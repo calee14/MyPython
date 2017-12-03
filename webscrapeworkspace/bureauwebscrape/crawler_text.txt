@@ -1,0 +1,13 @@
+brand, product_name, shipping
+EVGA,EVGA GeForce GTX 1080 Ti FTW3 DT DirectX 12 11G-P4-6694-KR Video Card,Free Shipping
+MSI,MSI Radeon RX 580 DirectX 12 Radeon RX 580 8G V1 Video Card,Free Shipping
+ASUS,ASUS GeForce GTX 1080 TURBO-GTX1080-8G Video Card,Free Shipping
+GIGABYTE,GIGABYTE Radeon RX 550 DirectX 12 GV-RX550D5-2GD Video Card,Free Shipping
+ZOTAC,ZOTAC GeForce GTX 1060 AMP!| ZT-P10600B-10M| 6GB GDDR5 Super Compact Dual-Fan IceStorm Cooling FREEZE Fan Stop,$4.99 Shipping
+XFX,XFX Radeon RX 580 DirectX 12 RX-580P427D6 GTS XXX Edition Video Card w/ Backplate,$4.99 Shipping
+EVGA,EVGA GeForce GTX 1060 3GB FTW GAMING ACX 3.0| 03G-P4-6168-KR| 3GB GDDR5| LED| DX12 OSD Support (PXOC),Free Shipping
+MSI,MSI Radeon RX 570 DirectX 12 RX 570 GAMING X 4G Video Card,Free Shipping
+GIGABYTE,GIGABYTE GeForce GTX 1080 Ti Turbo 11GD| GV-N108TTURBO-11GD,$4.99 Shipping
+ZOTAC,ZOTAC GeForce GTX 1080 Ti AMP Extreme Core 11GB GDDR5X 352-bit Gaming Graphics Card VR Ready 16+2 Power Phase Freeze Fan Stop IceStorm Cooling Spectra Lighting ZT-P10810F-10P,$4.99 Shipping
+ASUS,ASUS ROG Strix Radeon RX 570 O4G Gaming OC Edition GDDR5 DP HDMI DVI VR Ready AMD Graphics Card (ROG-STRIX-RX570-O4G-GAMING),$4.99 Shipping
+XFX,XFX RS XXX Edition Radeon RX 570 DirectX 12 RX-570P427D6 4GB OC+ 1284 MHz XFX Custom Backplate 256-Bit DDR5 PCI Express 3.0 CrossFireX Support Video Card,$4.99 Shipping

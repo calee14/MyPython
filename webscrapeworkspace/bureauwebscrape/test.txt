@@ -1,0 +1,161 @@
+2016 National Employment Matrix title and code Total, all occupations
+2016 National Employment Matrix title and code 00-0000
+2016 National Employment Matrix title and code Management occupations
+2016 National Employment Matrix title and code 11-0000
+2016 National Employment Matrix title and code Business and financial operations occupations
+2016 National Employment Matrix title and code 13-0000
+2016 National Employment Matrix title and code Computer and mathematical occupations
+2016 National Employment Matrix title and code 15-0000
+2016 National Employment Matrix title and code Architecture and engineering occupations
+2016 National Employment Matrix title and code 17-0000
+2016 National Employment Matrix title and code Life, physical, and social science occupations
+2016 National Employment Matrix title and code 19-0000
+2016 National Employment Matrix title and code Community and social service occupations
+2016 National Employment Matrix title and code 21-0000
+2016 National Employment Matrix title and code Legal occupations
+2016 National Employment Matrix title and code 23-0000
+2016 National Employment Matrix title and code Education, training, and library occupations
+2016 National Employment Matrix title and code 25-0000
+2016 National Employment Matrix title and code Arts, design, entertainment, sports, and media occupations
+2016 National Employment Matrix title and code 27-0000
+2016 National Employment Matrix title and code Healthcare practitioners and technical occupations
+2016 National Employment Matrix title and code 29-0000
+2016 National Employment Matrix title and code Healthcare support occupations
+2016 National Employment Matrix title and code 31-0000
+2016 National Employment Matrix title and code Protective service occupations
+2016 National Employment Matrix title and code 33-0000
+2016 National Employment Matrix title and code Food preparation and serving related occupations
+2016 National Employment Matrix title and code 35-0000
+2016 National Employment Matrix title and code Building and grounds cleaning and maintenance occupations
+2016 National Employment Matrix title and code 37-0000
+2016 National Employment Matrix title and code Personal care and service occupations
+2016 National Employment Matrix title and code 39-0000
+2016 National Employment Matrix title and code Sales and related occupations
+2016 National Employment Matrix title and code 41-0000
+2016 National Employment Matrix title and code Office and administrative support occupations
+2016 National Employment Matrix title and code 43-0000
+2016 National Employment Matrix title and code Farming, fishing, and forestry occupations
+2016 National Employment Matrix title and code 45-0000
+2016 National Employment Matrix title and code Construction and extraction occupations
+2016 National Employment Matrix title and code 47-0000
+2016 National Employment Matrix title and code Installation, maintenance, and repair occupations
+2016 National Employment Matrix title and code 49-0000
+2016 National Employment Matrix title and code Production occupations
+2016 National Employment Matrix title and code 51-0000
+2016 National Employment Matrix title and code Transportation and material moving occupations
+2016 National Employment Matrix title and code 53-0000
+Employment 156,063.8
+Employment 167,582.3
+Employment 9,533.1
+Employment 10,411.5
+Employment 8,066.8
+Employment 8,817.3
+Employment 4,419.0
+Employment 5,015.3
+Employment 2,601.0
+Employment 2,794.2
+Employment 1,299.5
+Employment 1,422.4
+Employment 2,570.7
+Employment 2,917.9
+Employment 1,283.3
+Employment 1,409.1
+Employment 9,426.5
+Employment 10,303.4
+Employment 2,772.9
+Employment 2,946.5
+Employment 8,751.5
+Employment 10,082.4
+Employment 4,315.6
+Employment 5,315.5
+Employment 3,505.6
+Employment 3,663.8
+Employment 13,206.1
+Employment 14,438.3
+Employment 5,654.1
+Employment 6,147.3
+Employment 6,419.7
+Employment 7,589.0
+Employment 15,747.8
+Employment 16,255.2
+Employment 23,081.2
+Employment 23,230.6
+Employment 1,060.1
+Employment 1,060.6
+Employment 6,812.5
+Employment 7,570.8
+Employment 5,905.4
+Employment 6,301.5
+Employment 9,356.9
+Employment 8,971.6
+Employment 10,274.2
+Employment 10,918.1
+Change, 2016–26 11,518.6
+Change, 2016–26 7.4
+Change, 2016–26 878.3
+Change, 2016–26 9.2
+Change, 2016–26 750.4
+Change, 2016–26 9.3
+Change, 2016–26 596.3
+Change, 2016–26 13.5
+Change, 2016–26 193.2
+Change, 2016–26 7.4
+Change, 2016–26 122.9
+Change, 2016–26 9.5
+Change, 2016–26 347.2
+Change, 2016–26 13.5
+Change, 2016–26 125.8
+Change, 2016–26 9.8
+Change, 2016–26 876.8
+Change, 2016–26 9.3
+Change, 2016–26 173.6
+Change, 2016–26 6.3
+Change, 2016–26 1,330.9
+Change, 2016–26 15.2
+Change, 2016–26 999.9
+Change, 2016–26 23.2
+Change, 2016–26 158.2
+Change, 2016–26 4.5
+Change, 2016–26 1,232.2
+Change, 2016–26 9.3
+Change, 2016–26 493.2
+Change, 2016–26 8.7
+Change, 2016–26 1,169.2
+Change, 2016–26 18.2
+Change, 2016–26 507.4
+Change, 2016–26 3.2
+Change, 2016–26 149.4
+Change, 2016–26 0.6
+Change, 2016–26 0.5
+Change, 2016–26 0.0
+Change, 2016–26 758.4
+Change, 2016–26 11.1
+Change, 2016–26 396.1
+Change, 2016–26 6.7
+Change, 2016–26 -385.3
+Change, 2016–26 -4.1
+Change, 2016–26 643.9
+Change, 2016–26 6.3
+Median annual wage, 2016(1) $37,040
+Median annual wage, 2016(1) $100,790
+Median annual wage, 2016(1) $66,530
+Median annual wage, 2016(1) $82,830
+Median annual wage, 2016(1) $77,900
+Median annual wage, 2016(1) $63,340
+Median annual wage, 2016(1) $42,990
+Median annual wage, 2016(1) $79,650
+Median annual wage, 2016(1) $48,000
+Median annual wage, 2016(1) $47,190
+Median annual wage, 2016(1) $63,420
+Median annual wage, 2016(1) $27,910
+Median annual wage, 2016(1) $38,660
+Median annual wage, 2016(1) $20,810
+Median annual wage, 2016(1) $24,700
+Median annual wage, 2016(1) $22,710
+Median annual wage, 2016(1) $26,590
+Median annual wage, 2016(1) $34,050
+Median annual wage, 2016(1) $23,510
+Median annual wage, 2016(1) $43,610
+Median annual wage, 2016(1) $43,440
+Median annual wage, 2016(1) $33,130
+Median annual wage, 2016(1) $30,730

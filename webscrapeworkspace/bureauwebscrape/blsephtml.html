@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- P2 -->
+	<title>Employment by major occupational group</title>
+	<script id="_fed_an_ua_tag" language="javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOL&amp;subagency=BLS&amp;yt=true">
+	</script>
+	<script src="/javascripts/jquery-min.js" type="text/javascript">
+	</script>
+	<script src="/javascripts/bls.js" type="text/javascript">
+	</script>
+	<link href="/stylesheets/bls_combined.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/bls_content.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/bls_tables.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/jquery-tools.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/bls_nr.css" rel="stylesheet" type="text/css"><noscript>
+	<link href="/stylesheets/bls_noscript.css" rel="stylesheet" type="text/css"></noscript>
+	<meta content="IE=Edge" http-equiv="x-ua-compatible">
+	<meta content="https://www.bls.gov/images/bls_emblem.png" property="og:image">
+	<style type="text/css">
+	 td.gsc-table-cell-thumbnail{
+	           display:none !important;
+	           }
+	</style>
+	<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+	<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+	<link href="/manifest.json" rel="manifest">
+	<link href="/safari-pinned-tab.svg" rel="mask-icon">
+	<meta content="#ffffff" name="theme-color">
+	<meta content="type" http-equiv="Content-Script-Type">
+	<meta content="BLS" name="agency">
+	<meta content="general" name="audience">
+	<meta content="BLS: Employment and Unemployment" name="subagency">
+	<meta content="BLS: Employment and Unemployment: Office of Occupational Statistics and Employment Projections" name="program">
+	<meta content="Statistics: Occupations: Occupational projections" name="subject">
+	<meta content="Publications" name="doctype">
+	<style media="all" type="text/css">
+	      <!--
+	   @import url("/stylesheets/bls_ooh.css");
+	   -->
+	</style>
+	<meta content="10/24/2017" name="date">
+</head><!-- ********************************* BLS Style Sheets ********************************* -->
+<!-- START include/global/head.stm -->
+<!--[if lt IE 9]>
+        <link href="/stylesheets/ie8-styles.css" media="all" rel="Stylesheet" type="text/css"> 
+    <![endif]-->
+<!--[if lt IE 8]>
+        <link href="/stylesheets/ie7-styles.css" media="all" rel="Stylesheet" type="text/css"> 
+    <![endif]-->
+<!--[if lt IE 7]>
+        <link href="/stylesheets/ie6-styles.css" media="all" rel="Stylesheet" type="text/css"> 
+        <style type="text/css">
+        body {
+            behavior:url(/stylesheets/csshover2.htc);
+        }
+        </style>            
+    <![endif]-->
+<!--[if IE]>
+        <style type="text/css">
+        body {
+            font-size: expression(1 / (screen.deviceXDPI / 96) * 84 + '%');
+        }
+        </style>    
+    <![endif]-->
+<!-- END include/global/head.stm -->
+<!-- ********************************* /BLS Style Sheets ********************************* -->
+<body>
+	<!-- ****************************************** Begin HEADER ************************************************ -->
+	<!--no_index_start-->
+	<!-- DOL BANNER BEGIN -->
+	<!-- DOL BANNER START -->
+	 <a class="skiplink" href="#startcontent">Skip to Content</a>
+	<div id="dol-bar">
+		<div id="dol-bar-content">
+			<div id="dol-bar-emblem">
+				<h3><a href="http://www.dol.gov/">US Department of Labor</a></h3>
+			</div>
+			<form action="https://subscriptions.bls.gov/accounts/USDOLBLS/subscriber/qualify" id="dol-bar-form" method="get" name="subsform">
+				<div id="dol-bar-right">
+					<a href="/bls/topicsaz.htm">A to Z Index</a> | <a href="/bls/faqs.htm">FAQs</a> | <a href="/bls/infohome.htm">About BLS</a> | <a href="/bls/contact.htm">Contact Us</a> <label for="dol-bar-email" style="display: none;">E-mail:</label> <input id="dol-bar-email" name="email" onclick="this.value=''; this.onclick = null;" size="32" title="Enter your email address to subscribe to updates" type="text" value="Subscribe to E-mail Updates"> <input alt="Submit" id="dol-bar-subscribe" src="/images/buttons/subscribe_button_red_on_red.png" type="image">
+				</div>
+			</form>
+			<div class="clearfloat"></div>
+		</div>
+	</div><!-- DOL BANNER END -->
+	<!-- DOL BANNER END -->
+	<!-- BLS BANNER BEGIN -->
+	<!-- BLS BANNER START -->
+	<div id="top"></div>
+	<div id="bls-banner-wrapper">
+		<div id="bls-banner">
+			<div id="bls-banner-emblem">
+				<h2><a href="/home.htm">U.S. Bureau of Labor Statistics</a></h2>
+			</div>
+			<div id="bls-banner-right">
+				<div id="bls-banner-links">
+					<span class="social-follow"><a href="http://twitter.com/BLS_gov" target="_blank" title="Follow BLS on Twitter">Follow Us</a></span> <span class="social-follow-links"><!-- <img src="/images/icons/facebook.png"/>-->
+					 <a href="http://twitter.com/BLS_gov" target="_blank"><img alt="Follow BLS on Twitter" src="/images/icons/twitter_bird_icon_white.png"></a> <!--<img src="/images/icons/linkedin.png"/>--></span> | <a class="first" href="/newsroom/">What's New</a> | <a href="/schedule/news_release/">Release Calendar</a> | <a href="https://blogs.bls.gov/blog/">Blog</a>
+				</div>
+				<div id="bls-banner-search">
+					<form action="/search/query" method="get">
+						<input id="bls-banner-search-input" name="query" onclick="this.value=''; this.onclick = null;" title="Search Input" type="text" value="Search BLS.gov"> <input alt="Search" id="bls-banner-search-submit" name="term" src="/images/buttons/search_button_red_on_red.png" title="Submit" type="image">
+					</form>
+				</div>
+			</div>
+			<div class="clearfloat"></div>
+		</div>
+	</div><!-- BLS BANNER END -->
+	<!-- BLS BANNER END -->
+	<!-- MAIN NAV BEGIN -->
+	<div id="main-nav-wrapper">
+		<div id="main-nav-container">
+			<div>
+				<ul class="nojs" id="main-nav">
+					<li class="submenu-home">
+						<a href="/home.htm" style="padding-left: 1em;">Home</a> <!-- ********************************************** Begin Home Tab LIST ****************************************** -->
+						 <!-- 1st column -->
+						<div class="sub" id="submenu-home">
+							<ul>
+								<li>
+									<h5><a href="#">Subject Areas»</a></h5>
+								</li>
+								<li><a href="/bls/inflation.htm">Inflation &amp; Prices</a></li>
+								<li><a href="/bls/spending.htm">Spending &amp; Time Use</a></li>
+								<li><a href="/bls/unemployment.htm">Unemployment</a></li>
+								<li><a href="/bls/employment.htm">Employment</a></li>
+								<li><a href="/bls/wages.htm">Pay &amp; Benefits</a></li>
+								<li><a href="/bls/productivity.htm">Productivity</a></li>
+								<li><a href="/iif/">Workplace Injuries</a></li>
+								<li><a href="/bls/international.htm">International</a></li>
+								<li><a href="/bls/demographics.htm">Demographics</a></li>
+								<li><a href="/bls/industry.htm">Industries</a></li>
+								<li><a href="/bls/business.htm">Business Costs</a></li>
+								<li><a href="/bls/occupation.htm">Occupations</a></li>
+								<li><a href="/bls/geography.htm">Geography</a></li>
+							</ul><!-- 2nd column -->
+							<ul>
+								<li>
+									<h5><a href="#">Resources For »</a></h5>
+								</li>
+								<li><a href="/audience/business.htm">Business Leaders</a></li>
+								<li><a href="/audience/consumers.htm">Consumers</a></li>
+								<li><a href="/developers/home.htm">Developers</a></li>
+								<li><a href="/audience/economists.htm">Economists</a></li>
+								<li><a href="/audience/investors.htm">Investors</a></li>
+								<li><a href="/audience/jobseekers.htm">Jobseekers</a></li>
+								<li><a href="/newsroom/home.htm">Media</a></li>
+								<li><a href="/audience/policy.htm">Public Policymakers</a></li>
+								<li><a href="/audience/students.htm">Students &amp; Teachers</a></li>
+								<li><a href="/respondents/home.htm">Survey Respondents</a></li>
+								<li></li>
+								<li>
+									<h5><a href="#">At a Glance Tables »</a></h5>
+								</li>
+								<li><a href="/eag/eag.us.htm">U.S. Economy</a></li>
+								<li><a href="/eag/">Regions, States, &amp; Areas</a></li>
+								<li><a href="/iag/home.htm">Industries</a></li>
+							</ul><!-- 3rd column -->
+							<ul>
+								<li>
+									<h5><a href="#">MORE »</a></h5>
+								</li>
+								<li><a href="/video/">Videos</a></li>
+								<li><a href="/bls/announcement.htm">Announcements</a></li>
+								<li><a href="/bls/bls-speakers/bls-speakers.htm">BLS Speakers Available</a></li>
+								<li><a href="https://blogs.bls.gov/blog/">Commissioner's Corner</a></li>
+								<li><a href="/bls/research.htm">Research</a></li>
+								<li><a href="/spotlight/">Spotlight on Statistics</a></li>
+								<li><a href="/k12/">Students' Pages</a></li>
+								<li><a href="/bls/erratabydate.htm">Errata</a></li>
+								<li><a href="/bls/other.htm">Other Statistical Sites</a></li>
+							</ul>
+						</div><!-- ***********************************************End Home Tab LIST ******************************************** -->
+					</li>
+					<li class="submenu selected">
+						<a href="/bls/proghome.htm">Subjects</a> <!-- ************************************* Begin SUBJECTS TAB list ****************************************** -->
+						 <!-- 1st column -->
+						<div class="sub" id="submenu-programs">
+							<ul>
+								<li>
+									<h5><a href="/bls/inflation.htm">Inflation &amp; Prices »</a></h5>
+								</li>
+								<li><a href="/cpi/">Consumer Price Index</a></li>
+								<li><a href="/ppi/">Producer Price Indexes</a></li>
+								<li><a href="/mxp/">Import/Export Price Indexes</a></li>
+								<li><a href="/ncs/ect/">Employment Cost Index</a></li>
+								<li><a href="/bls/escalation.htm">Contract Escalation</a></li>
+								<li><a href="/pir/">Price Index Research</a></li>
+								<li><a href="/bls/inflation.htm">Inflation &amp; Prices Overview</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/wages.htm">Pay &amp; Benefits »</a></h5>
+								</li>
+								<li><a href="/ncs/ect/">Employment Costs</a></li>
+								<li><a href="/ncs/">National Compensation Data</a></li>
+								<li><a href="/bls/blswage.htm">Wages by Area &amp; Occupation</a></li>
+								<li><a href="/cps/earnings.htm#demographics">Earnings by Demographics</a></li>
+								<li><a href="/ces/">Earnings by Industry</a></li>
+								<li><a href="https://www.bls.gov/cew/">County Wages</a></li>
+								<li><a href="/ncs/ebs/">Benefits</a></li>
+								<li><a href="/crp/">Compensation Research</a></li>
+								<li><a href="/wsp/">Strikes &amp; Lockouts</a></li>
+								<li><a href="/bls/wages.htm">Pay &amp; Benefits Overview</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/spending.htm">Spending &amp; Time Use »</a></h5>
+								</li>
+								<li><a href="/cex/">Consumer Expenditures</a></li>
+								<li><a href="/tus/">How Americans Spend Time</a></li>
+							</ul><!-- 2nd column -->
+							<ul>
+								<li>
+									<h5><a href="/bls/unemployment.htm">Unemployment »</a></h5>
+								</li>
+								<li><a href="/cps/">National Unemployment Rate</a></li>
+								<li><a href="/lau/">State &amp; Local Unemployment Rates</a></li>
+								<li><a href="/ers/">Unemployment Research</a></li>
+								<li><a href="/bls/unemployment.htm">Unemployment Overview</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/employment.htm">Employment »</a></h5>
+								</li>
+								<li><a href="/ces/">National Employment</a></li>
+								<li><a href="/sae/">State &amp; Local Employment</a></li>
+								<li><a href="https://www.bls.gov/cew/">State &amp; County Employment</a></li>
+								<li><a href="/cps/">Worker Characteristics</a></li>
+								<li><a href="/emp/">Employment Projections</a></li>
+								<li><a href="/jlt/">Job Openings &amp; Labor Turnover</a></li>
+								<li><a href="/oes/">Employment by Occupation</a></li>
+								<li><a href="/nls/">Work Experience Over Time</a></li>
+								<li><a href="/bdm/">Business Employment Dynamics</a></li>
+								<li><a href="/ers/">Employment Research</a></li>
+								<li><a href="/bls/employment.htm">Employment Overview</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/iif/">Workplace Injuries »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/ors/">Occupational Requirements »</a></h5>
+								</li>
+							</ul><!-- 3rd column -->
+							<ul>
+								<li>
+									<h5><a href="/bls/productivity.htm">Productivity »</a></h5>
+								</li>
+								<li><a href="/lpc/">Labor Productivity &amp; Costs</a></li>
+								<li><a href="/mfp/">Multifactor Productivity</a></li>
+								<li><a href="/dpr/">Productivity Research</a></li>
+								<li><a href="/bls/productivity.htm">Productivity Overview</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/international.htm">International »</a></h5>
+								</li>
+								<li><a href="/itc/">International Technical Cooperation</a></li>
+								<li><a href="/mxp/">Import/Export Price Indexes</a></li>
+								<li><a href="/bls/international.htm">International Overview</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/regions/home.htm">REGIONAL OFFICES »</a></h5>
+								</li>
+								<li><a href="/regions/new-england/">New England (Boston)</a></li>
+								<li><a href="/regions/new-york-new-jersey/">New York-New Jersey (NY City)</a></li>
+								<li><a href="/regions/mid-atlantic/">Mid-Atlantic (Philadelphia)</a></li>
+								<li><a href="/regions/southeast/">Southeast (Atlanta)</a></li>
+								<li><a href="/regions/midwest/">Midwest (Chicago)</a></li>
+								<li><a href="/regions/southwest/">Southwest (Dallas)</a></li>
+								<li><a href="/regions/mountain-plains/">Mountain-Plains (Kansas City)</a></li>
+								<li><a href="/regions/west/">West (San Francisco)</a></li>
+								<li><a href="/regions/home.htm">Regional Overview</a></li>
+							</ul>
+						</div><!-- **************************************End SUBJECT AREAS ******************************************** -->
+					</li>
+					<li class="submenu">
+						<a href="/data/">Data Tools</a> <!-- ******************************************** Begin DATA TOOLS LIST ****************************************** -->
+						<div class="sub" id="submenu-data">
+							<ul>
+								<li>
+									<h5><a href="/data/">Data Retrieval Tools »</a></h5>
+								</li>
+								<li><a href="/cgi-bin/surveymost?bls">Top Picks</a></li>
+								<li><a href="/cgi-bin/srgate">Series Report</a></li>
+								<li><a href="/data/">One Screen</a></li>
+								<li><a href="/data/">Multi-Screen</a></li>
+								<li><a href="/data/#maps">Maps</a></li>
+								<li><a href="/data/#calculators">Calculators</a></li>
+								<li><a href="/data/#api">Public Data API</a></li>
+								<li></li>
+							</ul><!-- 2nd column -->
+							<ul>
+								<li>
+									<h5><a href="#">CUSTOMIZED TABLES »</a></h5>
+								</li>
+								<li><a href="https://download.bls.gov/pub/time.series/">Text Files</a></li>
+								<li><a href="/data/#historical-tables">News Release Tables</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/moredata.htm">More Sources of Data »</a></h5>
+								</li>
+								<li><a href="/rda/home.htm">Restricted Data Access</a></li>
+								<li><a href="/data/archived.htm">Discontinued Databases</a></li>
+								<li><a href="/help/hlpform1.htm">FAQs</a></li>
+								<li><a href="/help/notice.htm">Special Notices</a></li>
+								<li><a href="/bls/moredata.htm">More Sources of Data</a></li>
+							</ul>
+						</div><!-- *********************************************End DATABASES and TOOLS LIST ******************************************** -->
+					</li>
+					<li class="submenu">
+						<a href="/opub/">Publications</a> <!-- ********************************************** Begin PUBLICATIONS LIST ****************************************** -->
+						<div class="sub" id="submenu-pubs">
+							<ul>
+								<li>
+									<h5><a href="/opub/#latest">Latest Publications »</a></h5>
+								</li>
+								<li><a href="/opub/ted/">The Economics Daily</a></li>
+								<li><a href="/opub/mlr/">Monthly Labor Review</a></li>
+								<li><a href="/opub/btn/">Beyond the Numbers</a></li>
+								<li><a href="/spotlight/">Spotlight on Statistics</a></li>
+								<li><a href="/opub/reports">Reports &amp; Bulletins</a></li>
+								<li><a href="https://blogs.bls.gov/blog/">Commissioner's Corner</a></li>
+							</ul><!-- 2nd column -->
+							<ul>
+								<li></li>
+								<li><a href="/video/">Videos</a></li>
+								<li><a href="/careeroutlook/">Career Outlook</a></li>
+								<li><a href="/ooh/">Occupational Outlook Handbook</a></li>
+								<li><a href="/opub/hom/">Handbook of Methods</a></li><!-- <li><a href="/nls/nlsnews.htm">National Longitudinal Surveys News</a></li>
+    <li><a href="/opub/#magazines">Magazines &amp; Journals </a></li>
+    <li><a href="/opub/#chartbooks">Chartbooks</a></li>
+    
+    <li><a href="/opub/#catalog">Catalog of Publications </a></li> -->
+								<li><a href="/osmr/osmr.htm">Research Papers</a></li>
+								<li><a href="/opub/#copyright">Copyright Information</a></li>
+								<li><a href="/opub/#contact">Contact &amp; Help</a></li>
+							</ul>
+						</div><!-- ***********************************************End PUBLICATIONS LIST ******************************************** -->
+					</li>
+					<li class="submenu">
+						<a href="/bls/newsrels.htm">Economic Releases</a> <!-- ********************************************** Begin ECONOMIC RELEASES LIST ****************************************** -->
+						 <!-- 1st column -->
+						<div class="sub" id="submenu-news">
+							<ul>
+								<li>
+									<h5><a href="/bls/newsrels.htm#latest-releases">Latest Releases »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/newsrels.htm#major">Major Economic Indicators »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/schedule/news_release/">Schedules for news Releases »</a></h5>
+								</li>
+								<li><a href="/schedule/">By Month</a></li>
+								<li><a href="/schedule/schedule/by_prog/all_sched.htm">By News Release</a></li>
+								<li><a href="/schedule/news_release/current_year.asp">Current Year</a></li>
+								<li><a href="/bls/archived_sched.htm">Prior Years</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/news-release/home.htm">Archived News Releases »</a></h5>
+								</li>
+							</ul><!-- 2nd column -->
+							<ul>
+								<li>
+									<h5><a href="/bls/newsrels.htm#OEUS">Employment &amp; Unemployment »</a></h5>
+								</li>
+								<li><a href="/bls/newsrels.htm#OEUS">Monthly</a></li>
+								<li><a href="/bls/newsrels.htm#OEUS">Quarterly, annual, and other</a></li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/newsrels.htm#OPLC">Inflation &amp; Prices »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/newsrels.htm#OCWC">Pay &amp; Benefits &amp; Workplace Injuries »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/newsrels.htm#OPT">Productivity &amp; Technology »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/newsrels.htm#OEP">Employment Projections »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/newsrels.htm#INT">International Programs »</a></h5>
+								</li>
+								<li></li>
+								<li>
+									<h5><a href="/bls/newsrels.htm#NEWS">Regional News Releases »</a></h5>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="submenu">
+						<a href="/k12/">Students</a> <!-- ********************************************** Begin Students Tab LIST ****************************************** -->
+						<div class="sub" id="submenu-students">
+							<ul>
+								<li><a href="/k12/games.htm">Games &amp; Quizzes</a></li>
+								<li><a href="/k12/students.htm">Student Resources</a></li>
+								<li><a href="/k12/teachers.htm">Teacher´s Desk</a></li>
+								<li><a href="/k12/history.htm">History of BLS</a></li>
+								<li><a href="/k12/faq.htm">FAQs</a></li>
+							</ul>
+						</div><!-- ***********************************************End Students Tab LIST ******************************************** -->
+					</li>
+					<li class="submenu">
+						<a href="https://beta.bls.gov">Beta</a> <!-- ***********************************************Start BETA LIST ******************************************** -->
+						<div class="sub" id="submenu-beta">
+							<ul>
+								<li>
+									<h5><a href="https://beta.bls.gov/dataQuery/">Data Finder »</a></h5>
+								</li>
+								<li>
+									<h5><a href="https://beta.bls.gov/maps/cew/us">State and County Map »</a></h5>
+								</li>
+							</ul>
+						</div><!-- ***********************************************End BETA LIST ******************************************** -->
+					</li>
+				</ul>
+			</div>
+			<div class="clearfloat"></div>
+		</div>
+	</div><!-- MAIN NAV END -->
+	<!-- WRAPPER TOP BEGIN -->
+	<div id="wrapper-outer">
+		<div id="wrapper">
+			<div id="container">
+				<!-- WRAPPER TOP END -->
+				<!-- SUBDOMAIN TITLE TOP BEGIN -->
+				<div id="subdomain-title">
+					<span id="subdomain-title-text"><!-- SUBDOMAIN TITLE TOP END -->
+					 <!-- SUBDOMAIN TITLE BEGIN -->
+					 <!--no_index_end-->
+					 Employment Projections <!--no_index_start-->
+					 <!-- SUBDOMAIN TITLE END -->
+					 <!-- SUBDOMAIN TITLE MIDDLE BEGIN --></span>
+					<div class="article-tools-box" style="margin-left: 4px;">
+						<div id="fontpopup">
+							FONT SIZE: <a class="fontminus" onclick="bls_chsize('minus');" onfocus="this.blur();" onmouseover="this.style.cursor='pointer'" style="cursor: pointer;"><img alt="Minus Font Size" height="16" src="/images/icons/icon_small_minus.gif" width="16"></a> <a class="fontplus" onclick="bls_chsize('plus');" onfocus="this.blur();" onmouseover="this.style.cursor='pointer'" style="cursor: pointer;"><img alt="Plus Font Size" height="16" src="/images/icons/icon_small_plus.gif" width="16"></a> <a href="https://data.bls.gov/cgi-bin/print.pl/emp/ep_table_101.htm">PRINT:</a> <a href="https://data.bls.gov/cgi-bin/print.pl/emp/ep_table_101.htm"><img alt="Print" height="16" src="/images/icons/icon_small_printer.gif" width="16"></a>
+						</div>
+					</div><!-- SUBDOMAIN TITLE MIDDLE END -->
+					<div class="article-tools-box">
+						<a class="thickbox" href="#TB_inline?height=200&amp;width=325&amp;inlineId=emp_program_links">EPP <img alt="EMP Program Links" src="/images/icons/icon_small_link.gif"></a>
+					</div>
+					<div id="emp_program_links" style="display: none;">
+						<h2>Employment Projections</h2>
+						<ul>
+							<li><a href="/emp/">EPP Homepage</a></li>
+							<li><a href="/emp/empfaq01.htm">EPP FAQs</a></li>
+							<li><a href="/emp/empcon01.htm">Contact EPP</a></li>
+						</ul>
+					</div><!-- SUBDOMAIN TITLE BOTTOM BEGIN -->
+					<div class="article-tools-box" style="margin-right: 4px;">
+						<span class="social-media">SHARE ON: <a class="share_facebook" href="javascript:void(0);"><img alt="share on facebook" src="/images/icons/facebook.png" title="Facebook"></a> <a class="share_twitter" href="javascript:void(0);"><img alt="share on twitter" src="/images/icons/twitter.png" title="Twitter"></a> <a class="share_linkedin" href="javascript:void(0);"><img alt="share on linkedin" src="/images/icons/linkedin.png" title="LinkedIn"></a> <!--<a href="javascript:void(0);" class="share_googleplus"><img src="/images/icons/google.png" title="Google Plus" /></a>--></span>
+					</div>
+				</div><!-- End Subdomain Title Div -->
+				<div id="subdomain-title-border"></div><!-- SUBDOMAIN TITLE BOTTOM END -->
+				<!-- 2COL LAYOUT COL1 BEGIN -->
+				<div class="clearfloat" id="startcontent"></div>
+				<table id="main-content-table">
+					<tr>
+						<td id="secondary-nav-td">
+							<div id="secondary-nav">
+								<!-- 2COL LAYOUT COL1 END -->
+								<!-- SECONDARY NAV BEGIN -->
+								<div class="secondary-nav">
+									<ul class="level1">
+										<li class="menuhead"><a href="/emp/home.htm">EP HOME</a></li>
+										<li><a href="/emp/news.htm">EP NEWS RELEASES</a></li>
+										<li><a href="/emp/tables.htm">EP TABLES</a></li>
+										<li><a href="/emp/publications.htm">EP PUBLICATIONS</a></li>
+										<li><a href="/emp/ep_faq_001.htm">EP FAQs</a></li>
+										<li><a href="/emp/ep_contact_001.htm">CONTACT EP</a></li>
+									</ul>
+								</div>
+								<form action="/search/query" id="search-secondary-nav-form" method="get" name="search-secondary-nav-form">
+									<p><label for="search-secondary-nav-query">SEARCH EP</label> <input id="search-secondary-nav-category" name="prefix" type="hidden" value="https://www.bls.gov/emp/"> <input id="search-secondary-nav-query" name="query" type="text"> <input id="search-secondary-nav-submit" name="submit" type="submit" value="Go"></p>
+								</form>
+								<div class="secondary-nav">
+									<ul class="level1">
+										<li style="list-style: none"><label>EP Data</label></li>
+										<li><a href="/emp/ep_data_labor_force.htm">LABOR FORCE</a></li>
+										<li><a href="/emp/ep_data_aggregate_economy.htm">Aggregate Economy</a></li>
+										<li><a href="/emp/ep_data_input_output_matrix.htm">INTER-INDUSTRY RELATIONSHIPS (INPUT-OUTPUT, FINAL DEMAND MATRIX)</a></li>
+										<li><a href="/emp/ep_data_industry_out_and_emp.htm">INDUSTRY OUTPUT AND EMPLOYMENT</a></li>
+										<li><a href="/emp/ep_data_occupational_data.htm">OCCUPATIONAL EMPLOYMENT</a></li>
+										<li><a href="/emp/ep_education_training_system.htm">EDUCATION AND TRAINING</a></li>
+										<li><a href="/emp/ep_data_emp_requirements.htm">EMPLOYMENT REQUIREMENTS MATRIX</a></li>
+										<li><a href="/emp/ep_data_factor_analysis.htm">FACTOR ANALYSIS</a></li>
+										<li class="submenu">
+											<a>Documentation</a>
+											<ul class="level2">
+												<li><a href="/emp/ep_projections_methods.htm">EP Methodology</a></li>
+												<li><a href="/emp/nioem/empioan.htm">About the Numbers</a></li>
+												<li><a href="/emp/ep_crosswalks.htm">Classifications and crosswalks</a></li>
+												<li><a href="/emp/ep_separations.htm">OCCUPATIONAL SEPARATIONS</a></li>
+												<li><a href="/emp/nioem/empiori.htm">Related Information</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div><!-- SECONDARY NAV END -->
+								<!-- 2COL LAYOUT COL2 BEGIN -->
+							</div>
+						</td>
+						<td class="main-content" id="main-content-td">
+							<div class="verdana md" id="bodytext">
+								<!-- 2COL LAYOUT COL2 END -->
+								<!--no_index_end-->
+								<!-- MAIN CONTENT BEGIN -->
+								<!-- ****************************************** End HEADER ************************************************** -->
+								<!-- INSERT CONTENT HERE-->
+								<h1>Employment by major occupational group</h1>
+								<p>Other available formats: ( <a href="/emp/ind-occ-matrix/occupation.xlsx" title="Occupational Projections Tables">XLSX</a> )</p><!-- ********************************* Table: ep_table_101 ********************************* -->
+								<!-- ********************************* HEAD ************************************** -->
+								<table cellpadding="0" cellspacing="0" class="regular">
+									<caption>
+										<span class="tableTitle"><strong>Table 1.1 Employment by major occupational group, 2016 and projected 2026<br>
+										(Numbers in thousands)</strong></span>
+									</caption>
+									<thead>
+										<tr>
+											<th colspan="2" rowspan="2" scope="col">
+												<p align="center"><strong>2016 National Employment Matrix title and code</strong></p>
+											</th>
+											<th colspan="2" rowspan="1" scope="col">
+												<p align="center"><strong>Employment</strong></p>
+											</th>
+											<th colspan="2" rowspan="1" scope="col">
+												<p align="center"><strong>Change, 2016–26</strong></p>
+											</th>
+											<th colspan="1" rowspan="2" scope="col">
+												<p align="center"><strong>Median annual wage, 2016 <span class="footnoteid"><a id="ep_table_101.f.1" name="ep_table_101.f.1"></a> <a href="#1">(1)</a></span></strong></p>
+											</th>
+										</tr>
+										<tr>
+											<th scope="col">
+												<p align="center">2016</p>
+											</th>
+											<th scope="col">
+												<p align="center">2026</p>
+											</th>
+											<th scope="col">
+												<p align="center"><strong>Number</strong></p>
+											</th>
+											<th scope="col">
+												<p align="center"><strong>Percent</strong></p>
+											</th>
+										</tr>
+									</thead><!-- ********************************* /HEAD ************************************** -->
+									<!-- ********************************* BODY ************************************** -->
+									<tbody>
+										<tr>
+											<th id="ep_table_101.r.1" scope="row">
+												<p align="left" class="sub0">Total, all occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.00-0000"></span> 00-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">156,063.8</p>
+											</td>
+											<td>
+												<p class="datacell">167,582.3</p>
+											</td>
+											<td>
+												<p class="datacell">11,518.6</p>
+											</td>
+											<td>
+												<p class="datacell">7.4</p>
+											</td>
+											<td>
+												<p class="datacell">$37,040</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.1" scope="row">
+												<p align="left" class="sub1">Management occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.11-0000"></span> 11-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">9,533.1</p>
+											</td>
+											<td>
+												<p class="datacell">10,411.5</p>
+											</td>
+											<td>
+												<p class="datacell">878.3</p>
+											</td>
+											<td>
+												<p class="datacell">9.2</p>
+											</td>
+											<td>
+												<p class="datacell">$100,790</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.2" scope="row">
+												<p align="left" class="sub1">Business and financial operations occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.13-0000"></span> 13-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">8,066.8</p>
+											</td>
+											<td>
+												<p class="datacell">8,817.3</p>
+											</td>
+											<td>
+												<p class="datacell">750.4</p>
+											</td>
+											<td>
+												<p class="datacell">9.3</p>
+											</td>
+											<td>
+												<p class="datacell">$66,530</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.3" scope="row">
+												<p align="left" class="sub1">Computer and mathematical occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.15-0000"></span> 15-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">4,419.0</p>
+											</td>
+											<td>
+												<p class="datacell">5,015.3</p>
+											</td>
+											<td>
+												<p class="datacell">596.3</p>
+											</td>
+											<td>
+												<p class="datacell">13.5</p>
+											</td>
+											<td>
+												<p class="datacell">$82,830</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.4" scope="row">
+												<p align="left" class="sub1">Architecture and engineering occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.17-0000"></span> 17-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">2,601.0</p>
+											</td>
+											<td>
+												<p class="datacell">2,794.2</p>
+											</td>
+											<td>
+												<p class="datacell">193.2</p>
+											</td>
+											<td>
+												<p class="datacell">7.4</p>
+											</td>
+											<td>
+												<p class="datacell">$77,900</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.5" scope="row">
+												<p align="left" class="sub1">Life, physical, and social science occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.19-0000"></span> 19-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">1,299.5</p>
+											</td>
+											<td>
+												<p class="datacell">1,422.4</p>
+											</td>
+											<td>
+												<p class="datacell">122.9</p>
+											</td>
+											<td>
+												<p class="datacell">9.5</p>
+											</td>
+											<td>
+												<p class="datacell">$63,340</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.6" scope="row">
+												<p align="left" class="sub1">Community and social service occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.21-0000"></span> 21-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">2,570.7</p>
+											</td>
+											<td>
+												<p class="datacell">2,917.9</p>
+											</td>
+											<td>
+												<p class="datacell">347.2</p>
+											</td>
+											<td>
+												<p class="datacell">13.5</p>
+											</td>
+											<td>
+												<p class="datacell">$42,990</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.7" scope="row">
+												<p align="left" class="sub1">Legal occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.23-0000"></span> 23-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">1,283.3</p>
+											</td>
+											<td>
+												<p class="datacell">1,409.1</p>
+											</td>
+											<td>
+												<p class="datacell">125.8</p>
+											</td>
+											<td>
+												<p class="datacell">9.8</p>
+											</td>
+											<td>
+												<p class="datacell">$79,650</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.8" scope="row">
+												<p align="left" class="sub1">Education, training, and library occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.25-0000"></span> 25-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">9,426.5</p>
+											</td>
+											<td>
+												<p class="datacell">10,303.4</p>
+											</td>
+											<td>
+												<p class="datacell">876.8</p>
+											</td>
+											<td>
+												<p class="datacell">9.3</p>
+											</td>
+											<td>
+												<p class="datacell">$48,000</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.9" scope="row">
+												<p align="left" class="sub1">Arts, design, entertainment, sports, and media occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.27-0000"></span> 27-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">2,772.9</p>
+											</td>
+											<td>
+												<p class="datacell">2,946.5</p>
+											</td>
+											<td>
+												<p class="datacell">173.6</p>
+											</td>
+											<td>
+												<p class="datacell">6.3</p>
+											</td>
+											<td>
+												<p class="datacell">$47,190</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.10" scope="row">
+												<p align="left" class="sub1">Healthcare practitioners and technical occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.29-0000"></span> 29-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">8,751.5</p>
+											</td>
+											<td>
+												<p class="datacell">10,082.4</p>
+											</td>
+											<td>
+												<p class="datacell">1,330.9</p>
+											</td>
+											<td>
+												<p class="datacell">15.2</p>
+											</td>
+											<td>
+												<p class="datacell">$63,420</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.11" scope="row">
+												<p align="left" class="sub1">Healthcare support occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.31-0000"></span> 31-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">4,315.6</p>
+											</td>
+											<td>
+												<p class="datacell">5,315.5</p>
+											</td>
+											<td>
+												<p class="datacell">999.9</p>
+											</td>
+											<td>
+												<p class="datacell">23.2</p>
+											</td>
+											<td>
+												<p class="datacell">$27,910</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.12" scope="row">
+												<p align="left" class="sub1">Protective service occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.33-0000"></span> 33-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">3,505.6</p>
+											</td>
+											<td>
+												<p class="datacell">3,663.8</p>
+											</td>
+											<td>
+												<p class="datacell">158.2</p>
+											</td>
+											<td>
+												<p class="datacell">4.5</p>
+											</td>
+											<td>
+												<p class="datacell">$38,660</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.13" scope="row">
+												<p align="left" class="sub1">Food preparation and serving related occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.35-0000"></span> 35-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">13,206.1</p>
+											</td>
+											<td>
+												<p class="datacell">14,438.3</p>
+											</td>
+											<td>
+												<p class="datacell">1,232.2</p>
+											</td>
+											<td>
+												<p class="datacell">9.3</p>
+											</td>
+											<td>
+												<p class="datacell">$20,810</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.14" scope="row">
+												<p align="left" class="sub1">Building and grounds cleaning and maintenance occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.37-0000"></span> 37-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">5,654.1</p>
+											</td>
+											<td>
+												<p class="datacell">6,147.3</p>
+											</td>
+											<td>
+												<p class="datacell">493.2</p>
+											</td>
+											<td>
+												<p class="datacell">8.7</p>
+											</td>
+											<td>
+												<p class="datacell">$24,700</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.15" scope="row">
+												<p align="left" class="sub1">Personal care and service occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.39-0000"></span> 39-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">6,419.7</p>
+											</td>
+											<td>
+												<p class="datacell">7,589.0</p>
+											</td>
+											<td>
+												<p class="datacell">1,169.2</p>
+											</td>
+											<td>
+												<p class="datacell">18.2</p>
+											</td>
+											<td>
+												<p class="datacell">$22,710</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.16" scope="row">
+												<p align="left" class="sub1">Sales and related occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.41-0000"></span> 41-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">15,747.8</p>
+											</td>
+											<td>
+												<p class="datacell">16,255.2</p>
+											</td>
+											<td>
+												<p class="datacell">507.4</p>
+											</td>
+											<td>
+												<p class="datacell">3.2</p>
+											</td>
+											<td>
+												<p class="datacell">$26,590</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.17" scope="row">
+												<p align="left" class="sub1">Office and administrative support occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.43-0000"></span> 43-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">23,081.2</p>
+											</td>
+											<td>
+												<p class="datacell">23,230.6</p>
+											</td>
+											<td>
+												<p class="datacell">149.4</p>
+											</td>
+											<td>
+												<p class="datacell">0.6</p>
+											</td>
+											<td>
+												<p class="datacell">$34,050</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.18" scope="row">
+												<p align="left" class="sub1">Farming, fishing, and forestry occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.45-0000"></span> 45-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">1,060.1</p>
+											</td>
+											<td>
+												<p class="datacell">1,060.6</p>
+											</td>
+											<td>
+												<p class="datacell">0.5</p>
+											</td>
+											<td>
+												<p class="datacell">0.0</p>
+											</td>
+											<td>
+												<p class="datacell">$23,510</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.19" scope="row">
+												<p align="left" class="sub1">Construction and extraction occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.47-0000"></span> 47-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">6,812.5</p>
+											</td>
+											<td>
+												<p class="datacell">7,570.8</p>
+											</td>
+											<td>
+												<p class="datacell">758.4</p>
+											</td>
+											<td>
+												<p class="datacell">11.1</p>
+											</td>
+											<td>
+												<p class="datacell">$43,610</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.20" scope="row">
+												<p align="left" class="sub1">Installation, maintenance, and repair occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.49-0000"></span> 49-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">5,905.4</p>
+											</td>
+											<td>
+												<p class="datacell">6,301.5</p>
+											</td>
+											<td>
+												<p class="datacell">396.1</p>
+											</td>
+											<td>
+												<p class="datacell">6.7</p>
+											</td>
+											<td>
+												<p class="datacell">$43,440</p>
+											</td>
+										</tr>
+										<tr class="greenbar">
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.21" scope="row">
+												<p align="left" class="sub1">Production occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.51-0000"></span> 51-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">9,356.9</p>
+											</td>
+											<td>
+												<p class="datacell">8,971.6</p>
+											</td>
+											<td>
+												<p class="datacell">-385.3</p>
+											</td>
+											<td>
+												<p class="datacell">-4.1</p>
+											</td>
+											<td>
+												<p class="datacell">$33,130</p>
+											</td>
+										</tr>
+										<tr>
+											<th headers="ep_table_101.r.1" id="ep_table_101.r.1.22" scope="row">
+												<p align="left" class="sub1">Transportation and material moving occupations</p>
+											</th>
+											<td>
+												<p align="left"><nobr><span id="ep_table_101.53-0000"></span> 53-0000</nobr></p>
+											</td>
+											<td>
+												<p class="datacell">10,274.2</p>
+											</td>
+											<td>
+												<p class="datacell">10,918.1</p>
+											</td>
+											<td>
+												<p class="datacell">643.9</p>
+											</td>
+											<td>
+												<p class="datacell">6.3</p>
+											</td>
+											<td>
+												<p class="datacell">$30,730</p>
+											</td>
+										</tr>
+									</tbody><!-- ********************************* /BODY ************************************** -->
+									<!-- ********************************* FOOTNOTES ********************************* -->
+									<tfoot>
+										<tr>
+											<td colspan="7">
+												<p class="footnotes"><span class="footnotestitle">Footnotes:</span><br>
+												<span class="footnote"><a id="1" name="1"></a> <a href="#ep_table_101.f.1">(1)</a></span> Data are from the Occupational Employment Statistics program, U.S. Bureau of Labor Statistics. Wage data cover non-farm wage and salary workers and do not cover the self-employed, owners and partners in unincorporated firms, or household workers.<br>
+												Source: Employment Projections program, U.S. Bureau of Labor Statistics<br>
+												<br></p>
+											</td>
+										</tr>
+									</tfoot><!-- ********************************* /FOOTNOTES ********************************* -->
+								</table><!-- ********************************* /Table: ep_table_101 ********************************* -->
+								<p><a href="#top">Back to top</a></p>
+								<p></p>
+								<p class="update"><strong>Last Modified Date:</strong> October 24, 2017</p><!-- ********************************************TRAILER FILES******************************************** -->
+								<!-- MAIN CONTENT END -->
+								<!--no_index_start-->
+								<!-- 2COL LAYOUT COL3 BEGIN -->
+								<div class="social-media">
+									<div>
+										Recommend this page using:
+									</div>
+									<div>
+										<a class="share_facebook" href="javascript:void(0);"><img alt="share on facebook" src="/images/icons/facebook.png"></a> <span><a class="share_facebook" href="javascript:void(0);">Facebook</a></span>
+									</div>
+									<div>
+										<a class="share_twitter" href="javascript:void(0);"><img alt="share on twitter" src="/images/icons/twitter.png"></a> <span><a class="share_twitter" href="javascript:void(0);">Twitter</a></span>
+									</div>
+									<div>
+										<a class="share_linkedin" href="javascript:void(0);"><img alt="share on linkedin" src="/images/icons/linkedin.png"></a> <span><a class="share_linkedin" href="javascript:void(0);">LinkedIn</a></span>
+									</div><!--<div><a href="javascript:void(0);" class="share_googleplus"><img src="/images/icons/google.png"></a><span><a href="javascript:void(0);" class="share_googleplus">Google+</a></span></div>-->
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table><!-- 2COL LAYOUT COL3 END -->
+				<!-- QUICK LINKS BEGIN -->
+				<div class="clearfloat"></div>
+				<div id="quicklinks-wrapper">
+					<div id="quicklinks">
+						<ul>
+							<li>
+								<h4>tools</h4>
+							</li>
+							<li><a href="/eag/">Areas at a Glance</a></li>
+							<li><a href="/iag/">Industries at a Glance</a></li>
+							<li><a href="/bls/newsrels.htm">Economic Releases</a></li>
+							<li><a href="/data/">Databases &amp; Tables</a></li>
+							<li><a href="/map/MapToolServlet?survey=la">Maps</a></li>
+						</ul>
+						<ul>
+							<li>
+								<h4>calculators</h4>
+							</li>
+							<li><a href="/data/inflation_calculator.htm">Inflation</a></li><!--<li><a href="/location_quotient/">Location Quotient</a> </li> -->
+							<li><a href="/iirc/">Injury And Illness</a></li>
+						</ul>
+						<ul>
+							<li>
+								<h4>help</h4>
+							</li>
+							<li><a href="/help/">Help &amp; Tutorials</a></li>
+							<li><a href="/bls/faqs.htm">FAQs</a></li>
+							<li><a href="/bls/glossary.htm">Glossary</a></li>
+							<li><a href="/bls/infohome.htm">About BLS</a></li>
+							<li><a href="/bls/contact.htm">Contact Us</a></li>
+						</ul>
+						<ul>
+							<li>
+								<h4>info</h4>
+							</li>
+							<li><a href="/newsroom/">What's New</a></li>
+							<li><a href="/jobs/">Careers @ BLS</a></li>
+							<li><a href="http://www.dol.gov/dol/findit.htm">Find It! DOL</a></li>
+							<li><a href="https://subscriptions.bls.gov/accounts/USDOLBLS/subscriber/new">Join our Mailing Lists</a></li>
+							<li><a href="/bls/linksite.htm">Linking &amp; Copyright Info</a></li>
+						</ul>
+						<ul style="border-right: none;">
+							<li>
+								<h4>resources</h4>
+							</li>
+							<li><a href="http://www.oig.dol.gov/">Inspector General (OIG)</a></li>
+							<li><a href="/bls/bls_budget_and_performance.htm">Budget and Performance</a></li>
+							<li><a href="/bls/no_fear_act.htm">No Fear Act</a></li>
+							<li><a href="http://www.usa.gov/">USA.gov</a></li>
+							<li><a href="http://www.benefits.gov/">Benefits.gov</a></li>
+							<li><a href="https://www.disability.gov/">Disability.gov</a></li>
+						</ul>
+					</div>
+					<div class="clearfloat"></div>
+				</div><!-- QUICK LINKS END -->
+				<!-- WRAPPER BOTTOM BEGIN -->
+			</div><!-- close id="wrapper-outer" -->
+		</div><!-- close id="wrapper" -->
+	</div><!-- close id="container" -->
+	<!-- WRAPPER BOTTOM END -->
+	<!-- FOOTER LEFT BEGIN -->
+	<div id="fsrip" style="display:none;">
+		<span>10.119.30.249</span> <span>198.27.221.57, 10.174.24.103, 140.174.24.77, 77.67.85.130</span>
+	</div>
+	<script type="text/javascript">
+	       var fsr$ip = "";
+	$("#fsrip span").each(function(){
+	   if($(this).text().match(/^(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))$/)){
+	       fsr$ip = $(this).text();
+	   }
+	});
+	$("#fsrip").remove();
+	</script> 
+	<script src="/foresee/foresee-trigger.js" type="text/javascript">
+	</script>
+	<div id="footer-wrapper">
+		<div id="footer-links-wrapper-autowidth">
+			<div id="footer-links">
+				<p><a href="/bls/blsfoia.htm">Freedom of Information Act</a> | <a href="/bls/pss.htm">Privacy &amp; Security Statement</a> | <a href="/bls/disclaimer.htm">Disclaimers</a> | <a href="/bls/customer_survey.htm">Customer Survey</a> | <a href="/bls/website-policies.htm">Important Web Site Notices</a></p>
+			</div>
+		</div>
+		<div id="footer-info-wrapper">
+			<div id="footer-info">
+				<p><!-- FOOTER LEFT END -->
+				 <span id="footer-address">U.S. Bureau of Labor Statistics | Office of Occupational Statistics and Employment Projections, PSB Suite 2135, 2 Massachusetts Avenue, NE Washington, DC 20212-0001</span> <!-- FOOTER CENTER BEGIN --></p>
+				<p><!-- FOOTER CENTER END -->
+				 <span id="footer-contact"><a href="/emp/home.htm">www.bls.gov/EMP</a> | Telephone: 1-202-691-5700 | <a href="https://data.bls.gov/emp/ep_faq_001.htm">Contact EMP</a></span> <!-- FOOTER RIGHT BEGIN --></p>
+			</div>
+		</div>
+	</div><!-- FOOTER RIGHT END -->
+	<!--no_index_end-->
+	<!-- ***************************************************************************************************** -->
+</body>
+</html>
