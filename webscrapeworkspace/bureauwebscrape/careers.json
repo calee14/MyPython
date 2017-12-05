@@ -1,692 +1,577 @@
 [
-    {
-        "Total, all occupations": [
-            {
-                "code": "00-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "156,063.8"
-                    }, 
-                    {
-                        "employment_2016": "167,582.3"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "11,518.6"
-                    }, 
-                    {
-                        "change_percentage": "7.4"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$37,040"
-            }
-        ]
-    }, 
-    {
-        "Management occupations": [
-            {
-                "code": "11-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "9,533.1"
-                    }, 
-                    {
-                        "employment_2016": "10,411.5"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "878.3"
-                    }, 
-                    {
-                        "change_percentage": "9.2"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$100,790"
-            }
-        ]
-    }, 
-    {
-        "Business and financial operations occupations": [
-            {
-                "code": "13-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "8,066.8"
-                    }, 
-                    {
-                        "employment_2016": "8,817.3"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "750.4"
-                    }, 
-                    {
-                        "change_percentage": "9.3"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$66,530"
-            }
-        ]
-    }, 
-    {
-        "Computer and mathematical occupations": [
-            {
-                "code": "15-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "4,419.0"
-                    }, 
-                    {
-                        "employment_2016": "5,015.3"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "596.3"
-                    }, 
-                    {
-                        "change_percentage": "13.5"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$82,830"
-            }
-        ]
-    }, 
-    {
-        "Architecture and engineering occupations": [
-            {
-                "code": "17-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "2,601.0"
-                    }, 
-                    {
-                        "employment_2016": "2,794.2"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "193.2"
-                    }, 
-                    {
-                        "change_percentage": "7.4"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$77,900"
-            }
-        ]
-    }, 
-    {
-        "Life, physical, and social science occupations": [
-            {
-                "code": "19-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "1,299.5"
-                    }, 
-                    {
-                        "employment_2016": "1,422.4"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "122.9"
-                    }, 
-                    {
-                        "change_percentage": "9.5"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$63,340"
-            }
-        ]
-    }, 
-    {
-        "Community and social service occupations": [
-            {
-                "code": "21-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "2,570.7"
-                    }, 
-                    {
-                        "employment_2016": "2,917.9"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "347.2"
-                    }, 
-                    {
-                        "change_percentage": "13.5"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$42,990"
-            }
-        ]
-    }, 
-    {
-        "Legal occupations": [
-            {
-                "code": "23-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "1,283.3"
-                    }, 
-                    {
-                        "employment_2016": "1,409.1"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "125.8"
-                    }, 
-                    {
-                        "change_percentage": "9.8"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$79,650"
-            }
-        ]
-    }, 
-    {
-        "Education, training, and library occupations": [
-            {
-                "code": "25-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "9,426.5"
-                    }, 
-                    {
-                        "employment_2016": "10,303.4"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "876.8"
-                    }, 
-                    {
-                        "change_percentage": "9.3"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$48,000"
-            }
-        ]
-    }, 
-    {
-        "Arts, design, entertainment, sports, and media occupations": [
-            {
-                "code": "27-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "2,772.9"
-                    }, 
-                    {
-                        "employment_2016": "2,946.5"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "173.6"
-                    }, 
-                    {
-                        "change_percentage": "6.3"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$47,190"
-            }
-        ]
-    }, 
-    {
-        "Healthcare practitioners and technical occupations": [
-            {
-                "code": "29-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "8,751.5"
-                    }, 
-                    {
-                        "employment_2016": "10,082.4"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "1,330.9"
-                    }, 
-                    {
-                        "change_percentage": "15.2"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$63,420"
-            }
-        ]
-    }, 
-    {
-        "Healthcare support occupations": [
-            {
-                "code": "31-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "4,315.6"
-                    }, 
-                    {
-                        "employment_2016": "5,315.5"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "999.9"
-                    }, 
-                    {
-                        "change_percentage": "23.2"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$27,910"
-            }
-        ]
-    }, 
-    {
-        "Protective service occupations": [
-            {
-                "code": "33-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "3,505.6"
-                    }, 
-                    {
-                        "employment_2016": "3,663.8"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "158.2"
-                    }, 
-                    {
-                        "change_percentage": "4.5"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$38,660"
-            }
-        ]
-    }, 
-    {
-        "Food preparation and serving related occupations": [
-            {
-                "code": "35-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "13,206.1"
-                    }, 
-                    {
-                        "employment_2016": "14,438.3"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "1,232.2"
-                    }, 
-                    {
-                        "change_percentage": "9.3"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$20,810"
-            }
-        ]
-    }, 
-    {
-        "Building and grounds cleaning and maintenance occupations": [
-            {
-                "code": "37-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "5,654.1"
-                    }, 
-                    {
-                        "employment_2016": "6,147.3"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "493.2"
-                    }, 
-                    {
-                        "change_percentage": "8.7"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$24,700"
-            }
-        ]
-    }, 
-    {
-        "Personal care and service occupations": [
-            {
-                "code": "39-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "6,419.7"
-                    }, 
-                    {
-                        "employment_2016": "7,589.0"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "1,169.2"
-                    }, 
-                    {
-                        "change_percentage": "18.2"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$22,710"
-            }
-        ]
-    }, 
-    {
-        "Sales and related occupations": [
-            {
-                "code": "41-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "15,747.8"
-                    }, 
-                    {
-                        "employment_2016": "16,255.2"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "507.4"
-                    }, 
-                    {
-                        "change_percentage": "3.2"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$26,590"
-            }
-        ]
-    }, 
-    {
-        "Office and administrative support occupations": [
-            {
-                "code": "43-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "23,081.2"
-                    }, 
-                    {
-                        "employment_2016": "23,230.6"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "149.4"
-                    }, 
-                    {
-                        "change_percentage": "0.6"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$34,050"
-            }
-        ]
-    }, 
-    {
-        "Farming, fishing, and forestry occupations": [
-            {
-                "code": "45-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "1,060.1"
-                    }, 
-                    {
-                        "employment_2016": "1,060.6"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "0.5"
-                    }, 
-                    {
-                        "change_percentage": "0.0"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$23,510"
-            }
-        ]
-    }, 
-    {
-        "Construction and extraction occupations": [
-            {
-                "code": "47-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "6,812.5"
-                    }, 
-                    {
-                        "employment_2016": "7,570.8"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "758.4"
-                    }, 
-                    {
-                        "change_percentage": "11.1"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$43,610"
-            }
-        ]
-    }, 
-    {
-        "Installation, maintenance, and repair occupations": [
-            {
-                "code": "49-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "5,905.4"
-                    }, 
-                    {
-                        "employment_2016": "6,301.5"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "396.1"
-                    }, 
-                    {
-                        "change_percentage": "6.7"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$43,440"
-            }
-        ]
-    }, 
-    {
-        "Production occupations": [
-            {
-                "code": "51-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "9,356.9"
-                    }, 
-                    {
-                        "employment_2016": "8,971.6"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "-385.3"
-                    }, 
-                    {
-                        "change_percentage": "-4.1"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$33,130"
-            }
-        ]
-    }, 
-    {
-        "Transportation and material moving occupations": [
-            {
-                "code": "53-0000"
-            }, 
-            {
-                "employment": [
-                    {
-                        "employment_2016": "10,274.2"
-                    }, 
-                    {
-                        "employment_2016": "10,918.1"
-                    }
-                ]
-            }, 
-            {
-                "change_employment": [
-                    {
-                        "change_number": "643.9"
-                    }, 
-                    {
-                        "change_percentage": "6.3"
-                    }
-                ]
-            }, 
-            {
-                "anual_wage": "$30,730"
-            }
-        ]
-    }
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Total, all occupations", 
+                "00-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "156,063.8", 
+                "167,582.3"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "11,518.6", 
+                "7.4"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$37,040"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Management occupations", 
+                "11-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "9,533.1", 
+                "10,411.5"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "878.3", 
+                "9.2"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$100,790"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Business and financial operations occupations", 
+                "13-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "8,066.8", 
+                "8,817.3"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "750.4", 
+                "9.3"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$66,530"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Computer and mathematical occupations", 
+                "15-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "4,419.0", 
+                "5,015.3"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "596.3", 
+                "13.5"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$82,830"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Architecture and engineering occupations", 
+                "17-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "2,601.0", 
+                "2,794.2"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "193.2", 
+                "7.4"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$77,900"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Life, physical, and social science occupations", 
+                "19-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "1,299.5", 
+                "1,422.4"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "122.9", 
+                "9.5"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$63,340"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Community and social service occupations", 
+                "21-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "2,570.7", 
+                "2,917.9"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "347.2", 
+                "13.5"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$42,990"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Legal occupations", 
+                "23-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "1,283.3", 
+                "1,409.1"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "125.8", 
+                "9.8"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$79,650"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Education, training, and library occupations", 
+                "25-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "9,426.5", 
+                "10,303.4"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "876.8", 
+                "9.3"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$48,000"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Arts, design, entertainment, sports, and media occupations", 
+                "27-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "2,772.9", 
+                "2,946.5"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "173.6", 
+                "6.3"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$47,190"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Healthcare practitioners and technical occupations", 
+                "29-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "8,751.5", 
+                "10,082.4"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "1,330.9", 
+                "15.2"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$63,420"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Healthcare support occupations", 
+                "31-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "4,315.6", 
+                "5,315.5"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "999.9", 
+                "23.2"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$27,910"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Protective service occupations", 
+                "33-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "3,505.6", 
+                "3,663.8"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "158.2", 
+                "4.5"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$38,660"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Food preparation and serving related occupations", 
+                "35-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "13,206.1", 
+                "14,438.3"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "1,232.2", 
+                "9.3"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$20,810"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Building and grounds cleaning and maintenance occupations", 
+                "37-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "5,654.1", 
+                "6,147.3"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "493.2", 
+                "8.7"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$24,700"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Personal care and service occupations", 
+                "39-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "6,419.7", 
+                "7,589.0"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "1,169.2", 
+                "18.2"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$22,710"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Sales and related occupations", 
+                "41-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "15,747.8", 
+                "16,255.2"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "507.4", 
+                "3.2"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$26,590"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Office and administrative support occupations", 
+                "43-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "23,081.2", 
+                "23,230.6"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "149.4", 
+                "0.6"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$34,050"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Farming, fishing, and forestry occupations", 
+                "45-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "1,060.1", 
+                "1,060.6"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "0.5", 
+                "0.0"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$23,510"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Construction and extraction occupations", 
+                "47-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "6,812.5", 
+                "7,570.8"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "758.4", 
+                "11.1"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$43,610"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Installation, maintenance, and repair occupations", 
+                "49-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "5,905.4", 
+                "6,301.5"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "396.1", 
+                "6.7"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$43,440"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Production occupations", 
+                "51-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "9,356.9", 
+                "8,971.6"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "-385.3", 
+                "-4.1"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$33,130"
+            ]
+        }
+    ], 
+    [
+        {
+            "2016 National Employment Matrix title and code": [
+                "Transportation and material moving occupations", 
+                "53-0000"
+            ]
+        }, 
+        {
+            "Employment": [
+                "10,274.2", 
+                "10,918.1"
+            ]
+        }, 
+        {
+            "Change, 2016\u201326": [
+                "643.9", 
+                "6.3"
+            ]
+        }, 
+        {
+            "Median annual wage, 2016(1)": [
+                "$30,730"
+            ]
+        }
+    ]
 ]
