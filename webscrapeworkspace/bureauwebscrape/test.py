@@ -6,11 +6,6 @@ import requests
 import json
 from BLSHeader import HeaderOccupation
 
-def f7(seq):
-    seen = set()
-    seen_add = seen.add
-    return [x for x in seq if not (x in seen or seen_add(x))]
-
 # make program look like a browser, user_agent
 user_agent = 'Mozilla/5 (Solaris 10) Gecko'
 headers = { 'User-Agent' : user_agent }
@@ -41,6 +36,7 @@ for head in header:
 			array.append(header.requests_objects)
 		header = HeaderOccupation(colspan, title, count, array)
 		count += 1
+		print str(header.requests_objects) + '123'
 		header_list.append(header)
 	except Exception as e:
 		# print e
@@ -52,8 +48,6 @@ for row in contents:
 	# for item in row:
 	try:
 		children = row.find_all('p')
-		# children = list(set(children))
-		# children = f7(children)
 		print children
 	except Exception as e:
 		# print e
