@@ -3,7 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-from BLSHeader import HeaderOccupation
+from BLSHeader import TableHeader
+from BLSLink import BLSLink
 import json
 import urllib
 import urllib2 
@@ -26,23 +27,27 @@ with open(jsonfilename) as json_data:
 			for url in title:
 				blslink = title[url]
 				search_urls.append(blslink)
-
+# set the url we want to scrape
+search_url = search_urls[9]
 # get webdriver and call phantomjs
 driver = webdriver.PhantomJS()
-driver.get(''+search_urls[9]+'')
+driver.get(''+search_url+'')
 
 # waiting for the page to load
 wait = WebDriverWait(driver, 10)
+# find an element
 wait.until(EC.visibility_of_element_located((By.ID, "wrapper-outer")))
 link = driver.find_element_by_css_selector(".sorting")
+# simulate a click on the button
 link.click()
+# get the page source of the website
 html = driver.page_source
 
 class TableRetriever(object):
 
-	def __init__(self, search_urls, html):
+	def __init__(self, search_url, html):
 		# set url
-		# self.url = ''+search_urls[5]+''
+		self.url = ''+search_url+''
 		# open the url
 		# self.page = urllib.urlopen(self.url)
 		# run BeautifulSoup on the html
@@ -76,7 +81,7 @@ class TableRetriever(object):
 				array = []
 				for header in header_list:
 					array.append(header.requests_objects)
-				header = HeaderOccupation(colspan, title, count, array)
+				header = TableHeader(colspan, title, count, array)
 				self.requests_objects.append(header.findIndexes())
 				count += 1
 				print header.requests_objects
@@ -108,6 +113,7 @@ class TableRetriever(object):
 			# for item in row:
 			items = row.find_all('td')
 			print items[0].nextSibling
+			# keep checking and looping through children to find an element with text
 			for item in items:
 				print str(len(items)) + "this"
 				nextNode = item
@@ -125,7 +131,7 @@ class TableRetriever(object):
 						children.append(nextNode)
 						break
 				print len(children)
-			# else:
+			# set count s
 			print str(children) + 'sparta'
 			print str(num_rows) + "rows"
 			count = 0
@@ -134,13 +140,14 @@ class TableRetriever(object):
 				append_array = []
 				for num in num_array:
 					print str(num) + 'num'
-					append_array.append(str(children[num].text.encode('utf-8')))
+					append_array.append(str(children[num].text.encode('utf-8')).strip())
 				return_array[count].append(append_array)
 				count += 1
 			print return_array
 		return return_array
 
 	def combineArrays(self, arrays):
+		# create a variable of the length of the arrays
 		length_of_all_arrays = 0
 		for array in arrays:
 			for array2 in arrays:
@@ -150,12 +157,14 @@ class TableRetriever(object):
 					print("okay")
 				except Exception as e:
 					print e
+		# set an empty array of slots for future functions
 		occupations = self.init_list_of_objects(length_of_all_arrays) #[None] * len(header_list[0].children)  # Create list of 100 'None's
 		print str(len(occupations)) + " length"
 		# check if we have the same amount
 		print str(len(arrays)) + ' len of arrays'
 		for array in arrays:
 			count = 0 
+			print len(array.children)
 			for child in array.children:
 				print str(count) + "count"
 				child_index = array.children.index(child)
@@ -170,6 +179,28 @@ class TableRetriever(object):
 			print occupation
 		# print str(occupations[9]) + 'hi'
 		return arrays, occupations
+
+	def getLinks(self):
+		# find table
+		table = self.soup.find('table', attrs={'id' : 'landing-page-table'})
+		# scrape the contents of the header
+		contents = table.find('tbody')
+		link_header = contents.find_all('h4')
+		# list of all the occupations
+		occupation_links = []
+		for header in link_header:
+			# get a element which contains the link
+			atag = header.find('a')
+			link = atag['href']
+			# get the title
+			title = atag.text
+			# create the blslink object
+			blslink = BLSLink(self.url, link)
+			# add title
+			blslink.addChild(title)
+			# append object to the array
+			occupation_links.append(blslink)
+		return occupation_links
 
 	def jsonData(self, header_list, occupations):
 		# write it to a json file
@@ -189,6 +220,16 @@ class TableRetriever(object):
 		jsonstuff = json.dumps(json_occupations_data, indent=4)
 		f.write(jsonstuff)
 
+		# write links to a json file
+		links = self.getLinks()
+		json_array = []
+		for link in links:
+			json_array.append(link.createjson())
+		json_data = json.dumps(json_array, indent=4)
+		filename = "occupationlinks.json"
+		f = open(filename, "w")
+		f.write(json_data)
+
 	def scrape(self):
 		headers = self.scrapeHeader()
 		contents = self.scrapeContent(headers)
@@ -200,7 +241,7 @@ class TableRetriever(object):
 		self.jsonData(header_list, occupations)
 		print self.requests_objects
 # run it 
-retriever = TableRetriever(search_urls, html)
+retriever = TableRetriever(search_url, html)
 retriever.scrape()
 
 # filename = "test.txt"

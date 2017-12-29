@@ -1,0 +1,22 @@
+[
+    {
+        "Fishing and Hunting Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/fishers-and-related-fishing-workers.htm"
+        }
+    }, 
+    {
+        "Forest and Conservation Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/forest-and-conservation-workers.htm"
+        }
+    }, 
+    {
+        "Logging Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/logging-workers.htm"
+        }
+    }, 
+    {
+        "Agricultural Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/agricultural-workers.htm"
+        }
+    }
+]

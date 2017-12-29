@@ -29,19 +29,12 @@ for occupation in occupations_list:
 	atag = occupation.find('a')
 	# get the link from the a atag
 	link = atag['href']
-	# parse the domain of the url
-	parsed_uri = urlparse(url)
-	# get the domain form the string link
-	domain = '{uri.scheme}://{uri.netloc}/'.format(uri=parsed_uri)
-	link = domain+link
 	# get the title
 	title = atag.text
-	# make array of properties
-	append_properties = [link, title]
 	# create the blslink object
-	blslink = BLSLink()
+	blslink = BLSLink(url, link)
 	# add children
-	blslink.addChild(append_properties)
+	blslink.addChild(title)
 	# append object to the array
 	occupation_links.append(blslink)
 

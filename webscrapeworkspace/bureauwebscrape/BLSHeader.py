@@ -1,4 +1,4 @@
-class HeaderOccupation(object):
+class TableHeader(object):
 
 	def __init__(self, num_children=None, title=None, index=None, array=None):
 		# amount of children we are recieving
@@ -10,7 +10,7 @@ class HeaderOccupation(object):
 		if title is None:
 			title = "Occupation"
 		else:
-			self.title = title
+			self.title = title.strip()
 		# index of were we are in the header list
 		if index is None:
 			index = 0
@@ -25,8 +25,12 @@ class HeaderOccupation(object):
 		self.children = []
 
 	def addChild(self, child):
-		self.children.append(child)
-
+		if isinstance(child, list):
+			for c in child:
+				self.children.append(c)
+		else:
+			self.children.append(child)
+			
 	# finds the indexes of the arrays for the objects
 	def findIndexes(self, index=None, num_children=None, array=None):
 		if index is None:
