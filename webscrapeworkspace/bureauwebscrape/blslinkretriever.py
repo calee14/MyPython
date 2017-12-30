@@ -45,7 +45,7 @@ html = driver.page_source
 
 class TableRetriever(object):
 
-	def __init__(self, search_url, html):
+	def __init__(self, search_url, html, classIdentifier, idName, linkFileName=None, dataFileName=None):
 		# set url
 		self.url = ''+search_url+''
 		# open the url
@@ -53,11 +53,18 @@ class TableRetriever(object):
 		# run BeautifulSoup on the html
 		self.soup = BeautifulSoup(html, 'html.parser')
 		self.requests_objects = []
+		# class or id of the table
+		self.classIdentifier = classIdentifier
+		# class or id name of the table
+		self.idName = idName
+		# file names
+		self.linkFileName = linkFileName
+		self.dataFileName = dataFileName
 
-	def scrapeHeader(self):
+	def scrapeHeader(self, classIdentifier, idName):
 		# scrape the header of table
 		# find table
-		table = self.soup.find('table', attrs={'id' : 'landing-page-table'})
+		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
 		# find header
 		header = table.find('thead').find('tr')
 		# loop through each row
@@ -97,9 +104,9 @@ class TableRetriever(object):
 	        list_of_objects.append( list() ) # different object reference each time
 	    return list_of_objects
 
-	def scrapeContent(self, header_list):
+	def scrapeContent(self, header_list, classIdentifier, idName):
 		# find table
-		table = self.soup.find('table', attrs={'id' : 'landing-page-table'})
+		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
 		# scrape the contents of the header
 		contents = table.find('tbody')
 		rows = contents.find_all('tr')
@@ -113,7 +120,7 @@ class TableRetriever(object):
 			# for item in row:
 			items = row.find_all('td')
 			print items[0].nextSibling
-			# keep checking and looping through children to find an element with text
+			# recursive loop to find a element with text
 			for item in items:
 				print str(len(items)) + "this"
 				nextNode = item
@@ -180,9 +187,9 @@ class TableRetriever(object):
 		# print str(occupations[9]) + 'hi'
 		return arrays, occupations
 
-	def getLinks(self):
+	def getLinks(self, classIdentifier, idName):
 		# find table
-		table = self.soup.find('table', attrs={'id' : 'landing-page-table'})
+		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
 		# scrape the contents of the header
 		contents = table.find('tbody')
 		link_header = contents.find_all('h4')
@@ -214,34 +221,44 @@ class TableRetriever(object):
 				json_array.append(json_data)
 			json_occupations_data.append(json_array)
 
+		# write links to a json file
+		json_links_data = []
+		links = self.getLinks(self.classIdentifier, self.idName)
+		for link in links:
+			json_links_data.append(link.createjson())
+
+		return json_occupations_data, json_links_data
+
+	def writeToJSON(self, json_occupations_data, json_links_data, linkFileName, dataFileName):
 		# write it in json file
-		filename = "occupations.json"
+		filename = ''+dataFileName+''
 		f = open(filename, "w")
 		jsonstuff = json.dumps(json_occupations_data, indent=4)
 		f.write(jsonstuff)
 
-		# write links to a json file
-		links = self.getLinks()
-		json_array = []
-		for link in links:
-			json_array.append(link.createjson())
-		json_data = json.dumps(json_array, indent=4)
-		filename = "occupationlinks.json"
+		filename = ''+linkFileName+''
 		f = open(filename, "w")
+		json_data = json.dumps(json_links_data, indent=4)
 		f.write(json_data)
 
 	def scrape(self):
-		headers = self.scrapeHeader()
-		contents = self.scrapeContent(headers)
+		headers = self.scrapeHeader(self.classIdentifier, self.idName)
+		contents = self.scrapeContent(headers, self.classIdentifier, self.idName)
 		count = 0
 		for content in contents:
 			headers[count].addChild(content)
 			count += 1
 		header_list, occupations = self.combineArrays(headers)
-		self.jsonData(header_list, occupations)
+		json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
+		self.writeToJSON(json_occupations_data, json_links_data ,self.linkFileName, self.dataFileName)
 		print self.requests_objects
+
+classIdentifier = 'id'
+idName = 'landing-page-table'
+linkFileName = 'occupationlinks.json'
+dataFileName = 'occupations.json'
 # run it 
-retriever = TableRetriever(search_url, html)
+retriever = TableRetriever(search_url, html, classIdentifier, idName, linkFileName, dataFileName)
 retriever.scrape()
 
 # filename = "test.txt"

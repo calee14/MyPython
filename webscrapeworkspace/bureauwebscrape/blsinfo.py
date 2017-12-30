@@ -38,9 +38,10 @@ for content in contents:
 	except:
 		continue
 	for items in article:
-		print items
+		# to keep track if we added a class or not
+		addedContainer = False
 		try:
-			# temp_container = BLSContent()
+			# loop all types of headers
 			for i in range(1,7):
 				# if node is a h tag
 				if items.name == 'h'+str(i):
@@ -51,65 +52,16 @@ for content in contents:
 					# add the new container to the temp container
 					occupation_info.append(new_container)
 					# append the text of the title and break the loop
+					addedContainer = True
 					break
-				if items.findPrevious().name == 'h'+str(i):
-					previous = items.findPrevious()
-					try:
-						previous.text
-					except:
-						# make a new blscontainer object
-						title = items.text
-						# give it a new title
-						new_container = BLSContent(title)
-						# add the new container to the temp container
-						occupation_info.append(new_container)
-						# append the text of the title and break the loop
-					else:
-						continue
-			# print occupation_info[-1].title
-			# get last appended container and add to it
-			occupation_info[-1].addChild(items.text)
+			# if its content add it
+			if addedContainer == False:
+				if items.name == 'table':
+					print 'we found the table'
+				# get last appended container and add to it
+				occupation_info[-1].addChild(items.text)
 		except:
 			pass
-		# exit the loop after we have the data
-
-		# for item in items:
-		# 	# print str(len(items)) + " this"
-		# 	nextNode = item
-		# 	while True:
-		# 		# get the next node
-		# 		try:
-		# 			nextNode = nextNode.findNext()
-		# 		except:
-		# 			break
-		# 		# get header object or append text to header object
-		# 		try:
-		# 			# try getting a text attribute 
-		# 			nextNode.text
-		# 		except:
-		# 			# if there is a error
-		# 			pass
-		# 		else:
-		# 			print len(occupation_info)
-		# 			print nextNode.findPrevious().findPrevious().name
-		# 			# print len(occupation_info)
-		# 			# loop through all possible 'h' tag sizes num 1-6
-		# 			for i in range(1,7):
-		# 				# if node is a h tag
-		# 				if nextNode.name == 'h'+str(i) or nextNode.findPrevious().findPrevious().name == 'h'+str(i):
-		# 					# make a new blscontainer object
-		# 					title = nextNode.text
-		# 					# give it a new title
-		# 					new_container = BLSContent(title)
-		# 					# add the new container to the temp container
-		# 					occupation_info.append(new_container)
-		# 					# append the text of the title and break the loop
-		# 					break
-		# 			print occupation_info[-1].title
-		# 			# get last appended container and add to it
-		# 			occupation_info[-1].addChild(nextNode.text)
-		# 			# exit the loop after we have the data
-		# 			break
 print occupation_info[7].children
 jsonstuff = []
 for info in occupation_info:
