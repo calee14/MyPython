@@ -14,8 +14,15 @@ class BLSContent(object):
 		self.children.append(cleanedContent)
 
 	def cleanContent(self, item): 
-		# remove leading and trailing spaces and substitute multiple white spaces with one
-		cleanContent = " ".join(item.strip().split())
-		# return new content
-		return cleanContent
+		try:
+			# remove leading and trailing spaces and substitute multiple white spaces with one
+			cleanContent = " ".join(item.strip().split())
+			# return new content
+			return cleanContent
+		except Exception as e:
+			print e
+			print 'we could not clean'
+		# if all fail return what came in
+		return item
+		
 

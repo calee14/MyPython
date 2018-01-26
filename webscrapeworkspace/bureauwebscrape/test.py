@@ -4,7 +4,7 @@ import urllib2
 from bs4 import BeautifulSoup
 import requests
 import json
-from BLSHeader import HeaderOccupation
+from BLSHeader import TableHeader
 
 # make program look like a browser, user_agent
 user_agent = 'Mozilla/5 (Solaris 10) Gecko'
@@ -34,13 +34,12 @@ for head in header:
 		array = []
 		for header in header_list:
 			array.append(header.requests_objects)
-		header = HeaderOccupation(colspan, title, count, array)
+		header = TableHeader(colspan, title, count, array)
 		count += 1
 		print str(header.requests_objects) + '123'
 		header_list.append(header)
 	except Exception as e:
-		# print e
-		pass
+		print str(e) + "hi you"
 # scrape the contents of the header
 contents = table.find('tbody')
 for row in contents:
@@ -83,7 +82,8 @@ for header in header_list:
 	else:
 		for child in header.children:
 			child_index = header.children.index(child)
-			print child_index
+			print str(child_index) + "this number "
+			print child 
 			arrays[child_index].append(child)
 
 print arrays[0]

@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 from BLSHeader import TableHeader
 from BLSLink import BLSLink
+from collections import namedtuple
 import json
 import urllib
 import urllib2 
@@ -43,15 +44,25 @@ link.click()
 # get the page source of the website
 html = driver.page_source
 
-class TableRetriever(object):
+class TableScraper(object):
 
 	def __init__(self, search_url, html, classIdentifier, idName, linkFileName=None, dataFileName=None):
-		# set url
-		self.url = ''+search_url+''
-		# open the url
-		# self.page = urllib.urlopen(self.url)
-		# run BeautifulSoup on the html
-		self.soup = BeautifulSoup(html, 'html.parser')
+		# initialize variables
+		self.url = None
+		self.soup = None
+		# grab html page source
+		if html is None:
+			page = None
+			# set url
+			self.url = ''+search_url+''
+			# open the url
+			page = urllib.urlopen(self.url)
+			# get our soup
+			self.soup = BeautifulSoup(page, 'html.parser')
+		else:
+			# run BeautifulSoup on the html
+			self.soup = BeautifulSoup(html, 'html.parser')
+		# set request objects to hold indexes
 		self.requests_objects = []
 		# class or id of the table
 		self.classIdentifier = classIdentifier
@@ -62,11 +73,22 @@ class TableRetriever(object):
 		self.dataFileName = dataFileName
 
 	def scrapeHeader(self, classIdentifier, idName):
+		print 'intheheader'
 		# scrape the header of table
 		# find table
-		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
-		# find header
-		header = table.find('thead').find('tr')
+		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''}) 
+		if table is None:
+			table = self.soup
+		else:
+			pass
+		header = ''
+		noHeader = False
+		try:
+			# find header
+			header = table.find('thead').find('tr')
+		except:
+			header = table.find('tbody').find('tr')
+			noHeader = True
 		# loop through each row
 		count = 0
 		# list to hold headers
@@ -74,13 +96,19 @@ class TableRetriever(object):
 		# get the headers
 		for head in header:
 			try:
-				# get title of header
-				title = head.text.encode('utf-8')
+				title = ''
+				if noHeader is False:
+					try:
+						# get title of header
+						title = head.text.encode('utf-8')
+					except:
+						# move on to the next loop if we can't find the title
+						continue
 				# set length of array
 				colspan = 0
 				# try to find length
 				try:
-					colspan = int(head['colspan'])
+					colspan = int(head.get('colspan'))
 				except:
 					# if we can find it set it to one
 					colspan = 1
@@ -91,13 +119,11 @@ class TableRetriever(object):
 				header = TableHeader(colspan, title, count, array)
 				self.requests_objects.append(header.findIndexes())
 				count += 1
-				print header.requests_objects
+				# print str(header.requests_objects) + 'hi this is the objects'
 				header_list.append(header)
 			except Exception as e:
-				# print e
-				pass
+				print e
 		return header_list
-
 	def init_list_of_objects(self, size):
 	    list_of_objects = list()
 	    for i in range(0,size):
@@ -107,6 +133,10 @@ class TableRetriever(object):
 	def scrapeContent(self, header_list, classIdentifier, idName):
 		# find table
 		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
+		if table is None:
+			table = self.soup
+		else:
+			pass
 		# scrape the contents of the header
 		contents = table.find('tbody')
 		rows = contents.find_all('tr')
@@ -147,23 +177,25 @@ class TableRetriever(object):
 				append_array = []
 				for num in num_array:
 					print str(num) + 'num'
-					append_array.append(str(children[num].text.encode('utf-8')).strip())
+					try:
+						append_array.append(str(children[num].text.encode('utf-8')).strip())
+					except Exception as e:
+						print e
+						print 'we could not fit it in header_list'
 				return_array[count].append(append_array)
 				count += 1
 			print return_array
 		return return_array
 
 	def combineArrays(self, arrays):
+		print "incombinearrays"
 		# create a variable of the length of the arrays
 		length_of_all_arrays = 0
 		for array in arrays:
 			for array2 in arrays:
-				try:
-					length_of_all_arrays = len(array.children)
-					len(array.children) == len(array2.children)
-					print("okay")
-				except Exception as e:
-					print e
+				length_of_all_arrays = len(array.children)
+				len(array.children) == len(array2.children)
+				print("okay")
 		# set an empty array of slots for future functions
 		occupations = self.init_list_of_objects(length_of_all_arrays) #[None] * len(header_list[0].children)  # Create list of 100 'None's
 		print str(len(occupations)) + " length"
@@ -190,6 +222,10 @@ class TableRetriever(object):
 	def getLinks(self, classIdentifier, idName):
 		# find table
 		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
+		if table is None:
+			table = self.soup
+		else:
+			pass
 		# scrape the contents of the header
 		contents = table.find('tbody')
 		link_header = contents.find_all('h4')
@@ -209,9 +245,11 @@ class TableRetriever(object):
 			occupation_links.append(blslink)
 		return occupation_links
 
-	def jsonData(self, header_list, occupations):
-		# write it to a json file
+	def jsonData(self, header_list=None, occupations=None):
+		print 'injsondata'
 		json_occupations_data = []
+		json_links_data = []
+		# write it to a json file
 		for occupation in occupations:
 			json_array = []
 			for header in header_list:
@@ -222,24 +260,28 @@ class TableRetriever(object):
 			json_occupations_data.append(json_array)
 
 		# write links to a json file
-		json_links_data = []
 		links = self.getLinks(self.classIdentifier, self.idName)
 		for link in links:
 			json_links_data.append(link.createjson())
-
+		print json_occupations_data
 		return json_occupations_data, json_links_data
 
-	def writeToJSON(self, json_occupations_data, json_links_data, linkFileName, dataFileName):
-		# write it in json file
-		filename = ''+dataFileName+''
-		f = open(filename, "w")
-		jsonstuff = json.dumps(json_occupations_data, indent=4)
-		f.write(jsonstuff)
+	def writeToJSON(self, array):
+		for data in array:
+			filename = ''+data.file+''
+			f = open(filename, "w")
+			jsonstuff = json.dumps(data.data, indent=4)
+			f.write(jsonstuff)
+		# # write it in json file
+		# filename = ''+dataFileName+''
+		# f = open(filename, "w")
+		# jsonstuff = json.dumps(json_occupations_data, indent=4)
+		# f.write(jsonstuff)
 
-		filename = ''+linkFileName+''
-		f = open(filename, "w")
-		json_data = json.dumps(json_links_data, indent=4)
-		f.write(json_data)
+		# filename = ''+linkFileName+''
+		# f = open(filename, "w")
+		# json_data = json.dumps(json_links_data, indent=4)
+		# f.write(json_data)
 
 	def scrape(self):
 		headers = self.scrapeHeader(self.classIdentifier, self.idName)
@@ -250,17 +292,23 @@ class TableRetriever(object):
 			count += 1
 		header_list, occupations = self.combineArrays(headers)
 		json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
-		self.writeToJSON(json_occupations_data, json_links_data ,self.linkFileName, self.dataFileName)
-		print self.requests_objects
+		BLSData = namedtuple('BLSData', 'data file')
+		content1 = BLSData(json_occupations_data, self.dataFileName)
+		print str(json_occupations_data) + "hi and stuff"
+		content2 = BLSData(json_links_data, self.linkFileName)
+		return [content1, content2]
+			
 
-classIdentifier = 'id'
-idName = 'landing-page-table'
+classIdentifier = 'class'
+idName = 'regular'
 linkFileName = 'occupationlinks.json'
 dataFileName = 'occupations.json'
 # run it 
-retriever = TableRetriever(search_url, html, classIdentifier, idName, linkFileName, dataFileName)
-retriever.scrape()
+retriever = TableScraper('https://www.bls.gov/emp/ep_table_101.htm', None, classIdentifier, idName, linkFileName, dataFileName)
+data = retriever.scrape()
+retriever.writeToJSON(data)
 
+###################### split #####################
 # filename = "test.txt"
 # f = open(filename, "w")
 

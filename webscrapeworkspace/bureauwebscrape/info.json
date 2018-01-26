@@ -26,20 +26,113 @@
         "Work Environment About this section": [
             "Forest and conservation workers work outdoors, sometimes in remote locations and in all types of weather.", 
             "Forest and conservation workers held about 14,300 jobs in 2016. The largest employers of forest and conservation workers were as follows:", 
-            "State government, excluding education and hospitals 27% Forestry 18 Support activities for agriculture and forestry 15 Self-employed workers 14 Local government, excluding education and hospitals 13", 
-            "Forest and conservation workers work mainly in the western and southeastern areas of the United States, where there are many national and state forests, and on private forests and parks.", 
-            "Forest and conservation workers work outdoors, sometimes in remote locations and in all types of weather. Workers use proper safety measures and equipment, such as hardhats, protective eyewear, and safety clothing.", 
-            "Most of these jobs are physically demanding. Forest and conservation workers may have to walk long distances through densely wooded areas and carry their equipment with them."
-        ]
-    }, 
-    {
-        "Injuries and Illnesses": [
-            "Forest and conservation workers whose primary duties involve fire suppression must take safety precautions because the work can be dangerous. Workers must follow prescribed safety procedures and wear proper safety gear."
-        ]
-    }, 
-    {
-        "Work Schedules": [
-            "Many forest and conservation workers are employed full time and work regular hours. Responding to an emergency may require workers to work additional hours and at any time of day."
+            [
+                [
+                    {
+                        "Header": [
+                            "27%"
+                        ]
+                    }, 
+                    {
+                        "Header": [
+                            "Forestry\n18"
+                        ]
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }
+                ], 
+                [
+                    {
+                        "Header": [
+                            "18"
+                        ]
+                    }, 
+                    {
+                        "Header": [
+                            "Support activities for agriculture and forestry\n15"
+                        ]
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }
+                ], 
+                [
+                    {
+                        "Header": [
+                            "15"
+                        ]
+                    }, 
+                    {
+                        "Header": [
+                            "Self-employed workers\n14"
+                        ]
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }
+                ], 
+                [
+                    {
+                        "Header": [
+                            "14"
+                        ]
+                    }, 
+                    {
+                        "Header": [
+                            "Local government, excluding education and hospitals\n13"
+                        ]
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }
+                ], 
+                [
+                    {
+                        "Header": [
+                            "13"
+                        ]
+                    }, 
+                    {
+                        "Header": [
+                            "Forest and conservation workers work mainly in the western and southeastern areas of the United States, where there are many national and state forests, and on private forests and parks."
+                        ]
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }
+                ]
+            ]
         ]
     }, 
     {
@@ -79,8 +172,50 @@
             "The median annual wage for forest and conservation workers was $26,940 in May 2016. The median wage is the wage at which half the workers in an occupation earned more than that amount and half earned less. The lowest 10 percent earned less than $19,100, and the highest 10 percent earned more than $49,150.", 
             "", 
             "In May 2016, the median annual wages for forest and conservation workers in the top industries in which they worked were as follows:", 
-            "Local government, excluding education and hospitals $31,960 State government, excluding education and hospitals 22,260", 
-            "Many forest and conservation workers are employed full time and work regular hours. Seasonal employees may be expected to work longer shifts and at night. Responding to an emergency or a fire may require workers to work additional hours and at any time of day."
+            [
+                [
+                    {
+                        "Header": [
+                            "$31,960"
+                        ]
+                    }, 
+                    {
+                        "Header": [
+                            "State government, excluding education and hospitals\n\n\t\t\t\t\t                \t\t22,260"
+                        ]
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }
+                ], 
+                [
+                    {
+                        "Header": [
+                            "22,260"
+                        ]
+                    }, 
+                    {
+                        "Header": [
+                            "Many forest and conservation workers are employed full time and work regular hours. Seasonal employees may be expected to work longer shifts and at night. Responding to an emergency or a fire may require workers to work additional hours and at any time of day."
+                        ]
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }, 
+                    {
+                        "Header": []
+                    }
+                ]
+            ]
         ]
     }, 
     {
@@ -94,7 +229,38 @@
     {
         "Job Prospects": [
             "Workers who follow standard safety procedures, remain physically fit, and work well on teams will have the best job opportunities.", 
-            "Employment projections data for forest and conservation workers, 2016-26 Occupational Title SOC Code Employment, 2016 Projected Employment, 2026 Change, 2016-26 Employment by Industry Percent Numeric SOURCE: U.S. Bureau of Labor Statistics, Employment Projections program Forest and conservation workers 45-4011 14,300 14,100 -1 -200 xlsx"
+            [
+                [
+                    {
+                        "Occupational Title": [
+                            "14,300"
+                        ]
+                    }, 
+                    {
+                        "SOC Code": [
+                            "14,100"
+                        ]
+                    }, 
+                    {
+                        "Employment, 2016": [
+                            "-1"
+                        ]
+                    }, 
+                    {
+                        "Projected Employment, 2026": [
+                            "-200"
+                        ]
+                    }, 
+                    {
+                        "Change, 2016-26": [
+                            ""
+                        ]
+                    }, 
+                    {
+                        "Employment by Industry": []
+                    }
+                ]
+            ]
         ]
     }, 
     {
