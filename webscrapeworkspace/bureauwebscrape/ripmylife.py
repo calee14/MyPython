@@ -7,6 +7,10 @@ from BLSHeader import TableHeader
 from BLSLink import BLSLink
 from collections import namedtuple
 import json
+import sys
+# directory for where our database code is
+sys.path.append('/Users/cap1/beginningpython/pythondatabases')
+from databaseeptable import databasecreator
 import urllib
 import urllib2 
 
@@ -66,22 +70,30 @@ class TableScraper(object):
 		columns = []
 		for head in tablehead:
 			if isinstance(head, NavigableString):
-				print 'we found a navigablestring'
+				# print 'we found a navigablestring'
 				continue
 			else:
 				columns.append(head)
 		return columns
 	def getColumnNames(self, tablecolumns):
+		# set a list to take in the names of each colomn
 		columnNames = []
+		# loop through the colomn heads
 		for i in range(len(tablecolumns)):
+			# get the text of the colmns
 			columnNames.append(tablecolumns[i].findAll(text=True))
+		# return the list of names
 		return columnNames
 	def createHeaders(self, tablehead, columnNames):
 		# print len([head for head in tablehead])
 		header_list = []
 		temp_list = []
 		for i in range(len(tablehead)):
-			colspan = int(tablehead[i]['colspan'])
+			colspan = 0
+			try:
+				colspan = int(tablehead[i]['colspan'])
+			except Exception as e:
+				colspan = 1
 			# print tablehead[i]['colspan']
 			title = columnNames[i]
 			# print columnNames[i]
@@ -156,6 +168,10 @@ class TableScraper(object):
 	def findContent(self, table):
 		rows = table.find('tbody').find_all('tr')
 		return rows
+	def cleanArrays(self, array):
+		for i in range(len(array)):
+			array[i] = array[i].strip()
+		return array
 	def getContentInEachRow(self, rows):
 		content_list = []
 		# loop through each row in table
@@ -165,12 +181,13 @@ class TableScraper(object):
 			# loop through each data cell
 			for data in rows[i]:
 				if isinstance(data, NavigableString):
-					print 'we found a navigablestring'
+					# print 'we found a navigablestring'
 					continue
-				print data
+				# print data
 				text = data.findAll(text=True)
+				text = self.cleanArrays(text)
 				data_list.append(text)
-				print text
+				# print text
 			content_list.append(data_list)
 		return content_list
 	def organizeContent(self, content):
@@ -185,11 +202,11 @@ class TableScraper(object):
 	def scrapeContent(self, header_list, classIdentifier, idName):
 		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''}) 
 		rows = self.findContent(table)
-		print rows
+		# print rows
 		content = self.getContentInEachRow(rows)
-		print content
+		# print content
 		organizedContent = self.organizeContent(content)
-		print organizedContent
+		# print organizedContent
 		# # find table
 		# table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
 		# if table is None:
@@ -253,29 +270,29 @@ class TableScraper(object):
 		# it doesn't matter which array we get because they're all the same length
 		return len(arrays[0].children)
 	def combineArrays(self, arrays):
-		print "incombinearrays"
+		# print "incombinearrays"
 		# create a variable of the length of the arrays
 		length_of_all_arrays = self.checkLenOfArrays(arrays)
 		# set an empty array of slots for future functions
 		occupations = self.init_list_of_objects(length_of_all_arrays) #[None] * len(header_list[0].children)  # Create list of 100 'None's
-		print str(len(occupations)) + " length"
+		# print str(len(occupations)) + " length"
 		# check if we have the same amount
-		print str(len(arrays)) + ' len of arrays'
+		# print str(len(arrays)) + ' len of arrays'
 		for array in arrays:
 			count = 0 
-			print len(array.children)
+			# print len(array.children)
 			for child in array.children:
-				print str(count) + "count"
+				# print str(count) + "count"
 				child_index = array.children.index(child)
-				print str(child_index) + 'index'
+				# print str(child_index) + 'index'
 				occupations[count].append(child)
 				count += 1
-		for array in arrays:
-			print str(array.children) + array.title
-			print len(array.children)
-		print len(occupations)
-		for occupation in occupations:
-			print occupation
+		# for array in arrays:
+			# print str(array.children) + array.title
+			# print len(array.children)
+		# print len(occupations)
+		# for occupation in occupations:
+			# print occupation
 		# print str(occupations[9]) + 'hi'
 		return arrays, occupations
 
@@ -304,9 +321,21 @@ class TableScraper(object):
 			# append object to the array
 			occupation_links.append(blslink)
 		return occupation_links
-
+	def flatten(self, lst):
+	    if not lst:
+	        return []
+	    elif not isinstance(lst, list):
+	        return [lst] 
+	    else:
+	        return self.flatten(lst[0]) + self.flatten(lst[1:])
+	def addToDatabase(self, values):
+		databasemaster = databasecreator()
+		value_list = []
+		for i in range(len(values)):
+			values[i] = self.flatten(values[i])
+		# databasemaster.addToTable() TODO: work on adding to database
 	def jsonData(self, header_list=None, occupations=None):
-		print 'injsondata'
+		# print 'injsondata'
 		json_occupations_data = []
 		json_links_data = []
 		# write it to a json file
@@ -323,7 +352,7 @@ class TableScraper(object):
 		links = self.getLinks(self.classIdentifier, self.idName)
 		for link in links:
 			json_links_data.append(link.createjson())
-		print json_occupations_data
+		# print json_occupations_data
 		return json_occupations_data, json_links_data
 
 	def writeToJSON(self, array):
@@ -341,20 +370,22 @@ class TableScraper(object):
 			headers[count].addChild(content)
 			count += 1
 		header_list, occupations = self.combineArrays(headers)
-		json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
-		BLSData = namedtuple('BLSData', 'data file')
-		content1 = BLSData(json_occupations_data, self.dataFileName)
-		print str(json_occupations_data) + "hi and stuff"
-		content2 = BLSData(json_links_data, self.linkFileName)
-		return [content1, content2]
+		self.addToDatabase(occupations)
+		# json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
+		# print str(json_occupations_data) + "hi and stuff"
+		# BLSData = namedtuple('BLSData', 'data file')
+		# content1 = BLSData(json_occupations_data, self.dataFileName)
+		# content2 = BLSData(json_links_data, self.linkFileName)
+		# return [content1, content2]
 			
-
+page_link = 'https://www.bls.gov/emp/ep_table_101.htm'
 classIdentifier = 'class'
 idName = 'regular'
 linkFileName = 'occupationlinks.json'
 dataFileName = 'occupations.json'
 # run it 
-retriever = TableScraper('https://www.bls.gov/emp/ep_table_101.htm', None, classIdentifier, idName, linkFileName, dataFileName)
-data = retriever.scrape()
-retriever.writeToJSON(data)
+retriever = TableScraper(page_link, None, classIdentifier, idName, linkFileName, dataFileName)
+retriever.scrape()
+# data = retriever.scrape()
+# retriever.writeToJSON(data)
 

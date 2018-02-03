@@ -10,7 +10,7 @@ class TableHeader(object):
 		if title is None or not title:
 			self.title = "Header"
 		else:
-			self.title = '-'.join(title)
+			self.title = '-'.join(title).strip()
 		# index of were we are in the header list
 		if index is None:
 			index = 0
@@ -25,7 +25,6 @@ class TableHeader(object):
 				self.children.append(c)
 		else:
 			self.children.append(child)
-			
 	# finds the indexes of the arrays for the objects
 	def findIndexes(self, index=None, num_children=None, lastList=None):
 		if index is None:
@@ -34,7 +33,7 @@ class TableHeader(object):
 			num_children = self.num_children
 		if index > 0:
 			lastObjectList = lastList[-1]
-			print lastObjectList[-1]
+			# print lastObjectList[-1]
 			return_array = range(int(lastObjectList[-1]) + 1, int(lastObjectList[-1]) + num_children + 1)
 			return return_array[-num_children:]
 		else: 
