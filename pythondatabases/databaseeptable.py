@@ -1,8 +1,8 @@
 import sys
 import psycopg2
+from databasedata import databaseData
 
 class databasecreator(object):
-
 	def __init__ (self):
 		self.con = None
 		self.cur = None
@@ -24,5 +24,13 @@ class databasecreator(object):
 		except psycopg2.DatabaseError, e:
 			print("Something went wrong with the databse.")
 			print(e)
-	def addToTable(self, values):
-		
+	def addToTable(self, value):
+		data = []
+		# loop through each row of values
+		if isinstance(value, databaseData):
+			data = value.data_list
+		else:
+			raise ValueError("Object was given the wrong data")
+		# for row in data:
+			
+

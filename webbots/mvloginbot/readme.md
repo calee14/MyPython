@@ -1,0 +1,2 @@
+# This python bot logs into mvcode club to receive the login points.
+The bot is going to use selenium, a library which imitates a webbrowser. We are going to use selenium to log into the website and once it recieves the log in points it will log out and restart the process.

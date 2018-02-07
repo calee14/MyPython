@@ -11,6 +11,7 @@ import sys
 # directory for where our database code is
 sys.path.append('/Users/cap1/beginningpython/pythondatabases')
 from databaseeptable import databasecreator
+from databasedata import databaseData
 import urllib
 import urllib2 
 
@@ -119,44 +120,6 @@ class TableScraper(object):
 		names = self.getColumnNames(columns)
 		# print names
 		headers = self.createHeaders(columns, names)
-		# print self.requests_objects
-		# raise error
-		# print [header.title for header in headers]
-		
-		# # loop through each row
-		# count = 0
-		# # list to hold headers
-		# header_list = []
-		# # get the headers
-		# for head in header:
-		# 	try:
-		# 		title = ''
-		# 		if noHeader is False:
-		# 			try:
-		# 				# get title of header
-		# 				title = head.text.encode('utf-8')
-		# 			except:
-		# 				# move on to the next loop if we can't find the title
-		# 				continue
-		# 		# set length of array
-		# 		colspan = 0
-		# 		# try to find length
-		# 		try:
-		# 			colspan = int(head.get('colspan'))
-		# 		except:
-		# 			# if we can find it set it to one
-		# 			colspan = 1
-		# 		# set an array
-		# 		array = []
-		# 		for header in header_list:
-		# 			array.append(header.requests_objects)
-		# 		header = TableHeader(colspan, title, count, array)
-		# 		self.requests_objects.append(header.findIndexes())
-		# 		count += 1
-		# 		# print str(header.requests_objects) + 'hi this is the objects'
-		# 		header_list.append(header)
-		# 	except Exception as e:
-		# 		print e
 		return headers
 
 	def init_list_of_objects(self, size):
@@ -207,60 +170,6 @@ class TableScraper(object):
 		# print content
 		organizedContent = self.organizeContent(content)
 		# print organizedContent
-		# # find table
-		# table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
-		# if table is None:
-		# 	table = self.soup
-		# else:
-		# 	pass
-		# # scrape the contents of the header
-		# contents = table.find('tbody')
-		# rows = contents.find_all('tr')
-		# num_rows = 0
-		# # return array
-		# return_array = self.init_list_of_objects(len(self.requests_objects))
-		# for row in rows:
-		# 	num_rows += 1
-		# 	# array to store all of our data
-		# 	children = []
-		# 	# for item in row:
-		# 	items = row.find_all('td')
-		# 	print items[0].nextSibling
-		# 	# recursive loop to find a element with text
-		# 	for item in items:
-		# 		print str(len(items)) + "this"
-		# 		nextNode = item
-		# 		while True:
-		# 			# get he next 
-		# 			nextNode = nextNode.findNext()
-		# 			try:
-		# 				# try getting a text attribute 
-		# 				nextNode.text
-		# 			except AttributeError:
-		# 				# if there is a error
-		# 				pass
-		# 			else:
-		# 				# if we found the text
-		# 				children.append(nextNode)
-		# 				break
-		# 		print len(children)
-		# 	# set count s
-		# 	print str(children) + 'sparta'
-		# 	print str(num_rows) + "rows"
-		# 	count = 0
-		# 	# after appending them to children we add to return array
-		# 	for num_array in self.requests_objects:
-		# 		append_array = []
-		# 		for num in num_array:
-		# 			print str(num) + 'num'
-		# 			try:
-		# 				append_array.append(str(children[num].text.encode('utf-8')).strip())
-		# 			except Exception as e:
-		# 				print e
-		# 				print 'we could not fit it in header_list'
-		# 		return_array[count].append(append_array)
-		# 		count += 1
-		# 	print return_array
 		return organizedContent
 	def checkLenOfArrays(self, arrays):
 		for i in range(len(arrays)):
@@ -328,12 +237,20 @@ class TableScraper(object):
 	        return [lst] 
 	    else:
 	        return self.flatten(lst[0]) + self.flatten(lst[1:])
-	def addToDatabase(self, values):
+	def addToDatabase(self, values, titles):
 		databasemaster = databasecreator()
-		value_list = []
+		value_list = databaseData()
 		for i in range(len(values)):
-			values[i] = self.flatten(values[i])
-		# databasemaster.addToTable() TODO: work on adding to database
+			newValueList = self.flatten(values[i])
+			print newValueList
+			sqlDataList = []
+			for j in range(len(newValueList)):
+				CellTuple = namedtuple('sqlData', 'data command title')
+				sqlData = CellTuple(newValueList[j].encode('utf-8'), "VARCHAR(255) UNIQUE NOT NULL", titles[j])
+				print sqlData
+				sqlDataList.append(sqlData)
+			value_list.addrow(sqlDataList)
+		databasemaster.addToTable(value_list) #TODO: work on adding to database
 	def jsonData(self, header_list=None, occupations=None):
 		# print 'injsondata'
 		json_occupations_data = []
@@ -361,16 +278,18 @@ class TableScraper(object):
 			f = open(filename, "w")
 			jsonstuff = json.dumps(data.data, indent=4)
 			f.write(jsonstuff)
+	def addContentToContainers(self, contents, containers):
+		count = 0
+		for content in contents:
+			containers[count].addChild(content)
+			count += 1
+		return containers
 
 	def scrape(self):
 		headers = self.scrapeHeader(self.classIdentifier, self.idName)
 		contents = self.scrapeContent(headers, self.classIdentifier, self.idName)
-		count = 0
-		for content in contents:
-			headers[count].addChild(content)
-			count += 1
-		header_list, occupations = self.combineArrays(headers)
-		self.addToDatabase(occupations)
+		header_list, occupations = self.combineArrays(self.addContentToContainers(contents, headers))
+		self.addToDatabase(occupations, [header.title for header in header_list])
 		# json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
 		# print str(json_occupations_data) + "hi and stuff"
 		# BLSData = namedtuple('BLSData', 'data file')
