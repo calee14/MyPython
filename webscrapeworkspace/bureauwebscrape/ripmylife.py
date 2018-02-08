@@ -284,12 +284,19 @@ class TableScraper(object):
 			containers[count].addChild(content)
 			count += 1
 		return containers
-
+	def findHeaderTitles(self, headerlist):
+		# This function is trying to get the header name list working for the database
+		# we are trying to get a unquie title for each column in the database
+		titles = []
+		for i in range(len(headerlist)):
+			for j in range(len(self.requests_objects[i])):
+				titles.append(headerlist[i].title + str(j))
+		print titles
 	def scrape(self):
 		headers = self.scrapeHeader(self.classIdentifier, self.idName)
 		contents = self.scrapeContent(headers, self.classIdentifier, self.idName)
 		header_list, occupations = self.combineArrays(self.addContentToContainers(contents, headers))
-		self.addToDatabase(occupations, [header.title for header in header_list])
+		self.addToDatabase(occupations, self.findHeaderTitles(headers))
 		# json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
 		# print str(json_occupations_data) + "hi and stuff"
 		# BLSData = namedtuple('BLSData', 'data file')

@@ -12,7 +12,7 @@ class databaseData(object):
 				raise ValueError('Object was given wrong data') 
 		self.data_list.append(row)
 	def checkdata(self, value):
-		print value
+		# print value
 		if isinstance(value, tuple):
 			if value.data is not None and value.command is not None and value.title:
 				return True
