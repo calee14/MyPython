@@ -11,18 +11,25 @@ class databasecreator(object):
 		self.cur = self.con.cursor()
 		print("Sucessfully connect to database.")
 
-	def createTable(self):
+	def createTable(self, value):
+		columns = None
+		if isinstance(value, databaseData):
+			columns = value.column_list
+		else:
+			raise ValueError("Object was given the wrong data")
 		self.connectToDatabase()
 		try:
 			# con = psycopg2.connect("host='localhost' dbname='careersearchdb' user='postgres' password='capsdatabase'")
 			# cur = con.cursor()
 			# print("Sucessfully connect to database.")
-			self.cur.execute(
-			"CREATE TABLE MajorOccupations(id serial PRIMARY KEY, occupation_title VARCHAR(255) UNIQUE NOT NULL, occupation_code VARCHAR(255) UNIQUE NOT NULL, employment_2016 VARCHAR(255) NOT NULL, employment_2026 VARCHAR(255) NOT NULL, change_2016 VARCHAR(255) NOT NULL, change_2026 VARCHAR(255) NOT NULL, median_wage VARCHAR(255) NOT NULL)")
+			self.cur.execute("CREATE TABLE MajorOccupations(id serial PRIMARY KEY);")
+			for column in columns:
+				self.cur.execute("ALTER TABLE MajorOccupations ADD %s %s;"  % (column.title, column.datatype))
+				print("Altering table " + "ALTER TABLE MajorOccupations ADD %s %s;" % (column.title, column.datatype))
 			print("Successfully created table")
 			self.con.commit()
 		except psycopg2.DatabaseError, e:
-			print("Something went wrong with the databse.")
+			print("Something went wrong with the database.")
 			print(e)
 	def addToTable(self, value):
 		data = []

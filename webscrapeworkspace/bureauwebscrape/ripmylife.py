@@ -237,20 +237,32 @@ class TableScraper(object):
 	        return [lst] 
 	    else:
 	        return self.flatten(lst[0]) + self.flatten(lst[1:])
+	def checkCharInt(self, string):
+		string = string.lstrip('0123456789.- ')
+		for ch in [',', '-', '(', ')']:
+			if ch in string:
+				string = string.replace(ch, '')
+		return string.strip()
 	def addToDatabase(self, values, titles):
 		databasemaster = databasecreator()
 		value_list = databaseData()
+		titleList = []
+		for i in range(len(titles)):
+			TitleTuple = namedtuple('TitleTuple', 'title datatype')
+			titleData = TitleTuple(self.checkCharInt(titles[i].encode('utf-8').replace(" ", "_")), "VARCHAR(255) UNIQUE NOT NULL")
+			titleList.append(titleData)
+		value_list.addheadertitle(titleList)
 		for i in range(len(values)):
 			newValueList = self.flatten(values[i])
-			print newValueList
 			sqlDataList = []
 			for j in range(len(newValueList)):
-				CellTuple = namedtuple('sqlData', 'data command title')
-				sqlData = CellTuple(newValueList[j].encode('utf-8'), "VARCHAR(255) UNIQUE NOT NULL", titles[j])
-				print sqlData
+				CellTuple = namedtuple('CellTuple', 'data column')
+				sqlData = CellTuple(newValueList[j].encode('utf-8'), titles[j])
+				# print str(sqlData)
 				sqlDataList.append(sqlData)
 			value_list.addrow(sqlDataList)
-		databasemaster.addToTable(value_list) #TODO: work on adding to database
+		databasemaster.createTable(value_list)
+		# databasemaster.addToTable(value_list) #TODO: work on adding to database
 	def jsonData(self, header_list=None, occupations=None):
 		# print 'injsondata'
 		json_occupations_data = []
@@ -290,8 +302,8 @@ class TableScraper(object):
 		titles = []
 		for i in range(len(headerlist)):
 			for j in range(len(self.requests_objects[i])):
-				titles.append(headerlist[i].title + str(j))
-		print titles
+				titles.append(headerlist[i].title + "_" + str(j))
+		return titles
 	def scrape(self):
 		headers = self.scrapeHeader(self.classIdentifier, self.idName)
 		contents = self.scrapeContent(headers, self.classIdentifier, self.idName)

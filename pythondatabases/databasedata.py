@@ -1,7 +1,7 @@
 class databaseData(object):
 	def __init__(self):
 		self.data_list = []
-
+		self.column_list = []
 	def addrow(self, values):
 		row = []
 		for value in values:
@@ -11,10 +11,18 @@ class databaseData(object):
 			else:
 				raise ValueError('Object was given wrong data') 
 		self.data_list.append(row)
+	def addheadertitle(self, values):
+		titles = []
+		for value in values:
+			if self.checkdata(value):
+				titles.append(value)
+			else:
+				raise ValueError('Object was given wrong data')
+		self.column_list = titles
 	def checkdata(self, value):
-		# print value
 		if isinstance(value, tuple):
-			if value.data is not None and value.command is not None and value.title:
+			if all(value):
 				return True
 		else:
 			return False
+
