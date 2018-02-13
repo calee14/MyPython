@@ -12,3 +12,21 @@ The python scraper class should be able to connect to the database and once conn
 			take the properties and add it to the table 
 			NOTE: also use tuples for this to hold hold mulitple data, the value and the datatype.
 # TODO: make it possible to add values to the database and make it work according to the data.
+# New Plan 2/12/18:
+The DatabaseData Class is going to organize the data that is being add to the DatabaseCreator. This class is going to include a container for table scrapers or regular scrapers (my definition for regular scrapers is just one that scrapes texts or writing). 
+	class DatabaseData()
+		init()
+			initialize the containers stored data for either a table scraper or regular scpaper
+		add row of data(value)
+			Array row // for storing the data from table
+			add the value to the row // operate a check on the data being passed in
+			add the row to the container for table scapers
+		check if data is a tuple
+			run a condition to check if the data is a tuple // the tuples will help us with data types in sql commands
+# Update Plan 2/12/18
+Title for colums in sql database table
+String -> 1. move numbers in beginning of string to end
+		  2. remove spaces and any special characters
+		  3. capitalize first word
+INSERT INTO TableName VALUES FOR (column name*)
+*(value which we get from the DatabaseData class)*
