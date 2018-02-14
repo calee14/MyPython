@@ -196,13 +196,6 @@ class TableScraper(object):
 				# print str(child_index) + 'index'
 				occupations[count].append(child)
 				count += 1
-		# for array in arrays:
-			# print str(array.children) + array.title
-			# print len(array.children)
-		# print len(occupations)
-		# for occupation in occupations:
-			# print occupation
-		# print str(occupations[9]) + 'hi'
 		return arrays, occupations
 
 	def getLinks(self, classIdentifier, idName):
@@ -237,19 +230,23 @@ class TableScraper(object):
 	        return [lst] 
 	    else:
 	        return self.flatten(lst[0]) + self.flatten(lst[1:])
-	def checkCharInt(self, string):
-		string = string.lstrip('0123456789.- ')
+	def checkString(self, string):
+		for ch in string:
+			if ch.isdigit():
+				string = string[1:] + ch
+			else:
+				break
 		for ch in [',', '-', '(', ')']:
 			if ch in string:
 				string = string.replace(ch, '')
-		return string.strip()
+		return string.strip().replace(" ", "_")
 	def addToDatabase(self, values, titles):
 		databasemaster = databasecreator()
 		value_list = databaseData()
 		titleList = []
 		for i in range(len(titles)):
 			TitleTuple = namedtuple('TitleTuple', 'title datatype')
-			titleData = TitleTuple(self.checkCharInt(titles[i].encode('utf-8').replace(" ", "_")), "VARCHAR(255) UNIQUE NOT NULL")
+			titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(255)")
 			titleList.append(titleData)
 		value_list.addheadertitle(titleList)
 		for i in range(len(values)):
@@ -257,11 +254,12 @@ class TableScraper(object):
 			sqlDataList = []
 			for j in range(len(newValueList)):
 				CellTuple = namedtuple('CellTuple', 'data column')
-				sqlData = CellTuple(newValueList[j].encode('utf-8'), titles[j])
+				sqlData = CellTuple(newValueList[j].encode('utf-8'), self.checkString(titles[j].encode('utf-8')))
 				# print str(sqlData)
 				sqlDataList.append(sqlData)
 			value_list.addrow(sqlDataList)
 		databasemaster.createTable(value_list)
+		databasemaster.addToTable(value_list)
 		# databasemaster.addToTable(value_list) #TODO: work on adding to database
 	def jsonData(self, header_list=None, occupations=None):
 		# print 'injsondata'
