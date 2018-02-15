@@ -246,15 +246,14 @@ class TableScraper(object):
 		titleList = []
 		for i in range(len(titles)):
 			TitleTuple = namedtuple('TitleTuple', 'title datatype')
-			titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(255)")
+			titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(255) NOT NULL")
 			titleList.append(titleData)
 		value_list.addheadertitle(titleList)
 		for i in range(len(values)):
 			newValueList = self.flatten(values[i])
 			sqlDataList = []
 			for j in range(len(newValueList)):
-				CellTuple = namedtuple('CellTuple', 'data column')
-				sqlData = CellTuple(newValueList[j].encode('utf-8'), self.checkString(titles[j].encode('utf-8')))
+				sqlData = newValueList[j].encode('utf-8')
 				# print str(sqlData)
 				sqlDataList.append(sqlData)
 			value_list.addrow(sqlDataList)

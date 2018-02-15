@@ -23,6 +23,8 @@ class databaseData(object):
 		if isinstance(value, tuple):
 			if all(value):
 				return True
+		elif isinstance(value, str):
+			return True
 		else:
 			return False
 

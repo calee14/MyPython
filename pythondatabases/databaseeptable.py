@@ -1,5 +1,6 @@
 import sys
 import psycopg2
+import sqlite3
 from databasedata import databaseData
 
 class databasecreator(object):
@@ -40,8 +41,12 @@ class databasecreator(object):
 			raise ValueError("Object was given the wrong data")
 		self.connectToDatabase()
 		try:
-			for row in data:
-				self.cur.executemany("INSERT INTO MajorOccupations VALUES %s;", ((val.data,) for val in row))
+			for items in data:
+				# var_string = ', '.join('?' * len(items))
+				# query_string = 'INSERT INTO MajorOccupations VALUES (%s);' % var_string
+				# self.cur.executemany(query_string, items)
+				t = tuple(items)
+				self.cur.execute("INSERT INTO MajorOccupations VALUES (%s);", t)
 			print("Sucessfully updated table")
 			self.con.commit()
 		except psycopg2.DatabaseError, e:
