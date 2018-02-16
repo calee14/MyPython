@@ -1,6 +1,6 @@
 import sys
 import psycopg2
-import sqlite3
+import re
 from databasedata import databaseData
 
 class databasecreator(object):
@@ -42,11 +42,10 @@ class databasecreator(object):
 		self.connectToDatabase()
 		try:
 			for items in data:
-				# var_string = ', '.join('?' * len(items))
-				# query_string = 'INSERT INTO MajorOccupations VALUES (%s);' % var_string
-				# self.cur.executemany(query_string, items)
-				t = tuple(items)
-				self.cur.execute("INSERT INTO MajorOccupations VALUES (%s);", t)
+				copy_string = re.sub(r'([a-z])(?!$)', r'\1,', '%s' * len(items))
+				final_string = re.sub(r'(?<=[.,])(?=[^\s])', r' ', copy_string)
+				query_string = 'INSERT INTO MajorOccupations VALUES (%s);' % final_string
+				self.cur.execute(query_string, items)
 			print("Sucessfully updated table")
 			self.con.commit()
 		except psycopg2.DatabaseError, e:
