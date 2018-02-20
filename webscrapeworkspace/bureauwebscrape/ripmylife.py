@@ -34,7 +34,8 @@ with open(jsonfilename) as json_data:
 				blslink = title[url]
 				search_urls.append(blslink)
 # set the url we want to scrape
-search_url = search_urls[9]
+search_url = search_urls[0]
+print search_url
 
 class TableScraper(object):
 
@@ -246,16 +247,13 @@ class TableScraper(object):
 		titleList = []
 		for i in range(len(titles)):
 			TitleTuple = namedtuple('TitleTuple', 'title datatype')
-			titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(255)")
+			titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(555)")
 			titleList.append(titleData)
 		value_list.addheadertitle(titleList)
 		for i in range(len(values)):
-			newValueList = self.flatten(values[i])
-			sqlDataList = []
-			for j in range(len(newValueList)):
-				sqlData = newValueList[j].encode('utf-8')
-				# print str(sqlData)
-				sqlDataList.append(sqlData)
+			newValueList = filter(None, self.flatten(values[i]))
+			print newValueList
+			sqlDataList = [newValueList[j].encode('utf-8') for j in range(len(newValueList))]
 			print sqlDataList
 			value_list.addrow(sqlDataList)
 		databasemaster.createTable(value_list)
@@ -293,6 +291,11 @@ class TableScraper(object):
 		for content in contents:
 			containers[count].addChild(content)
 			count += 1
+		index = 0
+		for container in containers:
+			if container.hasProperties() is False:
+				del containers[index]
+			index += 1
 		return containers
 	def findHeaderTitles(self, headerlist):
 		# This function is trying to get the header name list working for the database
@@ -314,9 +317,9 @@ class TableScraper(object):
 		# content2 = BLSData(json_links_data, self.linkFileName)
 		# return [content1, content2]
 			
-page_link = 'https://www.bls.gov/emp/ep_table_101.htm'
+page_link = search_url#'https://www.bls.gov/emp/ep_table_101.htm'
 classIdentifier = 'class'
-idName = 'regular'
+idName = 'display'
 linkFileName = 'occupationlinks.json'
 dataFileName = 'occupations.json'
 # run it 

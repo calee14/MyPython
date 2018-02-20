@@ -18,6 +18,13 @@ class TableHeader(object):
 			self.index = int(index)
 		#self.requests_objects = self.findIndexes(self.index, self.num_children, self.array)
 		self.children = []
+	def flatten(self, lst):
+	    if not lst:
+	        return []
+	    elif not isinstance(lst, list):
+	        return [lst] 
+	    else:
+	        return self.flatten(lst[0]) + self.flatten(lst[1:])
 
 	def addChild(self, child):
 		if isinstance(child, list):
@@ -39,3 +46,10 @@ class TableHeader(object):
 		else: 
 			return range(index, index + num_children)
 		return "Error, there was something wrong with getting the request indexes"
+	def hasProperties(self):
+		# function checks if children has any data at all
+		if not self.flatten(self.children):
+			return False;
+		return True;
+
+

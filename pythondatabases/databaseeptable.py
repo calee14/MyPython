@@ -23,10 +23,10 @@ class databasecreator(object):
 			# con = psycopg2.connect("host='localhost' dbname='careersearchdb' user='postgres' password='capsdatabase'")
 			# cur = con.cursor()
 			# print("Sucessfully connect to database.")
-			self.cur.execute("CREATE TABLE MajorOccupations();")
+			self.cur.execute("CREATE TABLE ArchitectureAndEngineeringOccupations();")
 			for column in columns:
-				self.cur.execute("ALTER TABLE MajorOccupations ADD %s %s;"  % (column.title, column.datatype))
-				print("Altering table " + "ALTER TABLE MajorOccupations ADD %s %s;" % (column.title, column.datatype))
+				self.cur.execute("ALTER TABLE ArchitectureAndEngineeringOccupations ADD %s %s;"  % (column.title, column.datatype))
+				print("Altering table " + "ALTER TABLE ArchitectureAndEngineeringOccupations ADD %s %s;" % (column.title, column.datatype))
 			print("Successfully created table")
 			self.con.commit()
 		except psycopg2.DatabaseError, e:
@@ -44,7 +44,7 @@ class databasecreator(object):
 			for items in data:
 				copy_string = re.sub(r'([a-z])(?!$)', r'\1,', '%s' * len(items))
 				final_string = re.sub(r'(?<=[.,])(?=[^\s])', r' ', copy_string)
-				query_string = 'INSERT INTO MajorOccupations VALUES (%s);' % final_string
+				query_string = 'INSERT INTO ArchitectureAndEngineeringOccupations VALUES (%s);' % final_string
 				self.cur.execute(query_string, items)
 			print("Sucessfully updated table")
 			self.con.commit()
