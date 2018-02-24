@@ -49,7 +49,8 @@ class TableHeader(object):
 	def hasProperties(self):
 		# function checks if children has any data at all
 		if not self.flatten(self.children):
-			return False;
-		return True;
+			return False
+		return True
+
 
 

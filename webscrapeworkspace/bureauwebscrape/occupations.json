@@ -1,897 +1,1106 @@
 [
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Total, all occupations"
-                ], 
-                [
-                    "00-0000"
+                    "", 
+                    "Aerospace Engineering and Operations Technicians", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "156,063.8"
-                ], 
-                [
-                    "167,582.3"
+                    "", 
+                    "Aerospace engineering and operations technicians operate and maintain equipment used in developing, testing, producing, and sustaining new aircraft and spacecraft. Increasingly, these workers are using computer-based modeling and simulation tools and processes in their work, as well as advanced automation and robotics.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "11,518.6"
-                ], 
-                [
-                    "7.4"
+                    "", 
+                    "Associate's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$37,040"
-                ]
-            ]
-        }
-    ], 
-    [
-        {
-            "2016 National Employment Matrix title and code": [
-                [
-                    "Management occupations"
-                ], 
-                [
-                    "11-0000"
-                ]
-            ]
-        }, 
-        {
-            "Employment": [
-                [
-                    "9,533.1"
-                ], 
-                [
-                    "10,340.4"
-                ]
-            ]
-        }, 
-        {
-            "Change, 2016\u201326": [
-                [
-                    "807.3"
-                ], 
-                [
-                    "8.5"
-                ]
-            ]
-        }, 
-        {
-            "Median annual wage, 2016-(1)": [
-                [
-                    "$100,790"
+                    "", 
+                    "$68,020", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Business and financial operations occupations"
-                ], 
-                [
-                    "13-0000"
+                    "", 
+                    "Aerospace Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "8,066.8"
-                ], 
-                [
-                    "8,840.7"
+                    "", 
+                    "Aerospace engineers design primarily aircraft, spacecraft, satellites, and missiles. In addition, they create and test prototypes to make sure that they function according to design.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "773.8"
-                ], 
-                [
-                    "9.6"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$66,530"
+                    "", 
+                    "$109,650", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Computer and mathematical occupations"
-                ], 
-                [
-                    "15-0000"
+                    "", 
+                    "Agricultural Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "4,419.0"
-                ], 
-                [
-                    "5,026.5"
+                    "", 
+                    "Agricultural engineers attempt to solve agricultural problems concerning power supplies, the efficiency of machinery, the use of structures and facilities, pollution and environmental issues, and the storage and processing of agricultural products.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "607.5"
-                ], 
-                [
-                    "13.7"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$82,830"
+                    "", 
+                    "$73,640", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Architecture and engineering occupations"
-                ], 
-                [
-                    "17-0000"
+                    "", 
+                    "Architects", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "2,601.0"
-                ], 
-                [
-                    "2,795.4"
+                    "", 
+                    "Architects plan and design houses, factories, office buildings, and other structures.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "194.3"
-                ], 
-                [
-                    "7.5"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$77,900"
+                    "", 
+                    "$76,930", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Life, physical, and social science occupations"
-                ], 
-                [
-                    "19-0000"
+                    "", 
+                    "Biomedical Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "1,299.5"
-                ], 
-                [
-                    "1,424.3"
+                    "", 
+                    "Biomedical engineers combine engineering principles with medical sciences to design and create equipment, devices, computer systems, and software used in healthcare.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "124.8"
-                ], 
-                [
-                    "9.6"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$63,340"
+                    "", 
+                    "$85,620", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Community and social service occupations"
-                ], 
-                [
-                    "21-0000"
+                    "", 
+                    "Cartographers and Photogrammetrists", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "2,570.7"
-                ], 
-                [
-                    "2,942.6"
+                    "", 
+                    "Cartographers and photogrammetrists collect, measure, and interpret geographic information in order to create and update maps and charts for regional planning, education, emergency response, and other purposes.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "371.9"
-                ], 
-                [
-                    "14.5"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$42,990"
+                    "", 
+                    "$62,750", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Legal occupations"
-                ], 
-                [
-                    "23-0000"
+                    "", 
+                    "Chemical Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "1,283.3"
-                ], 
-                [
-                    "1,399.5"
+                    "", 
+                    "Chemical engineers apply the principles of chemistry, biology, physics, and math to solve problems that involve the production or use of chemicals, fuel, drugs, food, and many other products. They design processes and equipment for large-scale manufacturing, plan and test production methods and byproducts treatment, and direct facility operations.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "116.2"
-                ], 
-                [
-                    "9.1"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$79,650"
+                    "", 
+                    "$98,340", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Education, training, and library occupations"
-                ], 
-                [
-                    "25-0000"
+                    "", 
+                    "Civil Engineering Technicians", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "9,426.5"
-                ], 
-                [
-                    "10,315.4"
+                    "", 
+                    "Civil engineering technicians help civil engineers to plan, design, and build highways, bridges, utilities, and other infrastructure projects. They also help to plan, design, and build commercial, industrial, residential, and land development projects.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "888.9"
-                ], 
-                [
-                    "9.4"
+                    "", 
+                    "Associate's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$48,000"
+                    "", 
+                    "$49,980", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Arts, design, entertainment, sports, and media occupations"
-                ], 
-                [
-                    "27-0000"
+                    "", 
+                    "Civil Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "2,772.9"
-                ], 
-                [
-                    "2,941.0"
+                    "", 
+                    "Civil engineers conceive, design, build, supervise, operate, construct, and maintain infrastructure projects and systems in the public and private sector, including roads, buildings, airports, tunnels, dams, bridges, and systems for water supply and sewage treatment.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "168.1"
-                ], 
-                [
-                    "6.1"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$47,190"
+                    "", 
+                    "$83,540", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Healthcare practitioners and technical occupations"
-                ], 
-                [
-                    "29-0000"
+                    "", 
+                    "Computer Hardware Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "8,751.5"
-                ], 
-                [
-                    "10,088.1"
+                    "", 
+                    "Computer hardware engineers research, design, develop, and test computer systems and components such as processors, circuit boards, memory devices, networks, and routers.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "1,336.6"
-                ], 
-                [
-                    "15.3"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$63,420"
+                    "", 
+                    "$115,080", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Healthcare support occupations"
-                ], 
-                [
-                    "31-0000"
+                    "", 
+                    "Drafters", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "4,315.6"
-                ], 
-                [
-                    "5,335.2"
+                    "", 
+                    "Drafters use software to convert the designs of engineers and architects into technical drawings. Most workers specialize in architectural, civil, electrical, or mechanical drafting and use technical drawings to help design everything from microchips to skyscrapers.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "1,019.6"
-                ], 
-                [
-                    "23.6"
+                    "", 
+                    "Associate's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$27,910"
+                    "", 
+                    "$53,480", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Protective service occupations"
-                ], 
-                [
-                    "33-0000"
+                    "", 
+                    "Electrical and Electronics Engineering Technicians", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "3,505.6"
-                ], 
-                [
-                    "3,663.8"
+                    "", 
+                    "Electrical and electronics engineering technicians help engineers design and develop computers, communications equipment, medical monitoring devices, navigational equipment, and other electrical and electronic equipment. They often work in product evaluation and testing, and use measuring and diagnostic devices to adjust, test, and repair equipment. They are also involved in the manufacture and deployment of equipment for automation.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "158.2"
-                ], 
-                [
-                    "4.5"
+                    "", 
+                    "Associate's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$38,660"
+                    "", 
+                    "$62,190", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Food preparation and serving related occupations"
-                ], 
-                [
-                    "35-0000"
+                    "", 
+                    "Electrical and Electronics Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "13,206.1"
-                ], 
-                [
-                    "14,438.1"
+                    "", 
+                    "Electrical engineers design, develop, test, and supervise the manufacturing of electrical equipment, such as electric motors, radar and navigation systems, communications systems, and power generation equipment. Electronics engineers design and develop electronic equipment, including broadcast and communications systems, such as portable music players and Global Positioning System (GPS) devices.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "1,232.0"
-                ], 
-                [
-                    "9.3"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$20,810"
+                    "", 
+                    "$96,270", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Building and grounds cleaning and maintenance occupations"
-                ], 
-                [
-                    "37-0000"
+                    "", 
+                    "Electro-mechanical Technicians", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "5,654.1"
-                ], 
-                [
-                    "6,177.9"
+                    "", 
+                    "Electro-mechanical technicians combine knowledge of mechanical technology with knowledge of electrical and electronic circuits. They operate, test, and maintain unmanned, automated, robotic, or electromechanical equipment.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "523.8"
-                ], 
-                [
-                    "9.3"
+                    "", 
+                    "Associate's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$24,700"
+                    "", 
+                    "$55,610", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Personal care and service occupations"
-                ], 
-                [
-                    "39-0000"
+                    "", 
+                    "Environmental Engineering Technicians", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "6,419.7"
-                ], 
-                [
-                    "7,647.4"
+                    "", 
+                    "Environmental engineering technicians carry out the plans that environmental engineers develop. They test, operate, and, if necessary, modify equipment used to prevent or clean up environmental pollution. They may collect samples for testing, or they may work to mitigate sources of environmental pollution.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "1,227.6"
-                ], 
-                [
-                    "19.1"
+                    "", 
+                    "Associate's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$22,710"
+                    "", 
+                    "$49,170", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Sales and related occupations"
-                ], 
-                [
-                    "41-0000"
+                    "", 
+                    "Environmental Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "15,747.8"
-                ], 
-                [
-                    "16,206.5"
+                    "", 
+                    "Environmental engineers use the principles of engineering, soil science, biology, and chemistry to develop solutions to environmental problems. They are involved in efforts to improve recycling, waste disposal, public health, and water and air pollution control.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "458.7"
-                ], 
-                [
-                    "2.9"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$26,590"
+                    "", 
+                    "$84,890", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Office and administrative support occupations"
-                ], 
-                [
-                    "43-0000"
+                    "", 
+                    "Health and Safety Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "23,081.2"
-                ], 
-                [
-                    "23,230.8"
+                    "", 
+                    "Health and safety engineers develop procedures and design systems to protect people from illness and injury and property from damage. They combine knowledge of engineering and of health and safety to make sure that chemicals, machinery, software, furniture, and other products will not cause harm to people or damage to property.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "149.6"
-                ], 
-                [
-                    "0.6"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$34,050"
+                    "", 
+                    "$86,720", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Farming, fishing, and forestry occupations"
-                ], 
-                [
-                    "45-0000"
+                    "", 
+                    "Industrial Engineering Technicians", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "1,060.1"
-                ], 
-                [
-                    "1,056.7"
+                    "", 
+                    "Industrial engineering technicians assist industrial engineers in devising efficient systems that integrate workers, machines, materials, information, and energy to make a product or provide a service. They prepare machinery and equipment layouts, plan workflows, conduct statistical production studies, and analyze production costs.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "-3.5"
-                ], 
-                [
-                    "-0.3"
+                    "", 
+                    "Associate's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$23,510"
+                    "", 
+                    "$53,330", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Construction and extraction occupations"
-                ], 
-                [
-                    "47-0000"
+                    "", 
+                    "Industrial Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "6,812.5"
-                ], 
-                [
-                    "7,560.0"
+                    "", 
+                    "Industrial engineers find ways to eliminate wastefulness in production processes. They devise efficient systems that integrate workers, machines, materials, information, and energy to make a product or provide a service.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "747.6"
-                ], 
-                [
-                    "11.0"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$43,610"
+                    "", 
+                    "$84,310", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Installation, maintenance, and repair occupations"
-                ], 
-                [
-                    "49-0000"
+                    "", 
+                    "Landscape Architects", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "5,905.4"
-                ], 
-                [
-                    "6,293.6"
+                    "", 
+                    "Landscape architects design parks and the outdoor spaces of campuses, recreational facilities, businesses, private homes, and other open areas.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "388.2"
-                ], 
-                [
-                    "6.6"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$43,440"
+                    "", 
+                    "$63,480", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Production occupations"
-                ], 
-                [
-                    "51-0000"
+                    "", 
+                    "Marine Engineers and Naval Architects", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "9,356.9"
-                ], 
-                [
-                    "8,950.0"
+                    "", 
+                    "Marine engineers and naval architects design, build, and maintain ships, from aircraft carriers to submarines and from sailboats to tankers. Marine engineers are responsible for the internal systems of a ship, such as the propulsion, electrical, refrigeration, and steering systems. Naval architects are responsible for the ship design, including the form, structure, and stability of hulls.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "-406.9"
-                ], 
-                [
-                    "-4.3"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$33,130"
+                    "", 
+                    "$93,350", 
+                    ""
                 ]
             ]
         }
     ], 
     [
         {
-            "2016 National Employment Matrix title and code": [
+            "OCCUPATION": [
                 [
-                    "Transportation and material moving occupations"
-                ], 
-                [
-                    "53-0000"
+                    "", 
+                    "Materials Engineers", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Employment": [
+            "JOB SUMMARY": [
                 [
-                    "10,274.2"
-                ], 
-                [
-                    "10,908.4"
+                    "", 
+                    "Materials engineers develop, process, and test materials used to create a wide range of products, from computer chips and aircraft wings to golf clubs and biomedical devices. They study the properties and structures of metals, ceramics, plastics, composites, nanomaterials (extremely small substances), and other substances in order to create new materials that meet certain mechanical, electrical, and chemical requirements.", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Change, 2016\u201326": [
+            "ENTRY-LEVEL EDUCATION": [
                 [
-                    "634.3"
-                ], 
-                [
-                    "6.2"
+                    "", 
+                    "Bachelor's degree", 
+                    ""
                 ]
             ]
         }, 
         {
-            "Median annual wage, 2016-(1)": [
+            "2016     MEDIAN PAY": [
                 [
-                    "$30,730"
+                    "", 
+                    "$93,310", 
+                    ""
+                ]
+            ]
+        }
+    ], 
+    [
+        {
+            "OCCUPATION": [
+                [
+                    "", 
+                    "Mechanical Engineering Technicians", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "JOB SUMMARY": [
+                [
+                    "", 
+                    "Mechanical engineering technicians help mechanical engineers design, develop, test, and manufacture mechanical devices, including tools, engines, and machines. They may make sketches and rough layouts, record and analyze data, make calculations and estimates, and report their findings.", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "ENTRY-LEVEL EDUCATION": [
+                [
+                    "", 
+                    "Associate's degree", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "2016     MEDIAN PAY": [
+                [
+                    "", 
+                    "$54,480", 
+                    ""
+                ]
+            ]
+        }
+    ], 
+    [
+        {
+            "OCCUPATION": [
+                [
+                    "", 
+                    "Mechanical Engineers", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "JOB SUMMARY": [
+                [
+                    "", 
+                    "Mechanical engineers design, develop, build, and test mechanical and thermal sensors and devices, including tools, engines, and machines.", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "ENTRY-LEVEL EDUCATION": [
+                [
+                    "", 
+                    "Bachelor's degree", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "2016     MEDIAN PAY": [
+                [
+                    "", 
+                    "$84,190", 
+                    ""
+                ]
+            ]
+        }
+    ], 
+    [
+        {
+            "OCCUPATION": [
+                [
+                    "", 
+                    "Mining and Geological Engineers", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "JOB SUMMARY": [
+                [
+                    "", 
+                    "Mining and geological engineers design mines to safely and efficiently remove minerals such as coal and metals for use in manufacturing and utilities.", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "ENTRY-LEVEL EDUCATION": [
+                [
+                    "", 
+                    "Bachelor's degree", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "2016     MEDIAN PAY": [
+                [
+                    "", 
+                    "$93,720", 
+                    ""
+                ]
+            ]
+        }
+    ], 
+    [
+        {
+            "OCCUPATION": [
+                [
+                    "", 
+                    "Nuclear Engineers", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "JOB SUMMARY": [
+                [
+                    "", 
+                    "Nuclear engineers research and develop the processes, instruments, and systems used to derive benefits from nuclear energy and radiation. Many of these engineers find industrial and medical uses for radioactive materials\u2014for example, in equipment used in medical diagnosis and treatment.", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "ENTRY-LEVEL EDUCATION": [
+                [
+                    "", 
+                    "Bachelor's degree", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "2016     MEDIAN PAY": [
+                [
+                    "", 
+                    "$102,220", 
+                    ""
+                ]
+            ]
+        }
+    ], 
+    [
+        {
+            "OCCUPATION": [
+                [
+                    "", 
+                    "Petroleum Engineers", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "JOB SUMMARY": [
+                [
+                    "", 
+                    "Petroleum engineers design and develop methods for extracting oil and gas from deposits below the Earth\u2019s surface. Petroleum engineers also find new ways to extract oil and gas from older wells.", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "ENTRY-LEVEL EDUCATION": [
+                [
+                    "", 
+                    "Bachelor's degree", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "2016     MEDIAN PAY": [
+                [
+                    "", 
+                    "$128,230", 
+                    ""
+                ]
+            ]
+        }
+    ], 
+    [
+        {
+            "OCCUPATION": [
+                [
+                    "", 
+                    "Surveying and Mapping Technicians", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "JOB SUMMARY": [
+                [
+                    "", 
+                    "Surveying and mapping technicians\u00a0collect data and make maps of the Earth's surface. Surveying technicians visit sites to take measurements of the land. Mapping technicians use geographic data to create maps. They both assist", 
+                    "surveyors", 
+                    "and", 
+                    "cartographers and photogrammetrists", 
+                    ".", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "ENTRY-LEVEL EDUCATION": [
+                [
+                    "", 
+                    "High school diploma or equivalent", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "2016     MEDIAN PAY": [
+                [
+                    "", 
+                    "$42,450", 
+                    ""
+                ]
+            ]
+        }
+    ], 
+    [
+        {
+            "OCCUPATION": [
+                [
+                    "", 
+                    "Surveyors", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "JOB SUMMARY": [
+                [
+                    "", 
+                    "Surveyors make precise measurements to determine property boundaries. They provide data relevant to the shape and contour of the Earth\u2019s surface for engineering, mapmaking, and construction projects.", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "ENTRY-LEVEL EDUCATION": [
+                [
+                    "", 
+                    "Bachelor's degree", 
+                    ""
+                ]
+            ]
+        }, 
+        {
+            "2016     MEDIAN PAY": [
+                [
+                    "", 
+                    "$59,390", 
+                    ""
                 ]
             ]
         }

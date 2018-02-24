@@ -128,7 +128,6 @@ class TableScraper(object):
 	    for i in range(0,size):
 	        list_of_objects.append( list() ) # different object reference each time
 	    return list_of_objects
-
 	def findContent(self, table):
 		rows = table.find('tbody').find_all('tr')
 		return rows
@@ -149,6 +148,9 @@ class TableScraper(object):
 					continue
 				# print data
 				text = data.findAll(text=True)
+				text = [' '.join(text).strip()]
+				if isinstance(text, list):
+					print ' '.join(text).strip() + 'what the fuck'
 				text = self.cleanArrays(text)
 				data_list.append(text)
 				# print text
@@ -193,8 +195,8 @@ class TableScraper(object):
 			# print len(array.children)
 			for child in array.children:
 				# print str(count) + "count"
-				child_index = array.children.index(child)
 				# print str(child_index) + 'index'
+				print child
 				occupations[count].append(child)
 				count += 1
 		return arrays, occupations

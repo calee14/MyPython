@@ -7,6 +7,16 @@ class databasecreator(object):
 	def __init__ (self):
 		self.con = None
 		self.cur = None
+	def cleanString(self, string):
+		for ch in [',', '-', '(', ')', ]:
+			count = 0
+			for char in string:
+				if char == ch:
+					string = string[:count] + '\\' + string[count:]
+					count += 1
+				count+=1
+		return string
+		# print string + "josh"
 	def connectToDatabase(self):
 		self.con = psycopg2.connect("host='localhost' dbname='careersearchdb' user='postgres' password='capsdatabase'")
 		self.cur = self.con.cursor()
@@ -42,6 +52,8 @@ class databasecreator(object):
 		self.connectToDatabase()
 		try:
 			for items in data:
+				print items
+				items = [self.cleanString(item) for item in items]
 				copy_string = re.sub(r'([a-z])(?!$)', r'\1,', '%s' * len(items))
 				final_string = re.sub(r'(?<=[.,])(?=[^\s])', r' ', copy_string)
 				query_string = 'INSERT INTO ArchitectureAndEngineeringOccupations VALUES (%s);' % final_string
