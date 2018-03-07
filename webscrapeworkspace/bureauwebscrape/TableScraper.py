@@ -1,3 +1,4 @@
+# import libraries for table scraper
 from selenium import webdriver
 from selenium.webdriver.common.by import By 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -15,46 +16,19 @@ from databasedata import databaseData
 import urllib
 import urllib2 
 
-# make program look like a browser, user_agent
-user_agent = 'Mozilla/5 (Solaris 10) Gecko'
-headers = { 'User-Agent' : user_agent }
-# search keys
-search_urls = []
-# get json file name 
-jsonfilename = "links.json"
-# open json file as var json_data
-with open(jsonfilename) as json_data:
-	# store it in variable d
-	d = json.load(json_data)
-	# get second object
-	for link in d:
-		for child in link:
-			title = link[child]
-			for url in title:
-				blslink = title[url]
-				search_urls.append(blslink)
-# set the url we want to scrape
-search_url = search_urls[0]
-print search_url
-
 class TableScraper(object):
 
-	def __init__(self, search_url, html, classIdentifier, idName, linkFileName=None, dataFileName=None):
+	def __init__(self, search_url, dbtitle, classIdentifier, idName, linkFileName=None, dataFileName=None):
 		# initialize variables
 		self.url = None
 		self.soup = None
 		# grab html page source
-		if html is None:
-			page = None
-			# set url
-			self.url = ''+search_url+''
-			# open the url
-			page = urllib.urlopen(self.url)
-			# get our soup
-			self.soup = BeautifulSoup(page, 'html.parser')
-		else:
-			# run BeautifulSoup on the html
-			self.soup = BeautifulSoup(html, 'html.parser')
+		# set url
+		self.url = ''+search_url+''
+		# open the url
+		page = urllib.urlopen(self.url)
+		# get our soup
+		self.soup = BeautifulSoup(page, 'html.parser')
 		# set request objects to hold indexes
 		self.requests_objects = []
 		# class or id of the table
@@ -64,7 +38,7 @@ class TableScraper(object):
 		# file names
 		self.linkFileName = linkFileName
 		self.dataFileName = dataFileName
-		
+		self.dbtitle = dbtitle
 	def findHead(self, tablehtml):
 		head = tablehtml.find('thead').find('tr')
 		return head
@@ -150,7 +124,7 @@ class TableScraper(object):
 				text = data.findAll(text=True)
 				text = [' '.join(text).strip()]
 				if isinstance(text, list):
-					print ' '.join(text).strip() + 'what the fuck'
+					print ' '.join(text).strip()
 				text = self.cleanArrays(text)
 				data_list.append(text)
 				# print text
@@ -234,6 +208,7 @@ class TableScraper(object):
 	    else:
 	        return self.flatten(lst[0]) + self.flatten(lst[1:])
 	def checkString(self, string):
+		string = ' '.join(string.split())
 		for ch in string:
 			if ch.isdigit():
 				string = string[1:] + ch
@@ -243,7 +218,7 @@ class TableScraper(object):
 			if ch in string:
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
-	def addToDatabase(self, values, titles):
+	def addToDatabase(self, values, titles, dbtitle):
 		databasemaster = databasecreator()
 		value_list = databaseData()
 		titleList = []
@@ -258,8 +233,9 @@ class TableScraper(object):
 			sqlDataList = [newValueList[j].encode('utf-8') for j in range(len(newValueList))]
 			print sqlDataList
 			value_list.addrow(sqlDataList)
-		databasemaster.createTable(value_list)
-		databasemaster.addToTable(value_list)
+		dbtitle = "".join(dbtitle.split())
+		databasemaster.createTable(value_list, dbtitle)
+		databasemaster.addToTable(value_list, dbtitle)
 		# databasemaster.addToTable(value_list) #TODO: work on adding to database
 	def jsonData(self, header_list=None, occupations=None):
 		# print 'injsondata'
@@ -311,22 +287,14 @@ class TableScraper(object):
 		headers = self.scrapeHeader(self.classIdentifier, self.idName)
 		contents = self.scrapeContent(headers, self.classIdentifier, self.idName)
 		header_list, occupations = self.combineArrays(self.addContentToContainers(contents, headers))
-		self.addToDatabase(occupations, self.findHeaderTitles(headers))
+		self.addToDatabase(occupations, self.findHeaderTitles(headers), self.dbtitle)
 		# json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
 		# print str(json_occupations_data) + "hi and stuff"
 		# BLSData = namedtuple('BLSData', 'data file')
 		# content1 = BLSData(json_occupations_data, self.dataFileName)
 		# content2 = BLSData(json_links_data, self.linkFileName)
 		# return [content1, content2]
-			
-page_link = search_url#'https://www.bls.gov/emp/ep_table_101.htm'
-classIdentifier = 'class'
-idName = 'display'
-linkFileName = 'occupationlinks.json'
-dataFileName = 'occupations.json'
-# run it 
-retriever = TableScraper(page_link, None, classIdentifier, idName, linkFileName, dataFileName)
-retriever.scrape()
+
 # data = retriever.scrape()
 # retriever.writeToJSON(data)
 
