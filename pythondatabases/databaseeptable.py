@@ -7,8 +7,17 @@ class databasecreator(object):
 	def __init__ (self):
 		self.con = None
 		self.cur = None
+	def utf8len(self, s):
+		try:
+			return len(s.encode('utf-8'))
+		except:
+			return s
+	def remove_char(self, hi, n):
+		first_part = hi[:n]
+		last_pasrt = hi[n+1:]
+		return first_part + last_pasrt
 	def cleanString(self, string):
-		for ch in [',', '(', ')', ':']:
+		for ch in ['(', ')', ':']:
 			count = 0
 			for char in string:
 				if char == ch:
@@ -22,9 +31,15 @@ class databasecreator(object):
 			count = 0
 			for char in string:
 				if char == ch:
-					string = string[:count] + string[count+1:]
+					string = self.remove_char(string, count)
 				count += 1
-		return string
+		# do this if the size of string (measured in bytes) is larger than 63
+		if len(string) > 63:
+			# we try to shorten it 
+			# if later cases show the string we input with missing characters we know that the string was too big
+			print("The string was too large. Attempting to shorten it")
+			string = string.replace('_', '')
+		return string.replace(',','')
 	def connectToDatabase(self):
 		self.con = psycopg2.connect("host='localhost' dbname='careersearchdb' user='postgres' password='capsdatabase'")
 		self.cur = self.con.cursor()
@@ -54,13 +69,14 @@ class databasecreator(object):
 				self.cur.execute("CREATE TABLE %s();" % (dbtitle))
 			for column in columns:
 				self.cur.execute("ALTER TABLE %s ADD %s %s;"  % (dbtitle, self.removeSpecialCharacters(column.title), self.removeSpecialCharacters(column.datatype)))
-				print("Altering table " + "ALTER TABLE %s ADD %s %s;" % (dbtitle, column.title, column.datatype))
+				print(self.utf8len("Altering table " + "ALTER TABLE %s ADD %s %s;" % (dbtitle, self.removeSpecialCharacters(column.title), self.removeSpecialCharacters(column.datatype))))
 			print("Successfully created table")
 			self.con.commit()
 		except psycopg2.DatabaseError, e:
 			print("Something went wrong with the database.")
 			print(e)
 	def addToTable(self, value, dbtitle):
+		dbtitle = self.removeSpecialCharacters(self.cleanString(dbtitle)).lower()
 		data = []
 		# loop through each row of values
 		if isinstance(value, databaseData):

@@ -81,6 +81,6 @@ def scrape_careers():
 		retriever.scrape()
 
 if __name__ == '__main__':
-	# scrape_main_table()
-	# scrape_ooh_table() 
+	scrape_main_table()
+	scrape_ooh_table() 
 	scrape_careers()
