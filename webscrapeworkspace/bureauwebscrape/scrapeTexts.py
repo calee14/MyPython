@@ -30,10 +30,10 @@ def scrapeSummaries():
 		page_title = search_url.title
 		classIdentifier = 'class'
 		idName = 'display'
-		scrapetext = TextScraper(page_link, page_title, None, None)
+		scrapetext = TextScraper(page_link, None, None)
 		scrapetext.setHeadersText('h4', 'p')
 		scrapetext.scrapeArea('center-content')
-		raise ValueError('Stop here')
+		scrapetext.addToDatabase(page_title.strip() + '_summary')
 		# linkFileName = 'occupationlinks.json'
 		# dataFileName = 'occupations.json'
 if __name__ == '__main__':

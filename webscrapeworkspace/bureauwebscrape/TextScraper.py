@@ -17,13 +17,12 @@ import urllib2
 
 class TextScraper(object):
 
-	def __init__(self, search_url, dbtitle, linkFileName=None, dataFileName=None):
+	def __init__(self, search_url, linkFileName=None, dataFileName=None):
 		self.url = '%s' % (search_url)
 		# open the url
 		page = urllib.urlopen(self.url)
 		# get our soup
 		self.soup = BeautifulSoup(page, 'html.parser')
-		self.dbtitle = dbtitle
 		self.data_text = []
 		self.linkFileName = linkFileName
 		self.dataFileName = dataFileName
@@ -61,15 +60,27 @@ class TextScraper(object):
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
 	def addToDatabase(self, dbtitle):
-		databasemaster = databasecreator
-		title_list = []
-		text_list = []
-		for child in self.children:
-			TitleTuple = namedtuple('TitleTuple', 'title datatype')
-			titleData = TitleTuple(self.checkString(chlid.title.encode('utf-8')), "VARCHAR(555)")
-			title_list.append(titleData)
-			text_list.append(child.text)
-		databasemaster.createTable(title_list)
+		# initialize our database creators
+		databasemaster = DatabaseCreator()
+		value_list = DatabaseData()
+		# set our titles
+		TitleTuple = namedtuple('TitleTuple', 'title datatype')
+		titleHeader = TitleTuple(self.checkString("Title"), "VARCHAR(555)")
+		titleText = TitleTuple(self.checkString("Text"), "VARCHAR(555)")
+		# create of containers
+		title_list = [titleHeader, titleText]
+		# add title list
+		value_list.addheadertitle(title_list)
+		# add our text to our 
+		for child in self.data_text:
+			text_list = []
+			text_list.append(child.title)
+			text_list.append(" ".join(child.text))
+			text_list = [text.encode('utf-8') for text in text_list]
+			value_list.addrow(text_list)
+		# create and update db table
+		databasemaster.createTable(value_list, self.checkString(dbtitle))
+		databasemaster.addToTable(value_list, self.checkString(dbtitle))
 	def check(self):
 		data_text = self.data_text
 		for text in data_text:

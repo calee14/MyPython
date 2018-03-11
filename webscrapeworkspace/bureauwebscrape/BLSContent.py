@@ -1,7 +1,7 @@
 class BLSContent(object):
 
 	def __init__(self, title=None):
-		self.children = []
+		self.text = []
 		if title is None:
 			self.title = 'Container'
 		else:
@@ -21,7 +21,7 @@ class BLSContent(object):
 		# clean the strings before append
 		cleanedContent = self.cleanContent(child)
 		# add content to children
-		self.children.append(cleanedContent)
+		self.text.append(cleanedContent)
 	
 		
 
