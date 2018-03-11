@@ -1,9 +1,9 @@
 import sys
 import psycopg2
 import re
-from databasedata import databaseData
+from databasedata import DatabaseData
 
-class databasecreator(object):
+class DatabaseCreator(object):
 	def __init__ (self):
 		self.con = None
 		self.cur = None
@@ -51,7 +51,7 @@ class databasecreator(object):
 	def createTable(self, value, dbtitle):
 		dbtitle = self.removeSpecialCharacters(self.cleanString(dbtitle)).lower()
 		columns = None
-		if isinstance(value, databaseData):
+		if isinstance(value, DatabaseData):
 			columns = value.column_list
 		else:
 			raise ValueError("Object was given the wrong data")
@@ -79,7 +79,7 @@ class databasecreator(object):
 		dbtitle = self.removeSpecialCharacters(self.cleanString(dbtitle)).lower()
 		data = []
 		# loop through each row of values
-		if isinstance(value, databaseData):
+		if isinstance(value, DatabaseData):
 			data = value.data_list
 		else:
 			raise ValueError("Object was given the wrong data")

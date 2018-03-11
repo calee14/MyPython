@@ -11,8 +11,8 @@ import json
 import sys
 # directory for where our database code is
 sys.path.append('/Users/cap1/beginningpython/pythondatabases')
-from databaseeptable import databasecreator
-from databasedata import databaseData
+from databaseeptable import DatabaseCreator
+from databasedata import DatabaseData
 import urllib
 import urllib2 
 
@@ -219,8 +219,8 @@ class TableScraper(object):
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
 	def addToDatabase(self, values, titles, dbtitle):
-		databasemaster = databasecreator()
-		value_list = databaseData()
+		databasemaster = DatabaseCreator()
+		value_list = DatabaseData()
 		titleList = []
 		for i in range(len(titles)):
 			TitleTuple = namedtuple('TitleTuple', 'title datatype')

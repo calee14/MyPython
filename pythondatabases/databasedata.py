@@ -1,4 +1,4 @@
-class databaseData(object):
+class DatabaseData(object):
 	def __init__(self):
 		self.data_list = []
 		self.column_list = []
