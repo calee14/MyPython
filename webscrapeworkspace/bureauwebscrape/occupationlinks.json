@@ -1,147 +1,1645 @@
 [
     {
         "Aerospace Engineering and Operations Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/aerospace-engineering-and-operations-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/aerospace-engineering-and-operations-technicians.htm"
         }
     }, 
     {
         "Aerospace Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/aerospace-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/aerospace-engineers.htm"
         }
     }, 
     {
         "Agricultural Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/agricultural-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/agricultural-engineers.htm"
         }
     }, 
     {
         "Architects": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/architects.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/architects.htm"
         }
     }, 
     {
         "Biomedical Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/biomedical-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/biomedical-engineers.htm"
         }
     }, 
     {
         "Cartographers and Photogrammetrists": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/cartographers-and-photogrammetrists.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/cartographers-and-photogrammetrists.htm"
         }
     }, 
     {
         "Chemical Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/chemical-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/chemical-engineers.htm"
         }
     }, 
     {
         "Civil Engineering Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/civil-engineering-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/civil-engineering-technicians.htm"
         }
     }, 
     {
         "Civil Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/civil-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/civil-engineers.htm"
         }
     }, 
     {
         "Computer Hardware Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/computer-hardware-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/computer-hardware-engineers.htm"
         }
     }, 
     {
         "Drafters": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/drafters.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/drafters.htm"
         }
     }, 
     {
         "Electrical and Electronics Engineering Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/electrical-and-electronics-engineering-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/electrical-and-electronics-engineering-technicians.htm"
         }
     }, 
     {
         "Electrical and Electronics Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm"
         }
     }, 
     {
         "Electro-mechanical Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/electro-mechanical-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/electro-mechanical-technicians.htm"
         }
     }, 
     {
         "Environmental Engineering Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/environmental-engineering-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/environmental-engineering-technicians.htm"
         }
     }, 
     {
         "Environmental Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/environmental-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/environmental-engineers.htm"
         }
     }, 
     {
         "Health and Safety Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/health-and-safety-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/health-and-safety-engineers.htm"
         }
     }, 
     {
         "Industrial Engineering Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/industrial-engineering-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/industrial-engineering-technicians.htm"
         }
     }, 
     {
         "Industrial Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/industrial-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/industrial-engineers.htm"
         }
     }, 
     {
         "Landscape Architects": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/landscape-architects.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/landscape-architects.htm"
         }
     }, 
     {
         "Marine Engineers and Naval Architects": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/marine-engineers-and-naval-architects.htm"
         }
     }, 
     {
         "Materials Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/materials-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/materials-engineers.htm"
         }
     }, 
     {
         "Mechanical Engineering Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/mechanical-engineering-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/mechanical-engineering-technicians.htm"
         }
     }, 
     {
         "Mechanical Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/mechanical-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/mechanical-engineers.htm"
         }
     }, 
     {
         "Mining and Geological Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/mining-and-geological-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/mining-and-geological-engineers.htm"
         }
     }, 
     {
         "Nuclear Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/nuclear-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/nuclear-engineers.htm"
         }
     }, 
     {
         "Petroleum Engineers": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/petroleum-engineers.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/petroleum-engineers.htm"
         }
     }, 
     {
         "Surveying and Mapping Technicians": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/surveying-and-mapping-technicians.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/surveying-and-mapping-technicians.htm"
         }
     }, 
     {
         "Surveyors": {
-            "url": "https://www.bls.gov//ooh/architecture-and-engineering/surveyors.htm#tab1"
+            "url": "https://www.bls.gov//ooh/architecture-and-engineering/surveyors.htm"
+        }
+    }
+][
+    {
+        "Art Directors": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/art-directors.htm"
+        }
+    }, 
+    {
+        "Craft and Fine Artists": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/craft-and-fine-artists.htm"
+        }
+    }, 
+    {
+        "Fashion Designers": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/fashion-designers.htm"
+        }
+    }, 
+    {
+        "Floral Designers": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/floral-designers.htm"
+        }
+    }, 
+    {
+        "Graphic Designers": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/graphic-designers.htm"
+        }
+    }, 
+    {
+        "Industrial Designers": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/industrial-designers.htm"
+        }
+    }, 
+    {
+        "Interior Designers": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/interior-designers.htm"
+        }
+    }, 
+    {
+        "Multimedia Artists and Animators": {
+            "url": "https://www.bls.gov//ooh/arts-and-design/multimedia-artists-and-animators.htm"
+        }
+    }
+][
+    {
+        "Grounds Maintenance Workers": {
+            "url": "https://www.bls.gov//ooh/building-and-grounds-cleaning/grounds-maintenance-workers.htm"
+        }
+    }, 
+    {
+        "Janitors and Building Cleaners": {
+            "url": "https://www.bls.gov//ooh/building-and-grounds-cleaning/janitors-and-building-cleaners.htm"
+        }
+    }, 
+    {
+        "Pest Control Workers": {
+            "url": "https://www.bls.gov//ooh/building-and-grounds-cleaning/pest-control-workers.htm"
+        }
+    }
+][
+    {
+        "Accountants and Auditors": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/accountants-and-auditors.htm"
+        }
+    }, 
+    {
+        "Appraisers and Assessors of Real Estate": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/appraisers-and-assessors-of-real-estate.htm"
+        }
+    }, 
+    {
+        "Budget Analysts": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/budget-analysts.htm"
+        }
+    }, 
+    {
+        "Claims Adjusters, Appraisers, Examiners, and Investigators": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/claims-adjusters-appraisers-examiners-and-investigators.htm"
+        }
+    }, 
+    {
+        "Compensation, Benefits, and Job Analysis Specialists": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/compensation-benefits-and-job-analysis-specialists.htm"
+        }
+    }, 
+    {
+        "Cost Estimators": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/cost-estimators.htm"
+        }
+    }, 
+    {
+        "Financial Analysts": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/financial-analysts.htm"
+        }
+    }, 
+    {
+        "Financial Examiners": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/financial-examiners.htm"
+        }
+    }, 
+    {
+        "Fundraisers": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/fundraisers.htm"
+        }
+    }, 
+    {
+        "Human Resources Specialists": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/human-resources-specialists.htm"
+        }
+    }, 
+    {
+        "Insurance Underwriters": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/insurance-underwriters.htm"
+        }
+    }, 
+    {
+        "Labor Relations Specialists": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/labor-relations-specialists.htm"
+        }
+    }, 
+    {
+        "Loan Officers": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/loan-officers.htm"
+        }
+    }, 
+    {
+        "Logisticians": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/logisticians.htm"
+        }
+    }, 
+    {
+        "Management Analysts": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/management-analysts.htm"
+        }
+    }, 
+    {
+        "Market Research Analysts": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/market-research-analysts.htm"
+        }
+    }, 
+    {
+        "Meeting, Convention, and Event Planners": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/meeting-convention-and-event-planners.htm"
+        }
+    }, 
+    {
+        "Personal Financial Advisors": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/personal-financial-advisors.htm"
+        }
+    }, 
+    {
+        "Purchasing Managers, Buyers, and Purchasing Agents": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/purchasing-managers-buyers-and-purchasing-agents.htm"
+        }
+    }, 
+    {
+        "Tax Examiners and Collectors, and Revenue Agents": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/tax-examiners-and-collectors-and-revenue-agents.htm"
+        }
+    }, 
+    {
+        "Training and Development Specialists": {
+            "url": "https://www.bls.gov//ooh/business-and-financial/training-and-development-specialists.htm"
+        }
+    }
+][
+    {
+        "Health Educators and Community Health Workers": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/health-educators.htm"
+        }
+    }, 
+    {
+        "Marriage and Family Therapists": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/marriage-and-family-therapists.htm"
+        }
+    }, 
+    {
+        "Probation Officers and Correctional Treatment Specialists": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/probation-officers-and-correctional-treatment-specialists.htm"
+        }
+    }, 
+    {
+        "Rehabilitation Counselors": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/rehabilitation-counselors.htm"
+        }
+    }, 
+    {
+        "School and Career Counselors": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/school-and-career-counselors.htm"
+        }
+    }, 
+    {
+        "Social and Human Service Assistants": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/social-and-human-service-assistants.htm"
+        }
+    }, 
+    {
+        "Social Workers": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/social-workers.htm"
+        }
+    }, 
+    {
+        "Substance Abuse, Behavioral Disorder, and Mental Health Counselors": {
+            "url": "https://www.bls.gov//ooh/community-and-social-service/substance-abuse-behavioral-disorder-and-mental-health-counselors.htm"
+        }
+    }
+][
+    {
+        "Computer and Information Research Scientists": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/computer-and-information-research-scientists.htm"
+        }
+    }, 
+    {
+        "Computer Network Architects": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/computer-network-architects.htm"
+        }
+    }, 
+    {
+        "Computer Programmers": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/computer-programmers.htm"
+        }
+    }, 
+    {
+        "Computer Support Specialists": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/computer-support-specialists.htm"
+        }
+    }, 
+    {
+        "Computer Systems Analysts": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/computer-systems-analysts.htm"
+        }
+    }, 
+    {
+        "Database Administrators": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/database-administrators.htm"
+        }
+    }, 
+    {
+        "Information Security Analysts": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/information-security-analysts.htm"
+        }
+    }, 
+    {
+        "Network and Computer Systems Administrators": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm"
+        }
+    }, 
+    {
+        "Software Developers": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/software-developers.htm"
+        }
+    }, 
+    {
+        "Web Developers": {
+            "url": "https://www.bls.gov//ooh/computer-and-information-technology/web-developers.htm"
+        }
+    }
+][
+    {
+        "Boilermakers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/boilermakers.htm"
+        }
+    }, 
+    {
+        "Masonry Workers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/brickmasons-blockmasons-and-stonemasons.htm"
+        }
+    }, 
+    {
+        "Carpenters": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/carpenters.htm"
+        }
+    }, 
+    {
+        "Construction and Building Inspectors": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/construction-and-building-inspectors.htm"
+        }
+    }, 
+    {
+        "Construction Equipment Operators": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/construction-equipment-operators.htm"
+        }
+    }, 
+    {
+        "Construction Laborers and Helpers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/construction-laborers-and-helpers.htm"
+        }
+    }, 
+    {
+        "Drywall and Ceiling Tile Installers, and Tapers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/drywall-and-ceiling-tile-installers-and-tapers.htm"
+        }
+    }, 
+    {
+        "Electricians": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/electricians.htm"
+        }
+    }, 
+    {
+        "Elevator Installers and Repairers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/elevator-installers-and-repairers.htm"
+        }
+    }, 
+    {
+        "Glaziers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/glaziers.htm"
+        }
+    }, 
+    {
+        "Hazardous Materials Removal Workers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/hazardous-materials-removal-workers.htm"
+        }
+    }, 
+    {
+        "Insulation Workers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/insulation-workers.htm"
+        }
+    }, 
+    {
+        "Painters, Construction and Maintenance": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/painters-construction-and-maintenance.htm"
+        }
+    }, 
+    {
+        "Plumbers, Pipefitters, and Steamfitters": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/plumbers-pipefitters-and-steamfitters.htm"
+        }
+    }, 
+    {
+        "Roofers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/roofers.htm"
+        }
+    }, 
+    {
+        "Sheet Metal Workers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/sheet-metal-workers.htm"
+        }
+    }, 
+    {
+        "Solar Photovoltaic Installers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/solar-photovoltaic-installers.htm"
+        }
+    }, 
+    {
+        "Ironworkers": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/structural-iron-and-steel-workers.htm"
+        }
+    }, 
+    {
+        "Flooring Installers and Tile and Marble Setters": {
+            "url": "https://www.bls.gov//ooh/construction-and-extraction/tile-and-marble-setters.htm"
+        }
+    }
+][
+    {
+        "Adult Literacy and High School Equivalency Diploma Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/adult-literacy-and-ged-teachers.htm"
+        }
+    }, 
+    {
+        "Career and Technical Education Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/career-and-technical-education-teachers.htm"
+        }
+    }, 
+    {
+        "Archivists, Curators, and Museum Workers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/curators-museum-technicians-and-conservators.htm"
+        }
+    }, 
+    {
+        "High School Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/high-school-teachers.htm"
+        }
+    }, 
+    {
+        "Instructional Coordinators": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/instructional-coordinators.htm"
+        }
+    }, 
+    {
+        "Kindergarten and Elementary School Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/kindergarten-and-elementary-school-teachers.htm"
+        }
+    }, 
+    {
+        "Librarians": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/librarians.htm"
+        }
+    }, 
+    {
+        "Library Technicians and Assistants": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/library-technicians-and-assistants.htm"
+        }
+    }, 
+    {
+        "Middle School Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/middle-school-teachers.htm"
+        }
+    }, 
+    {
+        "Postsecondary Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/postsecondary-teachers.htm"
+        }
+    }, 
+    {
+        "Preschool Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/preschool-teachers.htm"
+        }
+    }, 
+    {
+        "Special Education Teachers": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/special-education-teachers.htm"
+        }
+    }, 
+    {
+        "Teacher Assistants": {
+            "url": "https://www.bls.gov//ooh/education-training-and-library/teacher-assistants.htm"
+        }
+    }
+][
+    {
+        "Actors": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/actors.htm"
+        }
+    }, 
+    {
+        "Athletes and Sports Competitors": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/athletes-and-sports-competitors.htm"
+        }
+    }, 
+    {
+        "Coaches and Scouts": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/coaches-and-scouts.htm"
+        }
+    }, 
+    {
+        "Dancers and Choreographers": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/dancers-and-choreographers.htm"
+        }
+    }, 
+    {
+        "Music Directors and Composers": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/music-directors-and-composers.htm"
+        }
+    }, 
+    {
+        "Musicians and Singers": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/musicians-and-singers.htm"
+        }
+    }, 
+    {
+        "Producers and Directors": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/producers-and-directors.htm"
+        }
+    }, 
+    {
+        "Umpires, Referees, and Other Sports Officials": {
+            "url": "https://www.bls.gov//ooh/entertainment-and-sports/umpires-referees-and-other-sports-officials.htm"
+        }
+    }
+][
+    {
+        "Agricultural Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/agricultural-workers.htm"
+        }
+    }, 
+    {
+        "Fishing and Hunting Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/fishers-and-related-fishing-workers.htm"
+        }
+    }, 
+    {
+        "Forest and Conservation Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/forest-and-conservation-workers.htm"
+        }
+    }, 
+    {
+        "Logging Workers": {
+            "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/logging-workers.htm"
+        }
+    }
+][
+    {
+        "Bartenders": {
+            "url": "https://www.bls.gov//ooh/food-preparation-and-serving/bartenders.htm"
+        }
+    }, 
+    {
+        "Chefs and Head Cooks": {
+            "url": "https://www.bls.gov//ooh/food-preparation-and-serving/chefs-and-head-cooks.htm"
+        }
+    }, 
+    {
+        "Cooks": {
+            "url": "https://www.bls.gov//ooh/food-preparation-and-serving/cooks.htm"
+        }
+    }, 
+    {
+        "Food and Beverage Serving and Related Workers": {
+            "url": "https://www.bls.gov//ooh/food-preparation-and-serving/food-and-beverage-serving-and-related-workers.htm"
+        }
+    }, 
+    {
+        "Food Preparation Workers": {
+            "url": "https://www.bls.gov//ooh/food-preparation-and-serving/food-preparation-workers.htm"
+        }
+    }, 
+    {
+        "Waiters and Waitresses": {
+            "url": "https://www.bls.gov//ooh/food-preparation-and-serving/waiters-and-waitresses.htm"
+        }
+    }
+][
+    {
+        "Athletic Trainers": {
+            "url": "https://www.bls.gov//ooh/healthcare/athletic-trainers.htm"
+        }
+    }, 
+    {
+        "Audiologists": {
+            "url": "https://www.bls.gov//ooh/healthcare/audiologists.htm"
+        }
+    }, 
+    {
+        "Chiropractors": {
+            "url": "https://www.bls.gov//ooh/healthcare/chiropractors.htm"
+        }
+    }, 
+    {
+        "Dental Assistants": {
+            "url": "https://www.bls.gov//ooh/healthcare/dental-assistants.htm"
+        }
+    }, 
+    {
+        "Dental Hygienists": {
+            "url": "https://www.bls.gov//ooh/healthcare/dental-hygienists.htm"
+        }
+    }, 
+    {
+        "Dentists": {
+            "url": "https://www.bls.gov//ooh/healthcare/dentists.htm"
+        }
+    }, 
+    {
+        "Diagnostic Medical Sonographers and Cardiovascular Technologists and Technicians, Including Vascular Technologists": {
+            "url": "https://www.bls.gov//ooh/healthcare/diagnostic-medical-sonographers.htm"
+        }
+    }, 
+    {
+        "Dietitians and Nutritionists": {
+            "url": "https://www.bls.gov//ooh/healthcare/dietitians-and-nutritionists.htm"
+        }
+    }, 
+    {
+        "EMTs and Paramedics": {
+            "url": "https://www.bls.gov//ooh/healthcare/emts-and-paramedics.htm"
+        }
+    }, 
+    {
+        "Exercise Physiologists": {
+            "url": "https://www.bls.gov//ooh/healthcare/exercise-physiologists.htm"
+        }
+    }, 
+    {
+        "Genetic Counselors": {
+            "url": "https://www.bls.gov//ooh/healthcare/genetic-counselors.htm"
+        }
+    }, 
+    {
+        "Home Health Aides and Personal Care Aides": {
+            "url": "https://www.bls.gov//ooh/healthcare/home-health-aides-and-personal-care-aides.htm"
+        }
+    }, 
+    {
+        "Licensed Practical and Licensed Vocational Nurses": {
+            "url": "https://www.bls.gov//ooh/healthcare/licensed-practical-and-licensed-vocational-nurses.htm"
+        }
+    }, 
+    {
+        "Massage Therapists": {
+            "url": "https://www.bls.gov//ooh/healthcare/massage-therapists.htm"
+        }
+    }, 
+    {
+        "Medical and Clinical Laboratory Technologists and Technicians": {
+            "url": "https://www.bls.gov//ooh/healthcare/medical-and-clinical-laboratory-technologists-and-technicians.htm"
+        }
+    }, 
+    {
+        "Medical Assistants": {
+            "url": "https://www.bls.gov//ooh/healthcare/medical-assistants.htm"
+        }
+    }, 
+    {
+        "Medical Records and Health Information Technicians": {
+            "url": "https://www.bls.gov//ooh/healthcare/medical-records-and-health-information-technicians.htm"
+        }
+    }, 
+    {
+        "Medical Transcriptionists": {
+            "url": "https://www.bls.gov//ooh/healthcare/medical-transcriptionists.htm"
+        }
+    }, 
+    {
+        "Nuclear Medicine Technologists": {
+            "url": "https://www.bls.gov//ooh/healthcare/nuclear-medicine-technologists.htm"
+        }
+    }, 
+    {
+        "Nurse Anesthetists, Nurse Midwives, and Nurse Practitioners": {
+            "url": "https://www.bls.gov//ooh/healthcare/nurse-anesthetists-nurse-midwives-and-nurse-practitioners.htm"
+        }
+    }, 
+    {
+        "Nursing Assistants and Orderlies": {
+            "url": "https://www.bls.gov//ooh/healthcare/nursing-assistants.htm"
+        }
+    }, 
+    {
+        "Occupational Health and Safety Specialists and Technicians": {
+            "url": "https://www.bls.gov//ooh/healthcare/occupational-health-and-safety-specialists-and-technicians.htm"
+        }
+    }, 
+    {
+        "Occupational Therapists": {
+            "url": "https://www.bls.gov//ooh/healthcare/occupational-therapists.htm"
+        }
+    }, 
+    {
+        "Occupational Therapy Assistants and Aides": {
+            "url": "https://www.bls.gov//ooh/healthcare/occupational-therapy-assistants-and-aides.htm"
+        }
+    }, 
+    {
+        "Opticians": {
+            "url": "https://www.bls.gov//ooh/healthcare/opticians-dispensing.htm"
+        }
+    }, 
+    {
+        "Optometrists": {
+            "url": "https://www.bls.gov//ooh/healthcare/optometrists.htm"
+        }
+    }, 
+    {
+        "Orthotists and Prosthetists": {
+            "url": "https://www.bls.gov//ooh/healthcare/orthotists-and-prosthetists.htm"
+        }
+    }, 
+    {
+        "Pharmacists": {
+            "url": "https://www.bls.gov//ooh/healthcare/pharmacists.htm"
+        }
+    }, 
+    {
+        "Pharmacy Technicians": {
+            "url": "https://www.bls.gov//ooh/healthcare/pharmacy-technicians.htm"
+        }
+    }, 
+    {
+        "Phlebotomists": {
+            "url": "https://www.bls.gov//ooh/healthcare/phlebotomists.htm"
+        }
+    }, 
+    {
+        "Physical Therapist Assistants and Aides": {
+            "url": "https://www.bls.gov//ooh/healthcare/physical-therapist-assistants-and-aides.htm"
+        }
+    }, 
+    {
+        "Physical Therapists": {
+            "url": "https://www.bls.gov//ooh/healthcare/physical-therapists.htm"
+        }
+    }, 
+    {
+        "Physician Assistants": {
+            "url": "https://www.bls.gov//ooh/healthcare/physician-assistants.htm"
+        }
+    }, 
+    {
+        "Physicians and Surgeons": {
+            "url": "https://www.bls.gov//ooh/healthcare/physicians-and-surgeons.htm"
+        }
+    }, 
+    {
+        "Podiatrists": {
+            "url": "https://www.bls.gov//ooh/healthcare/podiatrists.htm"
+        }
+    }, 
+    {
+        "Psychiatric Technicians and Aides": {
+            "url": "https://www.bls.gov//ooh/healthcare/psychiatric-technicians-and-aides.htm"
+        }
+    }, 
+    {
+        "Radiation Therapists": {
+            "url": "https://www.bls.gov//ooh/healthcare/radiation-therapists.htm"
+        }
+    }, 
+    {
+        "Radiologic and MRI Technologists": {
+            "url": "https://www.bls.gov//ooh/healthcare/radiologic-technologists.htm"
+        }
+    }, 
+    {
+        "Recreational Therapists": {
+            "url": "https://www.bls.gov//ooh/healthcare/recreational-therapists.htm"
+        }
+    }, 
+    {
+        "Registered Nurses": {
+            "url": "https://www.bls.gov//ooh/healthcare/registered-nurses.htm"
+        }
+    }, 
+    {
+        "Respiratory Therapists": {
+            "url": "https://www.bls.gov//ooh/healthcare/respiratory-therapists.htm"
+        }
+    }, 
+    {
+        "Speech-Language Pathologists": {
+            "url": "https://www.bls.gov//ooh/healthcare/speech-language-pathologists.htm"
+        }
+    }, 
+    {
+        "Surgical Technologists": {
+            "url": "https://www.bls.gov//ooh/healthcare/surgical-technologists.htm"
+        }
+    }, 
+    {
+        "Veterinarians": {
+            "url": "https://www.bls.gov//ooh/healthcare/veterinarians.htm"
+        }
+    }, 
+    {
+        "Veterinary Assistants and Laboratory Animal Caretakers": {
+            "url": "https://www.bls.gov//ooh/healthcare/veterinary-assistants-and-laboratory-animal-caretakers.htm"
+        }
+    }, 
+    {
+        "Veterinary Technologists and Technicians": {
+            "url": "https://www.bls.gov//ooh/healthcare/veterinary-technologists-and-technicians.htm"
+        }
+    }
+][
+    {
+        "Aircraft and Avionics Equipment Mechanics and Technicians": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/aircraft-and-avionics-equipment-mechanics-and-technicians.htm"
+        }
+    }, 
+    {
+        "Automotive Body and Glass Repairers": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/automotive-body-and-glass-repairers.htm"
+        }
+    }, 
+    {
+        "Automotive Service Technicians and Mechanics": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/automotive-service-technicians-and-mechanics.htm"
+        }
+    }, 
+    {
+        "Diesel Service Technicians and Mechanics": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/diesel-service-technicians-and-mechanics.htm"
+        }
+    }, 
+    {
+        "Electrical and Electronics Installers and Repairers": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/electrical-and-electronics-installers-and-repairers.htm"
+        }
+    }, 
+    {
+        "General Maintenance and Repair Workers": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/general-maintenance-and-repair-workers.htm"
+        }
+    }, 
+    {
+        "Heating, Air Conditioning, and Refrigeration Mechanics and Installers": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/heating-air-conditioning-and-refrigeration-mechanics-and-installers.htm"
+        }
+    }, 
+    {
+        "Heavy Vehicle and Mobile Equipment Service Technicians": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/heavy-vehicle-and-mobile-equipment-service-technicians.htm"
+        }
+    }, 
+    {
+        "Industrial Machinery Mechanics, Machinery Maintenance Workers, and Millwrights": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/industrial-machinery-mechanics-and-maintenance-workers-and-millwrights.htm"
+        }
+    }, 
+    {
+        "Line Installers and Repairers": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/line-installers-and-repairers.htm"
+        }
+    }, 
+    {
+        "Medical Equipment Repairers": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/medical-equipment-repairers.htm"
+        }
+    }, 
+    {
+        "Small Engine Mechanics": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/small-engine-mechanics.htm"
+        }
+    }, 
+    {
+        "Telecommunications Equipment Installers and Repairers": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/telecommunications-equipment-installers-and-repairers-except-line-installers.htm"
+        }
+    }, 
+    {
+        "Wind Turbine Technicians": {
+            "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/wind-turbine-technicians.htm"
+        }
+    }
+][
+    {
+        "Arbitrators, Mediators, and Conciliators": {
+            "url": "https://www.bls.gov//ooh/legal/arbitrators-mediators-and-conciliators.htm"
+        }
+    }, 
+    {
+        "Court Reporters": {
+            "url": "https://www.bls.gov//ooh/legal/court-reporters.htm"
+        }
+    }, 
+    {
+        "Judges and Hearing Officers": {
+            "url": "https://www.bls.gov//ooh/legal/judges-and-hearing-officers.htm"
+        }
+    }, 
+    {
+        "Lawyers": {
+            "url": "https://www.bls.gov//ooh/legal/lawyers.htm"
+        }
+    }, 
+    {
+        "Paralegals and Legal Assistants": {
+            "url": "https://www.bls.gov//ooh/legal/paralegals-and-legal-assistants.htm"
+        }
+    }
+][
+    {
+        "Agricultural and Food Science Technicians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/agricultural-and-food-science-technicians.htm"
+        }
+    }, 
+    {
+        "Agricultural and Food Scientists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/agricultural-and-food-scientists.htm"
+        }
+    }, 
+    {
+        "Anthropologists and Archeologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/anthropologists-and-archeologists.htm"
+        }
+    }, 
+    {
+        "Atmospheric Scientists, Including Meteorologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/atmospheric-scientists-including-meteorologists.htm"
+        }
+    }, 
+    {
+        "Biochemists and Biophysicists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/biochemists-and-biophysicists.htm"
+        }
+    }, 
+    {
+        "Biological Technicians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/biological-technicians.htm"
+        }
+    }, 
+    {
+        "Chemical Technicians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/chemical-technicians.htm"
+        }
+    }, 
+    {
+        "Chemists and Materials Scientists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/chemists-and-materials-scientists.htm"
+        }
+    }, 
+    {
+        "Conservation Scientists and Foresters": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/conservation-scientists.htm"
+        }
+    }, 
+    {
+        "Economists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/economists.htm"
+        }
+    }, 
+    {
+        "Environmental Science and Protection Technicians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/environmental-science-and-protection-technicians.htm"
+        }
+    }, 
+    {
+        "Environmental Scientists and Specialists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/environmental-scientists-and-specialists.htm"
+        }
+    }, 
+    {
+        "Epidemiologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/epidemiologists.htm"
+        }
+    }, 
+    {
+        "Forensic Science Technicians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/forensic-science-technicians.htm"
+        }
+    }, 
+    {
+        "Geographers": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/geographers.htm"
+        }
+    }, 
+    {
+        "Geological and Petroleum Technicians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/geological-and-petroleum-technicians.htm"
+        }
+    }, 
+    {
+        "Geoscientists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/geoscientists.htm"
+        }
+    }, 
+    {
+        "Historians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/historians.htm"
+        }
+    }, 
+    {
+        "Hydrologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/hydrologists.htm"
+        }
+    }, 
+    {
+        "Medical Scientists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/medical-scientists.htm"
+        }
+    }, 
+    {
+        "Microbiologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/microbiologists.htm"
+        }
+    }, 
+    {
+        "Nuclear Technicians": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/nuclear-technicians.htm"
+        }
+    }, 
+    {
+        "Physicists and Astronomers": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/physicists-and-astronomers.htm"
+        }
+    }, 
+    {
+        "Political Scientists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/political-scientists.htm"
+        }
+    }, 
+    {
+        "Psychologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/psychologists.htm"
+        }
+    }, 
+    {
+        "Sociologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/sociologists.htm"
+        }
+    }, 
+    {
+        "Survey Researchers": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/survey-researchers.htm"
+        }
+    }, 
+    {
+        "Urban and Regional Planners": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/urban-and-regional-planners.htm"
+        }
+    }, 
+    {
+        "Zoologists and Wildlife Biologists": {
+            "url": "https://www.bls.gov//ooh/life-physical-and-social-science/zoologists-and-wildlife-biologists.htm"
+        }
+    }
+][
+    {
+        "Administrative Services Managers": {
+            "url": "https://www.bls.gov//ooh/management/administrative-services-managers.htm"
+        }
+    }, 
+    {
+        "Advertising, Promotions, and Marketing Managers": {
+            "url": "https://www.bls.gov//ooh/management/advertising-promotions-and-marketing-managers.htm"
+        }
+    }, 
+    {
+        "Architectural and Engineering Managers": {
+            "url": "https://www.bls.gov//ooh/management/architectural-and-engineering-managers.htm"
+        }
+    }, 
+    {
+        "Compensation and Benefits Managers": {
+            "url": "https://www.bls.gov//ooh/management/compensation-and-benefits-managers.htm"
+        }
+    }, 
+    {
+        "Computer and Information Systems Managers": {
+            "url": "https://www.bls.gov//ooh/management/computer-and-information-systems-managers.htm"
+        }
+    }, 
+    {
+        "Construction Managers": {
+            "url": "https://www.bls.gov//ooh/management/construction-managers.htm"
+        }
+    }, 
+    {
+        "Elementary, Middle, and High School Principals": {
+            "url": "https://www.bls.gov//ooh/management/elementary-middle-and-high-school-principals.htm"
+        }
+    }, 
+    {
+        "Emergency Management Directors": {
+            "url": "https://www.bls.gov//ooh/management/emergency-management-directors.htm"
+        }
+    }, 
+    {
+        "Farmers, Ranchers, and Other Agricultural Managers": {
+            "url": "https://www.bls.gov//ooh/management/farmers-ranchers-and-other-agricultural-managers.htm"
+        }
+    }, 
+    {
+        "Financial Managers": {
+            "url": "https://www.bls.gov//ooh/management/financial-managers.htm"
+        }
+    }, 
+    {
+        "Food Service Managers": {
+            "url": "https://www.bls.gov//ooh/management/food-service-managers.htm"
+        }
+    }, 
+    {
+        "Human Resources Managers": {
+            "url": "https://www.bls.gov//ooh/management/human-resources-managers.htm"
+        }
+    }, 
+    {
+        "Industrial Production Managers": {
+            "url": "https://www.bls.gov//ooh/management/industrial-production-managers.htm"
+        }
+    }, 
+    {
+        "Lodging Managers": {
+            "url": "https://www.bls.gov//ooh/management/lodging-managers.htm"
+        }
+    }, 
+    {
+        "Medical and Health Services Managers": {
+            "url": "https://www.bls.gov//ooh/management/medical-and-health-services-managers.htm"
+        }
+    }, 
+    {
+        "Natural Sciences Managers": {
+            "url": "https://www.bls.gov//ooh/management/natural-sciences-managers.htm"
+        }
+    }, 
+    {
+        "Postsecondary Education Administrators": {
+            "url": "https://www.bls.gov//ooh/management/postsecondary-education-administrators.htm"
+        }
+    }, 
+    {
+        "Preschool and Childcare Center Directors": {
+            "url": "https://www.bls.gov//ooh/management/preschool-and-childcare-center-directors.htm"
+        }
+    }, 
+    {
+        "Property, Real Estate, and Community Association Managers": {
+            "url": "https://www.bls.gov//ooh/management/property-real-estate-and-community-association-managers.htm"
+        }
+    }, 
+    {
+        "Public Relations and Fundraising Managers": {
+            "url": "https://www.bls.gov//ooh/management/public-relations-managers.htm"
+        }
+    }, 
+    {
+        "Sales Managers": {
+            "url": "https://www.bls.gov//ooh/management/sales-managers.htm"
+        }
+    }, 
+    {
+        "Social and Community Service Managers": {
+            "url": "https://www.bls.gov//ooh/management/social-and-community-service-managers.htm"
+        }
+    }, 
+    {
+        "Top Executives": {
+            "url": "https://www.bls.gov//ooh/management/top-executives.htm"
+        }
+    }, 
+    {
+        "Training and Development Managers": {
+            "url": "https://www.bls.gov//ooh/management/training-and-development-managers.htm"
+        }
+    }
+][
+    {
+        "Actuaries": {
+            "url": "https://www.bls.gov//ooh/math/actuaries.htm"
+        }
+    }, 
+    {
+        "Mathematicians and Statisticians": {
+            "url": "https://www.bls.gov//ooh/math/mathematicians-and-statisticians.htm"
+        }
+    }, 
+    {
+        "Operations Research Analysts": {
+            "url": "https://www.bls.gov//ooh/math/operations-research-analysts.htm"
+        }
+    }
+][
+    {
+        "Announcers": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/announcers.htm"
+        }
+    }, 
+    {
+        "Broadcast and Sound Engineering Technicians": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/broadcast-and-sound-engineering-technicians.htm"
+        }
+    }, 
+    {
+        "Editors": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/editors.htm"
+        }
+    }, 
+    {
+        "Film and Video Editors and Camera Operators": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/film-and-video-editors-and-camera-operators.htm"
+        }
+    }, 
+    {
+        "Interpreters and Translators": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/interpreters-and-translators.htm"
+        }
+    }, 
+    {
+        "Photographers": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/photographers.htm"
+        }
+    }, 
+    {
+        "Public Relations Specialists": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/public-relations-specialists.htm"
+        }
+    }, 
+    {
+        "Reporters, Correspondents, and Broadcast News Analysts": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/reporters-correspondents-and-broadcast-news-analysts.htm"
+        }
+    }, 
+    {
+        "Technical Writers": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/technical-writers.htm"
+        }
+    }, 
+    {
+        "Writers and Authors": {
+            "url": "https://www.bls.gov//ooh/media-and-communication/writers-and-authors.htm"
+        }
+    }
+][
+    {
+        "Bill and Account Collectors": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/bill-and-account-collectors.htm"
+        }
+    }, 
+    {
+        "Bookkeeping, Accounting, and Auditing Clerks": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm"
+        }
+    }, 
+    {
+        "Customer Service Representatives": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/customer-service-representatives.htm"
+        }
+    }, 
+    {
+        "Desktop Publishers": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/desktop-publishers.htm"
+        }
+    }, 
+    {
+        "Financial Clerks": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/financial-clerks.htm"
+        }
+    }, 
+    {
+        "General Office Clerks": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/general-office-clerks.htm"
+        }
+    }, 
+    {
+        "Information Clerks": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/information-clerks.htm"
+        }
+    }, 
+    {
+        "Material Recording Clerks": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/material-recording-clerks.htm"
+        }
+    }, 
+    {
+        "Police, Fire, and Ambulance Dispatchers": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/police-fire-and-ambulance-dispatchers.htm"
+        }
+    }, 
+    {
+        "Postal Service Workers": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/postal-service-workers.htm"
+        }
+    }, 
+    {
+        "Receptionists": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/receptionists.htm"
+        }
+    }, 
+    {
+        "Secretaries and Administrative Assistants": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm"
+        }
+    }, 
+    {
+        "Tellers": {
+            "url": "https://www.bls.gov//ooh/office-and-administrative-support/tellers.htm"
+        }
+    }
+][
+    {
+        "Animal Care and Service Workers": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/animal-care-and-service-workers.htm"
+        }
+    }, 
+    {
+        "Barbers, Hairstylists, and Cosmetologists": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/barbers-hairstylists-and-cosmetologists.htm"
+        }
+    }, 
+    {
+        "Childcare Workers": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/childcare-workers.htm"
+        }
+    }, 
+    {
+        "Fitness Trainers and Instructors": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/fitness-trainers-and-instructors.htm"
+        }
+    }, 
+    {
+        "Funeral Service Workers": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/funeral-service-occupations.htm"
+        }
+    }, 
+    {
+        "Gaming Services Workers": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/gaming-services-occupations.htm"
+        }
+    }, 
+    {
+        "Manicurists and Pedicurists": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/manicurists-and-pedicurists.htm"
+        }
+    }, 
+    {
+        "Recreation Workers": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/recreation-workers.htm"
+        }
+    }, 
+    {
+        "Skincare Specialists": {
+            "url": "https://www.bls.gov//ooh/personal-care-and-service/skincare-specialists.htm"
+        }
+    }
+][
+    {
+        "Assemblers and Fabricators": {
+            "url": "https://www.bls.gov//ooh/production/assemblers-and-fabricators.htm"
+        }
+    }, 
+    {
+        "Bakers": {
+            "url": "https://www.bls.gov//ooh/production/bakers.htm"
+        }
+    }, 
+    {
+        "Butchers": {
+            "url": "https://www.bls.gov//ooh/production/butchers-and-meat-cutters.htm"
+        }
+    }, 
+    {
+        "Dental and Ophthalmic Laboratory Technicians and Medical Appliance Technicians": {
+            "url": "https://www.bls.gov//ooh/production/dental-and-ophthalmic-laboratory-technicians-and-medical-appliance-technicians.htm"
+        }
+    }, 
+    {
+        "Food and Tobacco Processing Workers": {
+            "url": "https://www.bls.gov//ooh/production/food-and-tobacco-processing-workers.htm"
+        }
+    }, 
+    {
+        "Jewelers and Precious Stone and Metal Workers": {
+            "url": "https://www.bls.gov//ooh/production/jewelers-and-precious-stone-and-metal-workers.htm"
+        }
+    }, 
+    {
+        "Machinists and Tool and Die Makers": {
+            "url": "https://www.bls.gov//ooh/production/machinists-and-tool-and-die-makers.htm"
+        }
+    }, 
+    {
+        "Metal and Plastic Machine Workers": {
+            "url": "https://www.bls.gov//ooh/production/metal-and-plastic-machine-workers.htm"
+        }
+    }, 
+    {
+        "Painting and Coating Workers": {
+            "url": "https://www.bls.gov//ooh/production/painting-and-coating-workers.htm"
+        }
+    }, 
+    {
+        "Power Plant Operators, Distributors, and Dispatchers": {
+            "url": "https://www.bls.gov//ooh/production/power-plant-operators-distributors-and-dispatchers.htm"
+        }
+    }, 
+    {
+        "Quality Control Inspectors": {
+            "url": "https://www.bls.gov//ooh/production/quality-control-inspectors.htm"
+        }
+    }, 
+    {
+        "Stationary Engineers and Boiler Operators": {
+            "url": "https://www.bls.gov//ooh/production/stationary-engineers-and-boiler-operators.htm"
+        }
+    }, 
+    {
+        "Water and Wastewater Treatment Plant and System Operators": {
+            "url": "https://www.bls.gov//ooh/production/water-and-wastewater-treatment-plant-and-system-operators.htm"
+        }
+    }, 
+    {
+        "Welders, Cutters, Solderers, and Brazers": {
+            "url": "https://www.bls.gov//ooh/production/welders-cutters-solderers-and-brazers.htm"
+        }
+    }, 
+    {
+        "Woodworkers": {
+            "url": "https://www.bls.gov//ooh/production/woodworkers.htm"
+        }
+    }
+][
+    {
+        "Correctional Officers and Bailiffs": {
+            "url": "https://www.bls.gov//ooh/protective-service/correctional-officers.htm"
+        }
+    }, 
+    {
+        "Firefighters": {
+            "url": "https://www.bls.gov//ooh/protective-service/firefighters.htm"
+        }
+    }, 
+    {
+        "Fire Inspectors": {
+            "url": "https://www.bls.gov//ooh/protective-service/fire-inspectors-and-investigators.htm"
+        }
+    }, 
+    {
+        "Police and Detectives": {
+            "url": "https://www.bls.gov//ooh/protective-service/police-and-detectives.htm"
+        }
+    }, 
+    {
+        "Private Detectives and Investigators": {
+            "url": "https://www.bls.gov//ooh/protective-service/private-detectives-and-investigators.htm"
+        }
+    }, 
+    {
+        "Security Guards and Gaming Surveillance Officers": {
+            "url": "https://www.bls.gov//ooh/protective-service/security-guards.htm"
+        }
+    }
+][
+    {
+        "Advertising Sales Agents": {
+            "url": "https://www.bls.gov//ooh/sales/advertising-sales-agents.htm"
+        }
+    }, 
+    {
+        "Cashiers": {
+            "url": "https://www.bls.gov//ooh/sales/cashiers.htm"
+        }
+    }, 
+    {
+        "Insurance Sales Agents": {
+            "url": "https://www.bls.gov//ooh/sales/insurance-sales-agents.htm"
+        }
+    }, 
+    {
+        "Models": {
+            "url": "https://www.bls.gov//ooh/sales/models.htm"
+        }
+    }, 
+    {
+        "Real Estate Brokers and Sales Agents": {
+            "url": "https://www.bls.gov//ooh/sales/real-estate-brokers-and-sales-agents.htm"
+        }
+    }, 
+    {
+        "Retail Sales Workers": {
+            "url": "https://www.bls.gov//ooh/sales/retail-sales-workers.htm"
+        }
+    }, 
+    {
+        "Sales Engineers": {
+            "url": "https://www.bls.gov//ooh/sales/sales-engineers.htm"
+        }
+    }, 
+    {
+        "Securities, Commodities, and Financial Services Sales Agents": {
+            "url": "https://www.bls.gov//ooh/sales/securities-commodities-and-financial-services-sales-agents.htm"
+        }
+    }, 
+    {
+        "Travel Agents": {
+            "url": "https://www.bls.gov//ooh/sales/travel-agents.htm"
+        }
+    }, 
+    {
+        "Wholesale and Manufacturing Sales Representatives": {
+            "url": "https://www.bls.gov//ooh/sales/wholesale-and-manufacturing-sales-representatives.htm"
+        }
+    }
+][
+    {
+        "Airline and Commercial Pilots": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/airline-and-commercial-pilots.htm"
+        }
+    }, 
+    {
+        "Air Traffic Controllers": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/air-traffic-controllers.htm"
+        }
+    }, 
+    {
+        "Bus Drivers": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/bus-drivers.htm"
+        }
+    }, 
+    {
+        "Delivery Truck Drivers and Driver/Sales Workers": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/delivery-truck-drivers-and-driver-sales-workers.htm"
+        }
+    }, 
+    {
+        "Flight Attendants": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/flight-attendants.htm"
+        }
+    }, 
+    {
+        "Hand Laborers and Material Movers": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/hand-laborers-and-material-movers.htm"
+        }
+    }, 
+    {
+        "Heavy and Tractor-trailer Truck Drivers": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/heavy-and-tractor-trailer-truck-drivers.htm"
+        }
+    }, 
+    {
+        "Material Moving Machine Operators": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/material-moving-machine-operators.htm"
+        }
+    }, 
+    {
+        "Railroad Workers": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/railroad-occupations.htm"
+        }
+    }, 
+    {
+        "Taxi Drivers, Ride-Hailing Drivers, and Chauffeurs": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/taxi-drivers-and-chauffeurs.htm"
+        }
+    }, 
+    {
+        "Water Transportation Workers": {
+            "url": "https://www.bls.gov//ooh/transportation-and-material-moving/water-transportation-occupations.htm"
         }
     }
 ]

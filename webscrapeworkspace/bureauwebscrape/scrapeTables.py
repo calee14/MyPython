@@ -12,8 +12,8 @@ def scrape_main_table():
 	page_title = 'MajorOccupations'
 	classIdentifier = 'class'
 	idName = 'regular'
-	linkFileName = 'occupationlinks.json'
-	dataFileName = 'occupations.json'
+	# linkFileName = 'occupationlinks.json'
+	# dataFileName = 'occupations.json'
 	# run it 
 	retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
 	retriever.scrape()
@@ -39,16 +39,22 @@ def scrape_ooh_table():
 					search_urls.append(searchData)
 					# print searchData.title + "child"
 					# print searchData.url
+	linkFileName = 'occupationlinks.json'
+	dataFileName = 'occupations.json'
+	f = open(linkFileName, 'w').close()
+	f = open(dataFileName, 'w').close()
 	for search_url in search_urls:
 		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
 		page_title = search_url.title
 		classIdentifier = 'class'
 		idName = 'display'
-		linkFileName = 'occupationlinks.json'
-		dataFileName = 'occupations.json'
 		# run it 
-		retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
-		retriever.scrape()
+		# temporary for testing purposes
+		try:
+			retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
+			retriever.scrape()
+		except Exception as e:
+			print e
 
 def scrape_careers():
 	# scrape the bls.gov/ooh tables
@@ -81,6 +87,6 @@ def scrape_careers():
 		retriever.scrape()
 
 if __name__ == '__main__':
-	scrape_main_table()
+	# scrape_main_table()
 	scrape_ooh_table() 
-	scrape_careers()
+	# scrape_careers()

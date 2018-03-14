@@ -261,7 +261,7 @@ class TableScraper(object):
 	def writeToJSON(self, array):
 		for data in array:
 			filename = ''+data.file+''
-			f = open(filename, "w")
+			f = open(filename, "a")
 			jsonstuff = json.dumps(data.data, indent=4)
 			f.write(jsonstuff)
 	def addContentToContainers(self, contents, containers):
@@ -288,12 +288,13 @@ class TableScraper(object):
 		contents = self.scrapeContent(headers, self.classIdentifier, self.idName)
 		header_list, occupations = self.combineArrays(self.addContentToContainers(contents, headers))
 		self.addToDatabase(occupations, self.findHeaderTitles(headers), self.dbtitle)
-		# json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
-		# print str(json_occupations_data) + "hi and stuff"
-		# BLSData = namedtuple('BLSData', 'data file')
-		# content1 = BLSData(json_occupations_data, self.dataFileName)
-		# content2 = BLSData(json_links_data, self.linkFileName)
-		# return [content1, content2]
+		json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
+		print str(json_occupations_data) + "hi and stuff"
+		if self.linkFileName is not None or self.dataFileName is not None:
+			BLSData = namedtuple('BLSData', 'data file')
+			content1 = BLSData(json_occupations_data, self.dataFileName)
+			content2 = BLSData(json_links_data, self.linkFileName)
+			self.writeToJSON([content1, content2])
 
 # data = retriever.scrape()
 # retriever.writeToJSON(data)
