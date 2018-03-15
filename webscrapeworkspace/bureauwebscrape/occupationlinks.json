@@ -143,8 +143,7 @@
         "Surveyors": {
             "url": "https://www.bls.gov//ooh/architecture-and-engineering/surveyors.htm"
         }
-    }
-][
+    }, 
     {
         "Art Directors": {
             "url": "https://www.bls.gov//ooh/arts-and-design/art-directors.htm"
@@ -184,8 +183,7 @@
         "Multimedia Artists and Animators": {
             "url": "https://www.bls.gov//ooh/arts-and-design/multimedia-artists-and-animators.htm"
         }
-    }
-][
+    }, 
     {
         "Grounds Maintenance Workers": {
             "url": "https://www.bls.gov//ooh/building-and-grounds-cleaning/grounds-maintenance-workers.htm"
@@ -200,8 +198,7 @@
         "Pest Control Workers": {
             "url": "https://www.bls.gov//ooh/building-and-grounds-cleaning/pest-control-workers.htm"
         }
-    }
-][
+    }, 
     {
         "Accountants and Auditors": {
             "url": "https://www.bls.gov//ooh/business-and-financial/accountants-and-auditors.htm"
@@ -306,8 +303,7 @@
         "Training and Development Specialists": {
             "url": "https://www.bls.gov//ooh/business-and-financial/training-and-development-specialists.htm"
         }
-    }
-][
+    }, 
     {
         "Health Educators and Community Health Workers": {
             "url": "https://www.bls.gov//ooh/community-and-social-service/health-educators.htm"
@@ -347,8 +343,7 @@
         "Substance Abuse, Behavioral Disorder, and Mental Health Counselors": {
             "url": "https://www.bls.gov//ooh/community-and-social-service/substance-abuse-behavioral-disorder-and-mental-health-counselors.htm"
         }
-    }
-][
+    }, 
     {
         "Computer and Information Research Scientists": {
             "url": "https://www.bls.gov//ooh/computer-and-information-technology/computer-and-information-research-scientists.htm"
@@ -398,8 +393,7 @@
         "Web Developers": {
             "url": "https://www.bls.gov//ooh/computer-and-information-technology/web-developers.htm"
         }
-    }
-][
+    }, 
     {
         "Boilermakers": {
             "url": "https://www.bls.gov//ooh/construction-and-extraction/boilermakers.htm"
@@ -494,8 +488,7 @@
         "Flooring Installers and Tile and Marble Setters": {
             "url": "https://www.bls.gov//ooh/construction-and-extraction/tile-and-marble-setters.htm"
         }
-    }
-][
+    }, 
     {
         "Adult Literacy and High School Equivalency Diploma Teachers": {
             "url": "https://www.bls.gov//ooh/education-training-and-library/adult-literacy-and-ged-teachers.htm"
@@ -560,8 +553,7 @@
         "Teacher Assistants": {
             "url": "https://www.bls.gov//ooh/education-training-and-library/teacher-assistants.htm"
         }
-    }
-][
+    }, 
     {
         "Actors": {
             "url": "https://www.bls.gov//ooh/entertainment-and-sports/actors.htm"
@@ -601,8 +593,7 @@
         "Umpires, Referees, and Other Sports Officials": {
             "url": "https://www.bls.gov//ooh/entertainment-and-sports/umpires-referees-and-other-sports-officials.htm"
         }
-    }
-][
+    }, 
     {
         "Agricultural Workers": {
             "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/agricultural-workers.htm"
@@ -622,8 +613,7 @@
         "Logging Workers": {
             "url": "https://www.bls.gov//ooh/farming-fishing-and-forestry/logging-workers.htm"
         }
-    }
-][
+    }, 
     {
         "Bartenders": {
             "url": "https://www.bls.gov//ooh/food-preparation-and-serving/bartenders.htm"
@@ -653,8 +643,7 @@
         "Waiters and Waitresses": {
             "url": "https://www.bls.gov//ooh/food-preparation-and-serving/waiters-and-waitresses.htm"
         }
-    }
-][
+    }, 
     {
         "Athletic Trainers": {
             "url": "https://www.bls.gov//ooh/healthcare/athletic-trainers.htm"
@@ -884,8 +873,7 @@
         "Veterinary Technologists and Technicians": {
             "url": "https://www.bls.gov//ooh/healthcare/veterinary-technologists-and-technicians.htm"
         }
-    }
-][
+    }, 
     {
         "Aircraft and Avionics Equipment Mechanics and Technicians": {
             "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/aircraft-and-avionics-equipment-mechanics-and-technicians.htm"
@@ -955,8 +943,7 @@
         "Wind Turbine Technicians": {
             "url": "https://www.bls.gov//ooh/installation-maintenance-and-repair/wind-turbine-technicians.htm"
         }
-    }
-][
+    }, 
     {
         "Arbitrators, Mediators, and Conciliators": {
             "url": "https://www.bls.gov//ooh/legal/arbitrators-mediators-and-conciliators.htm"
@@ -981,8 +968,7 @@
         "Paralegals and Legal Assistants": {
             "url": "https://www.bls.gov//ooh/legal/paralegals-and-legal-assistants.htm"
         }
-    }
-][
+    }, 
     {
         "Agricultural and Food Science Technicians": {
             "url": "https://www.bls.gov//ooh/life-physical-and-social-science/agricultural-and-food-science-technicians.htm"
@@ -1127,8 +1113,7 @@
         "Zoologists and Wildlife Biologists": {
             "url": "https://www.bls.gov//ooh/life-physical-and-social-science/zoologists-and-wildlife-biologists.htm"
         }
-    }
-][
+    }, 
     {
         "Administrative Services Managers": {
             "url": "https://www.bls.gov//ooh/management/administrative-services-managers.htm"
@@ -1248,8 +1233,7 @@
         "Training and Development Managers": {
             "url": "https://www.bls.gov//ooh/management/training-and-development-managers.htm"
         }
-    }
-][
+    }, 
     {
         "Actuaries": {
             "url": "https://www.bls.gov//ooh/math/actuaries.htm"
@@ -1264,8 +1248,7 @@
         "Operations Research Analysts": {
             "url": "https://www.bls.gov//ooh/math/operations-research-analysts.htm"
         }
-    }
-][
+    }, 
     {
         "Announcers": {
             "url": "https://www.bls.gov//ooh/media-and-communication/announcers.htm"
@@ -1315,8 +1298,7 @@
         "Writers and Authors": {
             "url": "https://www.bls.gov//ooh/media-and-communication/writers-and-authors.htm"
         }
-    }
-][
+    }, 
     {
         "Bill and Account Collectors": {
             "url": "https://www.bls.gov//ooh/office-and-administrative-support/bill-and-account-collectors.htm"
@@ -1381,8 +1363,7 @@
         "Tellers": {
             "url": "https://www.bls.gov//ooh/office-and-administrative-support/tellers.htm"
         }
-    }
-][
+    }, 
     {
         "Animal Care and Service Workers": {
             "url": "https://www.bls.gov//ooh/personal-care-and-service/animal-care-and-service-workers.htm"
@@ -1427,8 +1408,7 @@
         "Skincare Specialists": {
             "url": "https://www.bls.gov//ooh/personal-care-and-service/skincare-specialists.htm"
         }
-    }
-][
+    }, 
     {
         "Assemblers and Fabricators": {
             "url": "https://www.bls.gov//ooh/production/assemblers-and-fabricators.htm"
@@ -1503,8 +1483,7 @@
         "Woodworkers": {
             "url": "https://www.bls.gov//ooh/production/woodworkers.htm"
         }
-    }
-][
+    }, 
     {
         "Correctional Officers and Bailiffs": {
             "url": "https://www.bls.gov//ooh/protective-service/correctional-officers.htm"
@@ -1534,8 +1513,7 @@
         "Security Guards and Gaming Surveillance Officers": {
             "url": "https://www.bls.gov//ooh/protective-service/security-guards.htm"
         }
-    }
-][
+    }, 
     {
         "Advertising Sales Agents": {
             "url": "https://www.bls.gov//ooh/sales/advertising-sales-agents.htm"
@@ -1585,8 +1563,7 @@
         "Wholesale and Manufacturing Sales Representatives": {
             "url": "https://www.bls.gov//ooh/sales/wholesale-and-manufacturing-sales-representatives.htm"
         }
-    }
-][
+    }, 
     {
         "Airline and Commercial Pilots": {
             "url": "https://www.bls.gov//ooh/transportation-and-material-moving/airline-and-commercial-pilots.htm"

@@ -6,14 +6,22 @@ from collections import namedtuple
 user_agent = 'Mozilla/5 (Solaris 10) Gecko'
 headers = { 'User-Agent' : user_agent }
 
+def flatten(lst):
+	    if not lst:
+	        return []
+	    elif not isinstance(lst, list):
+	        return [lst] 
+	    else:
+	        return flatten(lst[0]) + flatten(lst[1:])
+
 def scrape_main_table():
 	# scrape the main occupations table
 	page_link = 'https://www.bls.gov/emp/ep_table_101.htm'
 	page_title = 'MajorOccupations'
 	classIdentifier = 'class'
 	idName = 'regular'
-	# linkFileName = 'occupationlinks.json'
-	# dataFileName = 'occupations.json'
+	linkFileName = None#'occupationlinks.json'
+	dataFileName = None#'occupations.json'
 	# run it 
 	retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
 	retriever.scrape()
@@ -43,18 +51,26 @@ def scrape_ooh_table():
 	dataFileName = 'occupations.json'
 	f = open(linkFileName, 'w').close()
 	f = open(dataFileName, 'w').close()
+	# links we get from the scraping
+	links = []
 	for search_url in search_urls:
 		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
 		page_title = search_url.title
 		classIdentifier = 'class'
 		idName = 'display'
 		# run it 
-		# temporary for testing purposes
+		# try is temporary for testing purposes
 		try:
 			retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
-			retriever.scrape()
+			scrapedLinks = retriever.scrape()
+			links.append(scrapedLinks)
 		except Exception as e:
 			print e
+	shit = [data.data for data in links]
+	fuck = flatten(shit)
+	f = open('occupationlinks.json', "a")
+	jsonstuff = json.dumps(fuck, indent=4)
+	f.write(jsonstuff)
 
 def scrape_careers():
 	# scrape the bls.gov/ooh tables
@@ -66,6 +82,7 @@ def scrape_careers():
 	with open(jsonfilename) as json_data:
 		# store it in variable d
 		d = json.load(json_data)
+		print d
 		# get second object
 		for link in d:
 			for child in link:
@@ -89,4 +106,4 @@ def scrape_careers():
 if __name__ == '__main__':
 	# scrape_main_table()
 	scrape_ooh_table() 
-	# scrape_careers()
+	scrape_careers()
