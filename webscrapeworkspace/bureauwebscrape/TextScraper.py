@@ -80,28 +80,36 @@ class TextScraper(object):
 			if ch in string:
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
-	def addToDatabase(self, dbtitle):
+	def addToDatabase(self, dbtitle, column_headers, tabletitle):
 		# initialize our database creators
 		databasemaster = DatabaseCreator()
 		value_list = DatabaseData()
 		# set our titles
 		TitleTuple = namedtuple('TitleTuple', 'title datatype')
-		titleHeader = TitleTuple(self.checkString("Title"), "VARCHAR(555)")
-		titleText = TitleTuple(self.checkString("Text"), "VARCHAR(555)")
 		# create of containers
-		title_list = [titleHeader, titleText]
+		title_list = []
+		for title in column_headers:
+			titleText = TitleTuple(self.checkString(title), "VARCHAR(1000)")
+			title_list.append(titleText)
+		text_list = [" ".join(child.text) for child in self.data_text]
+		text_list = [text.encode('utf-8') for text in text_list]
+		text_list = text_list[:len(title_list)]
+		# # add our text to our 
+		# for child in self.data_text:
+		# 	print child.text
+		# 	text_list = []
+		# 	text_list.append(child.title)
+		# 	text_list.append(" ".join(child.text))
+		# 	text_list = [text.encode('utf-8') for text in text_list]
+		value_list.addrow(text_list)
 		# add title list
 		value_list.addheadertitle(title_list)
-		# add our text to our 
-		for child in self.data_text:
-			text_list = []
-			text_list.append(child.title)
-			text_list.append(" ".join(child.text))
-			text_list = [text.encode('utf-8') for text in text_list]
-			value_list.addrow(text_list)
 		# create and update db table
-		databasemaster.createTable(value_list, self.checkString(dbtitle))
-		databasemaster.addToTable(value_list, self.checkString(dbtitle))
+		databasemaster.createTable(value_list, self.checkString(tabletitle))
+		databasemaster.addToTable(value_list, self.checkString(tabletitle))
+	def dropTableInDatabase(self, dbtitle):
+		databasemaster = DatabaseCreator()
+		databasemaster.dropTable(self.checkString(dbtitle))
 	def check(self):
 		data_text = self.data_text
 		for text in data_text:

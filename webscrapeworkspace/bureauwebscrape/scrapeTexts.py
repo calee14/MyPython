@@ -32,7 +32,9 @@ def scrapeOccupationSummaries():
 		scrapetext = TextScraper(page_link, None, None)
 		scrapetext.setHeadersText('h4', 'p')
 		scrapetext.scrapeArea('center-content')
-		scrapetext.addToDatabase(page_title.strip() + '_summary')
+		headers = ["Job Title", "What Aerospace Engineering and Operations Technicians Do", "Work Environment", "How to Become an Aerospace Engineering and Operations Technician ", "Pay", "Job Outlook", "State and Area Data", "Similar Occupations"]
+		scrapetext.addToDatabase(page_title.strip(), headers, "Summaries")
+		# scrapetext.dropTableInDatabase(page_title.strip() + '_summary')
 		# linkFileName = 'occupationlinks.json'
 		# dataFileName = 'occupations.json'
 def scrapeGuidesLinks():
@@ -75,6 +77,6 @@ def scrapeGuidesContent(links):
 		raise ValueError("Testing")
 
 if __name__ == '__main__':
-	# scrapeOccupationSummaries()
-	links = scrapeGuidesLinks()
-	scrapeGuidesContent(links)
+	scrapeOccupationSummaries()
+	# links = scrapeGuidesLinks()
+	# scrapeGuidesContent(links)
