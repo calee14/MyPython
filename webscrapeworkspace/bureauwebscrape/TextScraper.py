@@ -19,8 +19,15 @@ class TextScraper(object):
 
 	def __init__(self, search_url, linkFileName=None, dataFileName=None):
 		self.url = '%s' % (search_url)
+		hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+	       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+	       'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+	       'Accept-Encoding': 'none',
+	       'Accept-Language': 'en-US,en;q=0.8',
+	       'Connection': 'keep-alive'}
+		req = urllib2.Request(self.url, headers=hdr)
 		# open the url
-		page = urllib.urlopen(self.url)
+		page = urllib2.urlopen(req)
 		# get our soup
 		self.soup = BeautifulSoup(page, 'html.parser')
 		self.data_text = []
@@ -29,6 +36,20 @@ class TextScraper(object):
 	def setHeadersText(self, headers, text):
 		self.header_tag = headers
 		self.text_tag = text
+	# NOTES
+	# New Method to scrape texts:
+	# Scrape all divs within a specific div or element
+	# Iterate through all of the elements in the specified elements
+	# Use the getAll() function to get texts in arrays.
+	# After the text is in the array seperate them from titles and text
+	# We can tell if they're title by sentence length(2-), word count(count number of spaces, 9-), char count (49-)
+	# We can tell if they're text by sentence length (3+), word count (count number of spaces, 10+), char count (50+)
+	# Repeat this step until we've scraped all sections
+	# New Method to scrape texts:
+	# Scrape all divs within a specific div or element
+	# Iterate through all of the elements in the specified elements
+	# Use the find methods to find the header tag
+	# Use the find_all method to find all of the text tags
 	def scrapeArea(self, element_type):
 		element_tag = self.soup.find("div", {"id": "%s" % (element_type)})
 		for element in element_tag:

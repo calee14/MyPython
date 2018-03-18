@@ -5,7 +5,7 @@ from bs4 import Tag, NavigableString, BeautifulSoup
 import urllib
 import urllib2
 
-def scrapeSummaries():
+def scrapeOccupationSummaries():
 	# scrape the bls.gov/ooh tables
 	# search keys
 	search_urls = []
@@ -45,15 +45,36 @@ def scrapeGuidesLinks():
 	       'Connection': 'keep-alive'}
 
 	req = urllib2.Request(site, headers=hdr)
-
 	try:
 	    page = urllib2.urlopen(req)
 	except urllib2.HTTPError, e:
 	    print e.fp.read()
-
 	soup = BeautifulSoup(page, 'html.parser')
 	careers = soup.find('li', attrs={'class' : 'li-career careerHub'})
-	print careers
+	submenu = careers.find('ul', attrs={'class' : 'sub-menu'})
+	search_urls = []
+	for i in submenu:
+		try:
+			li_list = i.find_all('li')
+			for li in li_list:
+				SearchUrl = namedtuple('SearchUrl', 'title url')
+				search_url = SearchUrl(li.find('a').text, li.find('a')['href'])
+				search_urls.append(search_url)
+		except Exception as e:
+			print e
+	return search_urls
+def scrapeGuidesContent(links):
+	for search_url in links:
+		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
+		page_title = search_url.title
+		scrapetext = TextScraper(page_link, None, None)
+		tag = "'div', 'class' : 'step-one-title stepright back-none1'"
+		scrapetext.setHeadersText(tag, 'p')
+		scrapetext.scrapeArea('inner-ac-block mrgNbtm')
+		print scrapetext.data_text
+		raise ValueError("Testing")
+
 if __name__ == '__main__':
-	# scrapeSummaries()
-	scrapeGuidesLinks()
+	# scrapeOccupationSummaries()
+	links = scrapeGuidesLinks()
+	scrapeGuidesContent(links)
