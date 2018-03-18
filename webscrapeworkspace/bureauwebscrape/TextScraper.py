@@ -80,7 +80,7 @@ class TextScraper(object):
 			if ch in string:
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
-	def addToDatabase(self, dbtitle, column_headers, tabletitle):
+	def addToDatabase(self, ctitle, column_headers, tabletitle):
 		# initialize our database creators
 		databasemaster = DatabaseCreator()
 		value_list = DatabaseData()
@@ -91,8 +91,10 @@ class TextScraper(object):
 		for title in column_headers:
 			titleText = TitleTuple(self.checkString(title), "VARCHAR(1000)")
 			title_list.append(titleText)
+
 		text_list = [" ".join(child.text) for child in self.data_text]
 		text_list = [text.encode('utf-8') for text in text_list]
+		text_list.insert(0, ctitle.encode('utf-8'))
 		text_list = text_list[:len(title_list)]
 		# # add our text to our 
 		# for child in self.data_text:
