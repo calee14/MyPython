@@ -40,10 +40,13 @@ class TableScraper(object):
 		self.dataFileName = dataFileName
 		self.dbtitle = dbtitle
 	def findHead(self, tablehtml):
+		# find the head element of the table
 		head = tablehtml.find('thead').find('tr')
 		return head
 	def getColumns(self, tablehead):
+		# get the columns in the header
 		columns = []
+		# loop through each column and add it to the list
 		for head in tablehead:
 			if isinstance(head, NavigableString):
 				# print 'we found a navigablestring'
@@ -52,6 +55,7 @@ class TableScraper(object):
 				columns.append(head)
 		return columns
 	def getColumnNames(self, tablecolumns):
+		# get the titile of the column
 		# set a list to take in the names of each colomn
 		columnNames = []
 		# loop through the colomn heads
@@ -61,6 +65,7 @@ class TableScraper(object):
 		# return the list of names
 		return columnNames
 	def createHeaders(self, tablehead, columnNames):
+		# get the the headers and create the TableHeader classes to hold the data
 		# print len([head for head in tablehead])
 		header_list = []
 		temp_list = []
@@ -83,33 +88,42 @@ class TableScraper(object):
 		return header_list
 
 	def scrapeHeader(self, classIdentifier, idName):
+		# combine all the functions to scrape the header of the table
 		# print 'intheheader'
 		# scrape the header of table
 		# find table
 		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''}) 
 		# print table
+		# find the header elements of the table
 		head = self.findHead(table)
 		# print head
+		# loop through all the columns
 		columns = self.getColumns(head)
 		# print columns
+		# get the names of the columns
 		names = self.getColumnNames(columns)
 		# print names
+		# create the TableHeader classes with the names
 		headers = self.createHeaders(columns, names)
 		return headers
 
 	def init_list_of_objects(self, size):
+		# creates a x number of lists in a list and returns it
 	    list_of_objects = list()
 	    for i in range(0,size):
 	        list_of_objects.append( list() ) # different object reference each time
 	    return list_of_objects
 	def findContent(self, table):
+		# find the table
 		rows = table.find('tbody').find_all('tr')
 		return rows
 	def cleanArrays(self, array):
+		# remove spaces in the string in the list
 		for i in range(len(array)):
 			array[i] = array[i].strip()
 		return array
 	def getContentInEachRow(self, rows):
+		# get the text in each row of the table
 		content_list = []
 		# loop through each row in table
 		for i in range(len(rows)):
@@ -121,22 +135,30 @@ class TableScraper(object):
 					# print 'we found a navigablestring'
 					continue
 				# print data
+				# get all the text in the cell of the table
 				text = data.findAll(text=True)
 				text = [' '.join(text).strip()]
 				if isinstance(text, list):
 					print ' '.join(text).strip()
 				text = self.cleanArrays(text)
+				# add the text/row to the data_list
 				data_list.append(text)
 				# print text
 			content_list.append(data_list)
 		return content_list
 	def organizeContent(self, content):
+		# creates a list containing lists: amount equal to the length of the requests objects
 		organized = self.init_list_of_objects(len(self.requests_objects))
+		# loop through the content
 		for row in content:
+			# loop through the number of TableHeader classes
 			for i in range(len(self.requests_objects)):
 				append_list = []
+				# loop through the request objects indexes
 				for num in self.requests_objects[i]:
+					# append the data to the right list
 					append_list.append(row[num])
+				# the append_list would go to the master list
 				organized[i].append(append_list)
 		return organized
 	def scrapeContent(self, header_list, classIdentifier, idName):
@@ -149,6 +171,8 @@ class TableScraper(object):
 		# print organizedContent
 		return organizedContent
 	def checkLenOfArrays(self, arrays):
+		# checks the len of all the arrays
+		# makes sure they're all equal to each other
 		for i in range(len(arrays)):
 			for j in range(i + 1, len(arrays)):
 				if len(arrays[i].children) != len(arrays[i].children):
@@ -156,6 +180,7 @@ class TableScraper(object):
 		# it doesn't matter which array we get because they're all the same length
 		return len(arrays[0].children)
 	def combineArrays(self, arrays):
+		# combine the lists from all of the TableHeaders
 		# print "incombinearrays"
 		# create a variable of the length of the arrays
 		length_of_all_arrays = self.checkLenOfArrays(arrays)
@@ -164,6 +189,7 @@ class TableScraper(object):
 		# print str(len(occupations)) + " length"
 		# check if we have the same amount
 		# print str(len(arrays)) + ' len of arrays'
+		# loop through all the lists
 		for array in arrays:
 			count = 0 
 			# print len(array.children)
@@ -171,6 +197,7 @@ class TableScraper(object):
 				# print str(count) + "count"
 				# print str(child_index) + 'index'
 				print child
+
 				occupations[count].append(child)
 				count += 1
 		return arrays, occupations
