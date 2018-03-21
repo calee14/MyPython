@@ -7,26 +7,31 @@ user_agent = 'Mozilla/5 (Solaris 10) Gecko'
 headers = { 'User-Agent' : user_agent }
 
 def flatten(lst):
-	    if not lst:
-	        return []
-	    elif not isinstance(lst, list):
-	        return [lst] 
-	    else:
-	        return flatten(lst[0]) + flatten(lst[1:])
+	# flatten function to get all values the the array no matter where they are
+	# flatten gets all values into one array
+    if not lst:
+        return []
+    elif not isinstance(lst, list):
+        return [lst] 
+    else:
+        return flatten(lst[0]) + flatten(lst[1:])
 
 def scrape_main_table():
+	# function scrapes the major occupation groups
 	# scrape the main occupations table
+	# get values for the scraper 
 	page_link = 'https://www.bls.gov/emp/ep_table_101.htm'
 	page_title = 'MajorOccupations'
 	classIdentifier = 'class'
 	idName = 'regular'
 	linkFileName = None#'occupationlinks.json'
 	dataFileName = None#'occupations.json'
-	# run it 
+	# create scraper, run it 
 	retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
 	retriever.scrape()
 
 def scrape_ooh_table():
+	# scraopes the careers in the major occupation groups
 	# scrape the bls.gov/ooh tables
 	# search keys
 	search_urls = []
@@ -36,7 +41,7 @@ def scrape_ooh_table():
 	with open(jsonfilename) as json_data:
 		# store it in variable d
 		d = json.load(json_data)
-		# get second object
+		# get get the object title and url
 		for link in d:
 			for child in link:
 				title = link[child]
@@ -47,13 +52,16 @@ def scrape_ooh_table():
 					search_urls.append(searchData)
 					# print searchData.title + "child"
 					# print searchData.url
+	# set values for the text file
 	linkFileName = 'occupationlinks.json'
 	dataFileName = 'occupations.json'
+	# clear the json files because we are adding to it
 	f = open(linkFileName, 'w').close()
 	f = open(dataFileName, 'w').close()
 	# links we get from the scraping
 	links = []
 	for search_url in search_urls:
+		# set the values for the scraper
 		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
 		page_title = search_url.title
 		classIdentifier = 'class'
@@ -66,13 +74,16 @@ def scrape_ooh_table():
 			links.append(scrapedLinks)
 		except Exception as e:
 			print e
-	shit = [data.data for data in links]
-	fuck = flatten(shit)
+	# sorry for the language
+	# add the links and titles to the text file
+	scrapedata = [data.data for data in links]
+	finaldata = flatten(scrapedata)
 	f = open('occupationlinks.json', "a")
-	jsonstuff = json.dumps(fuck, indent=4)
+	jsonstuff = json.dumps(finaldata, indent=4)
 	f.write(jsonstuff)
 
 def scrape_careers():
+	# scrape the summary of the data of the careers
 	# scrape the bls.gov/ooh tables
 	# search keys
 	search_urls = []
@@ -83,7 +94,7 @@ def scrape_careers():
 		# store it in variable d
 		d = json.load(json_data)
 		print d
-		# get second object
+		# get the title and url of the object
 		for link in d:
 			for child in link:
 				title = link[child]
@@ -92,7 +103,9 @@ def scrape_careers():
 					SearchUrl = namedtuple('SearchUrl', 'title url')
 					searchData = SearchUrl(child, blslink)
 					search_urls.append(searchData)
+	# loop through all of the urls
 	for search_url in search_urls:
+		# set the data for the scraper
 		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
 		page_title = search_url.title
 		classIdentifier = 'id'
@@ -104,6 +117,7 @@ def scrape_careers():
 		retriever.scrape()
 
 if __name__ == '__main__':
+	# run the functions
 	scrape_main_table()
 	# scrape_ooh_table() 
 	# scrape_careers()
