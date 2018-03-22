@@ -181,6 +181,7 @@ class TableScraper(object):
 		return len(arrays[0].children)
 	def combineArrays(self, arrays):
 		# combine the lists from all of the TableHeaders
+
 		# print "incombinearrays"
 		# create a variable of the length of the arrays
 		length_of_all_arrays = self.checkLenOfArrays(arrays)
@@ -203,6 +204,8 @@ class TableScraper(object):
 		return arrays, occupations
 
 	def getLinks(self, classIdentifier, idName):
+		# function to ge the links of the table
+		# NOTES: figure out which table
 		# find table
 		table = self.soup.find('table', attrs={''+classIdentifier+'' : ''+idName+''})
 		if table is None:
@@ -228,6 +231,8 @@ class TableScraper(object):
 			occupation_links.append(blslink)
 		return occupation_links
 	def flatten(self, lst):
+		# function to flatten a list
+		# gets all values the list has and puts it in one list
 	    if not lst:
 	        return []
 	    elif not isinstance(lst, list):
@@ -235,36 +240,62 @@ class TableScraper(object):
 	    else:
 	        return self.flatten(lst[0]) + self.flatten(lst[1:])
 	def checkString(self, string):
+		# function to check the string for any special character 
+		# used for the database 
+		# NOTES: might not need any more for we're checking it in the DatabaseCreator class
+		# make all spaces singlespaced
 		string = ' '.join(string.split())
+		# loop through all of the characters
 		for ch in string:
+			# if the charcter is a number
 			if ch.isdigit():
+				# move it to the back
+				# NOTES: do this because the database can't accept numbers infront of the 
 				string = string[1:] + ch
 			else:
 				break
+		# remove the special characters in the string
 		for ch in [',', '-', '(', ')']:
 			if ch in string:
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
 	def addToDatabase(self, values, titles, dbtitle):
+		# creates a DatabaseCreator instance which makes a table in the database
 		databasemaster = DatabaseCreator()
+		# data we use to pass in to the DatabaseCreator
 		value_list = DatabaseData()
 		titleList = []
+		# loop through all of the titles function was given
 		for i in range(len(titles)):
+			# create instance of tuple
 			TitleTuple = namedtuple('TitleTuple', 'title datatype')
+			# make a tule to add to the list
 			titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(555)")
+			# add it
 			titleList.append(titleData)
+		# add the title list to the DatabaseData class
 		value_list.addheadertitle(titleList)
+		# loop through the values function was given
 		for i in range(len(values)):
+			# filter the list in variable values
 			newValueList = filter(None, self.flatten(values[i]))
 			print newValueList
+			# make sure all the strings in the list are ecoded
 			sqlDataList = [newValueList[j].encode('utf-8') for j in range(len(newValueList))]
 			print sqlDataList
+			# add a row of data to the Database Data
+			# addrow function is equivlent to adding one row in the pgadmin table
 			value_list.addrow(sqlDataList)
+		# table name for our database
 		dbtitle = "".join(dbtitle.split())
+		# create the table
 		databasemaster.createTable(value_list, dbtitle)
+		# add our values to it
 		databasemaster.addToTable(value_list, dbtitle)
 		# databasemaster.addToTable(value_list) #TODO: work on adding to database
 	def jsonData(self, header_list=None, occupations=None):
+		# turns our data to json format 
+		# function is specified for the BLSHeader and occupations variables
 		# print 'injsondata'
 		json_occupations_data = []
 		json_links_data = []
@@ -293,13 +324,19 @@ class TableScraper(object):
 		# 	jsonstuff = json.dumps(data.data, indent=4)
 		# 	f.write(jsonstuff)
 	def addContentToContainers(self, contents, containers):
+		# add the data scraped to the right BLSHeader class
+		# add the data to the BLSHeader class
 		count = 0
 		for content in contents:
+			# add the properties 
 			containers[count].addChild(content)
 			count += 1
 		index = 0
+		# the properties in the list are empty then remove it
 		for container in containers:
+			# runs the check for values
 			if container.hasProperties() is False:
+				# remove it
 				del containers[index]
 			index += 1
 		return containers
@@ -307,17 +344,28 @@ class TableScraper(object):
 		# This function is trying to get the header name list working for the database
 		# we are trying to get a unquie title for each column in the database
 		titles = []
+		# loop through the headers
 		for i in range(len(headerlist)):
+			# loop through the request obects to get indexes
 			for j in range(len(self.requests_objects[i])):
+				# add the title to the list
+				# NOTES: we added j to the end of the string so that there won't be any duplacite titles
 				titles.append(headerlist[i].title + "_" + str(j))
 		return titles
 	def scrape(self):
+		# main scrape function 
+		# get the headers
 		headers = self.scrapeHeader(self.classIdentifier, self.idName)
+		# scrape the content of table
 		contents = self.scrapeContent(headers, self.classIdentifier, self.idName)
+		# organize into headers and lists
 		header_list, occupations = self.combineArrays(self.addContentToContainers(contents, headers))
+		# add the data to the database
 		self.addToDatabase(occupations, self.findHeaderTitles(headers), self.dbtitle)
+		# turn the data in to json format
 		json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
 		print str(json_occupations_data) + "hi and stuff"
+		# if we have link files inputed then we can add the data to the files
 		if self.linkFileName is not None or self.dataFileName is not None:
 			BLSData = namedtuple('BLSData', 'data file')
 			# data = BLSData(json_occupations_data, self.dataFileName)
