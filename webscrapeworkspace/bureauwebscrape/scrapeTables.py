@@ -64,12 +64,14 @@ def scrape_ooh_table():
 		# set the values for the scraper
 		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
 		page_title = search_url.title
+		table_title = "careergroup"
 		classIdentifier = 'class'
 		idName = 'display'
+		headers = ["title", "occupation", "job summary", "entrylevel_eduation", "median_pay"]
 		# run it 
 		# try is temporary for testing purposes
 		try:
-			retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
+			retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName)
 			scrapedLinks = retriever.scrape()
 			links.append(scrapedLinks)
 		except Exception as e:
@@ -121,5 +123,5 @@ def scrape_careers():
 if __name__ == '__main__':
 	# run the functions
 	# scrape_main_table()
-	# scrape_ooh_table() 
-	scrape_careers()
+	scrape_ooh_table() 
+	# scrape_careers()

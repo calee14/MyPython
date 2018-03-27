@@ -262,6 +262,7 @@ class TableScraper(object):
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
 	def addToDatabase(self, values, titles, dbtitle, tabletitle, headers=None):
+		# dbtitle = "".join(dbtitle.split())
 		# creates a DatabaseCreator instance which makes a table in the database
 		databasemaster = DatabaseCreator()
 		# data we use to pass in to the DatabaseCreator
