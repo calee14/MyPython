@@ -108,16 +108,18 @@ def scrape_careers():
 		# set the data for the scraper
 		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
 		page_title = search_url.title
+		table_title = "statsummaries"
 		classIdentifier = 'id'
 		idName = 'quickfacts'
 		linkFileName = None #'occupationlinks.json'
 		dataFileName = None #'occupations.json'
+		headers = ["title", "quickfacts1", "quickfacts2"]
 		# run it 
-		retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
+		retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName)
 		retriever.scrape()
 
 if __name__ == '__main__':
 	# run the functions
-	scrape_main_table()
+	# scrape_main_table()
 	# scrape_ooh_table() 
-	# scrape_careers()
+	scrape_careers()

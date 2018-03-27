@@ -18,7 +18,7 @@ import urllib2
 
 class TableScraper(object):
 
-	def __init__(self, search_url, dbtitle, classIdentifier, idName, linkFileName=None, dataFileName=None):
+	def __init__(self, search_url, dbtitle, tabletitle, classIdentifier, idName, dbheaders=None, linkFileName=None, dataFileName=None):
 		# initialize variables
 		self.url = None
 		self.soup = None
@@ -39,6 +39,8 @@ class TableScraper(object):
 		self.linkFileName = linkFileName
 		self.dataFileName = dataFileName
 		self.dbtitle = dbtitle
+		self.tabletitle = tabletitle
+		self.headers = dbheaders
 	def findHead(self, tablehtml):
 		# find the head element of the table
 		head = tablehtml.find('thead').find('tr')
@@ -259,18 +261,19 @@ class TableScraper(object):
 			if ch in string:
 				string = string.replace(ch, '')
 		return string.strip().replace(" ", "_")
-	def addToDatabase(self, values, titles, dbtitle):
+	def addToDatabase(self, values, titles, dbtitle, tabletitle, headers=None):
 		# creates a DatabaseCreator instance which makes a table in the database
 		databasemaster = DatabaseCreator()
 		# data we use to pass in to the DatabaseCreator
 		value_list = DatabaseData()
 		titleList = []
 		# loop through all of the titles function was given
-		for i in range(len(titles)):
+		# NOTE: no longer using titles for we are hard coding column headers
+		for i in range(len(headers)):
 			# create instance of tuple
 			TitleTuple = namedtuple('TitleTuple', 'title datatype')
 			# make a tule to add to the list
-			titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(555)")
+			titleData = TitleTuple(self.checkString(headers[i].encode('utf-8')), "VARCHAR(555)")
 			# add it
 			titleList.append(titleData)
 		# add the title list to the DatabaseData class
@@ -283,15 +286,17 @@ class TableScraper(object):
 			# make sure all the strings in the list are ecoded
 			sqlDataList = [newValueList[j].encode('utf-8') for j in range(len(newValueList))]
 			print sqlDataList
+			sqlDataList.insert(0, self.checkString(dbtitle).encode('utf-8'))
+			# we need to add the title of the database title
 			# add a row of data to the Database Data
 			# addrow function is equivlent to adding one row in the pgadmin table
 			value_list.addrow(sqlDataList)
 		# table name for our database
-		dbtitle = "".join(dbtitle.split())
+		tabletitle = "".join(tabletitle.split())
 		# create the table
-		databasemaster.createTable(value_list, dbtitle)
+		databasemaster.createTable(value_list, tabletitle)
 		# add our values to it
-		databasemaster.addToTable(value_list, dbtitle)
+		databasemaster.addToTable(value_list, tabletitle)
 		# databasemaster.addToTable(value_list) #TODO: work on adding to database
 	def jsonData(self, header_list=None, occupations=None):
 		# turns our data to json format 
@@ -361,7 +366,7 @@ class TableScraper(object):
 		# organize into headers and lists
 		header_list, occupations = self.combineArrays(self.addContentToContainers(contents, headers))
 		# add the data to the database
-		self.addToDatabase(occupations, self.findHeaderTitles(headers), self.dbtitle)
+		self.addToDatabase(occupations, self.findHeaderTitles(headers), self.dbtitle, self.tabletitle, self.headers)
 		# turn the data in to json format
 		json_occupations_data, json_links_data = self.jsonData(header_list, occupations)
 		print str(json_occupations_data) + "hi and stuff"
