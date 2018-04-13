@@ -62,7 +62,9 @@ class TextScraper(object):
 		# scrapes the specified area and stores it in the data_list variable
 		# NOTES: need to change function to make more dynamic and useable
 		# find the element area we want to scrape
-		element_tag = self.soup.find("div", {"id": "%s" % (element_type)})
+		print self.soup
+		element_tag = self.soup.select('div[style="display:block"]')
+		print element_tag
 		# loop through the elements of the element
 		for element in element_tag:
 			# if the element is the header

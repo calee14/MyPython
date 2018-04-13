@@ -41,12 +41,37 @@ def scrapeOccupationSummaries():
 		# scrape the text in the specified area and the specified headers (#hardcode)
 		scrapetext.scrapeArea('center-content')
 		# create the database with the headers
-		headers = ["Job Title", "What Aerospace Engineering and Operations Technicians Do", "Work Environment", "How to Become an Aerospace Engineering and Operations Technician ", "Pay", "Job Outlook", "State and Area Data", "Similar Occupations"]
+		headers = ["Job Title", "What Job Does", "Work Environment", "How to Become One", "Pay", "Job Outlook", "State and Area Data", "Similar Occupations"]
 		# add the data to the database
 		scrapetext.addToDatabase(page_title.strip(), headers, "Summaries")
 		# scrapetext.dropTableInDatabase(page_title.strip() + '_summary')
 		# linkFileName = 'occupationlinks.json'
 		# dataFileName = 'occupations.json'
+def scrapeHowToBecome():
+	search_urls = []
+	# get json file name 
+	jsonfilename = "occupationlinks.json"
+	# open json file as var json_data
+	with open(jsonfilename) as json_data:
+		# store it in variable d
+		d = json.load(json_data)
+		# get second object
+		for link in d:
+			for child in link:
+				title = link[child]
+				for url in title:
+					blslink = title[url]
+					SearchUrl = namedtuple('SearchUrl', 'title url')
+					searchData = SearchUrl(child, blslink)
+					search_urls.append(searchData)
+	for search_url in search_urls:
+		page_link = search_url.url + "#tab2"
+		page_title = search_url.title
+		scrapetext = TextScraper(page_link, None, None)
+		scrapetext.setHeadersText('h3', 'ul')
+		scrapetext.scrapeArea('panes')
+		print(scrapetext.data_text)
+		raise ValueError
 def scrapeGuidesLinks():
 	# scrape the guidle links for the careers listed in the learntobecome website
 	site= "https://www.learnhowtobecome.org"
@@ -100,6 +125,7 @@ def scrapeGuidesContent(links):
 		raise ValueError("Testing")
 if __name__ == '__main__':
 	# run the text scrapers
-	scrapeOccupationSummaries()
+	# scrapeOccupationSummaries()
+	scrapeHowToBecome()
 	# links = scrapeGuidesLinks()
 	# scrapeGuidesContent(links)
