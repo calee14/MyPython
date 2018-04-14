@@ -25,6 +25,12 @@ class BLSContent(object):
 		cleanedContent = self.cleanContent(child)
 		# add content to children
 		self.text.append(cleanedContent)
+	def addListChild(self, child):
+		if isinstance(child, list):
+			for c in child:
+				self.text.append(c)
+		else:
+			self.text.append(child)
 	
 		
 

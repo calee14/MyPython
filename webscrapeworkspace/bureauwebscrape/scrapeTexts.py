@@ -69,8 +69,11 @@ def scrapeHowToBecome():
 		page_title = search_url.title
 		scrapetext = TextScraper(page_link, None, None)
 		scrapetext.setHeadersText('h3', 'ul')
-		scrapetext.scrapeArea('panes')
-		print(scrapetext.data_text)
+		articles = scrapetext.getArea('panes', True, [1, 3])
+		for article in articles:
+			scrapetext.scrapeHTML(article, 'article')
+			print scrapetext.data_text[0].text
+			raise ValueError
 		raise ValueError
 def scrapeGuidesLinks():
 	# scrape the guidle links for the careers listed in the learntobecome website

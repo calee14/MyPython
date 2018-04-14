@@ -58,6 +58,39 @@ class TextScraper(object):
 	# Use the find_all method to find all of the text tags
 	# New Method to scrape texts:
 	# We need something new
+	def getArea(self, element, children=False, indexes=None):
+		area = self.soup.find('div', {'id':'%s' % (element)})
+		if children is True:
+			if indexes is None:
+				child_elements = []
+				for child in area:
+					if isinstance(child, NavigableString):
+						continue
+					else:
+						child_elements.append(child)
+				return child_elements
+			elif len(indexes) >= 1:
+				child_elements = []
+				index = 0
+				for child in area:
+					if isinstance(child, NavigableString):
+						continue
+					else:
+						if index in indexes:
+							child_elements.append(child)
+						index += 1
+				return child_elements
+		return -1
+	def scrapeHTML(self, html_snippet, element_area):
+		area = html_snippet.find(element_area)
+		for element in area:
+			if element.name == self.header_tag:
+				title = element.getText()
+				container = BLSContent(title)
+				self.data_text.append(container)
+			if element.name == self.text_tag:
+				text = element.find_all(text=True)
+				self.data_text[-1].addListChild(text)		
 	def scrapeArea(self, element_type):
 		# scrapes the specified area and stores it in the data_list variable
 		# NOTES: need to change function to make more dynamic and useable
