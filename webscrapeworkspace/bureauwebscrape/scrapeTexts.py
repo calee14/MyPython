@@ -43,7 +43,7 @@ def scrapeOccupationSummaries():
 		# create the database with the headers
 		headers = ["Job Title", "What Job Does", "Work Environment", "How to Become One", "Pay", "Job Outlook", "State and Area Data", "Similar Occupations"]
 		# add the data to the database
-		scrapetext.addToDatabase(page_title.strip(), headers, "Summaries")
+		scrapetext.addToDatabase(page_title.strip(), "Summaries",headers,  False)
 		# scrapetext.dropTableInDatabase(page_title.strip() + '_summary')
 		# linkFileName = 'occupationlinks.json'
 		# dataFileName = 'occupations.json'
@@ -68,13 +68,15 @@ def scrapeHowToBecome():
 		page_link = search_url.url + "#tab2"
 		page_title = search_url.title
 		scrapetext = TextScraper(page_link, None, None)
-		scrapetext.setHeadersText('h3', 'ul')
 		articles = scrapetext.getArea('panes', True, [1, 3])
-		for article in articles:
-			scrapetext.scrapeHTML(article, 'article')
-			print scrapetext.data_text[0].text
-			raise ValueError
-		raise ValueError
+		# scrape duties page
+		scrapetext.setHeadersText('h3', 'ul')
+		scrapetext.scrapeHTML(articles[0], 'article')
+		# scrape the how to become site
+		scrapetext.setHeadersText('h3', 'p')
+		scrapetext.scrapeHTML(articles[1], 'article')
+		# add all data scraped to the database
+		scrapetext.addToDatabase(page_title.strip(), "careerdetails", ["job_title", ], True)
 def scrapeGuidesLinks():
 	# scrape the guidle links for the careers listed in the learntobecome website
 	site= "https://www.learnhowtobecome.org"
