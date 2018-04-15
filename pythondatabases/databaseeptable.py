@@ -9,6 +9,14 @@ class DatabaseCreator(object):
 		self.con = None
 		# initialize the cursor/query tool of the database
 		self.cur = None
+	def flatten(self, lst):
+		# flatten the list to get all values in the list in one list
+	    if not lst:
+	        return []
+	    elif not isinstance(lst, list):
+	        return [lst] 
+	    else:
+	        return self.flatten(lst[0]) + self.flatten(lst[1:])
 	def utf8len(self, s):
 		# function returns the size (bytes) of the string
 		# useful if we have a name that is too long for the database
@@ -22,6 +30,11 @@ class DatabaseCreator(object):
 		first_part = hi[:n]
 		last_pasrt = hi[n+1:]
 		return first_part + last_pasrt
+	def cleanList(self, list_):
+		print str(list_) + "hi"
+		list_ = map(lambda s: s.strip(), list_)
+		list_ = self.flatten(list_)
+		return list_
 	def cleanString(self, string):
 		# cleans the string of any special characters
 		# database will give errors if special kinds of strings are entered in the query
@@ -37,6 +50,12 @@ class DatabaseCreator(object):
 				count+=1
 		return ' '.join(string.split())
 		# print string + "josh"
+	def cleanData(self, data):
+		if isinstance(data, list):
+			return self.cleanList(data)
+		elif isinstance(data, str):
+			return self.cleanString(data)
+		return -1
 	def removeSpecialCharacters(self, string):
 		# removes the string of any special characters
 		# NOTE: similar ot the cleanString function; plan to make them into one
@@ -149,7 +168,7 @@ class DatabaseCreator(object):
 				print items
 				# clean the string in the list
 				# NOTES: comma's are allowed in the table just not as a column header
-				items = [self.cleanString(item) for item in items]
+				items = [self.cleanData(item) for item in items]
 				# create a string of '%s' so the query can recognize the values in the list
 				copy_string = re.sub(r'([a-z])(?!$)', r'\1,', '%s' * len(items))
 				# add a comma and a space between the '%s' characters

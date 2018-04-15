@@ -9,6 +9,7 @@ class DatabaseData(object):
 		row = []
 		# run checks on the data and add to the lists
 		for value in values:
+			print value
 			if self.checkdata(value):
 				# if the check is good
 				row.append(value)
@@ -32,6 +33,8 @@ class DatabaseData(object):
 			if all(value):
 				return True
 		elif isinstance(value, str):
+			return True
+		elif isinstance(value, list):
 			return True
 		else:
 			return False
