@@ -170,14 +170,14 @@ class TextScraper(object):
 			# loop through the column titles
 			for title in column_headers:
 				# put it in a tuple so it can specify what type the variable is 
-				titleText = TitleTuple(self.checkString(title), "VARCHAR(3000)")
+				titleText = TitleTuple(self.checkString(title), "VARCHAR(5000)")
 				# add the tuple
 				title_list.append(titleText)
 		elif column_headers is None:
 			temp_list = [container.title.encode('utf-8') for container in self.data_text]
 			temp_list.insert(0, "job_title")
 			for title in temp_list:
-				titleText = TitleTuple(self.checkString(title), "VARCHAR(3000)")
+				titleText = TitleTuple(self.checkString(title), "VARCHAR(5000)")
 				title_list.append(titleText)
 		print title_list
 		text_list = []
