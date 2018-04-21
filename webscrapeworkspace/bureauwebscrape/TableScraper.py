@@ -18,7 +18,7 @@ import urllib2
 
 class TableScraper(object):
 
-	def __init__(self, search_url, dbtitle, tabletitle, classIdentifier, idName, dbheaders=None, linkFileName=None, dataFileName=None):
+	def __init__(self, search_url, dbtitle, tabletitle, classIdentifier, idName, dbheaders=None, linkFileName=None, dataFileName=None, useTableHeader=True):
 		# initialize variables
 		self.url = None
 		self.soup = None
@@ -41,6 +41,7 @@ class TableScraper(object):
 		self.dbtitle = dbtitle
 		self.tabletitle = tabletitle
 		self.headers = dbheaders
+		self.useTableHeader = useTableHeader
 	def findHead(self, tablehtml):
 		# find the head element of the table
 		head = tablehtml.find('thead').find('tr')
@@ -287,7 +288,8 @@ class TableScraper(object):
 			# make sure all the strings in the list are ecoded
 			sqlDataList = [newValueList[j].encode('utf-8') for j in range(len(newValueList))]
 			print sqlDataList
-			sqlDataList.insert(0, self.checkString(dbtitle).encode('utf-8'))
+			if self.useTableHeader is True:
+				sqlDataList.insert(0, self.checkString(dbtitle).encode('utf-8'))
 			# we need to add the title of the database title
 			# add a row of data to the Database Data
 			# addrow function is equivlent to adding one row in the pgadmin table

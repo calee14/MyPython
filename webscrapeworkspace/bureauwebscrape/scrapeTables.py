@@ -21,13 +21,15 @@ def scrape_main_table():
 	# scrape the main occupations table
 	# get values for the scraper 
 	page_link = 'https://www.bls.gov/emp/ep_table_101.htm'
-	page_title = 'MajorOccupations'
+	page_title = 'major'
+	db_title = 'major'
+	dbheaders = ['title', 'code', 'employment', 'employment_2016', 'change_2016-26', 'change_2016-26_percent', 'average_median_wage']
 	classIdentifier = 'class'
 	idName = 'regular'
 	linkFileName = None#'occupationlinks.json'
 	dataFileName = None#'occupations.json'
 	# create scraper, run it 
-	retriever = TableScraper(page_link, page_title, classIdentifier, idName, linkFileName, dataFileName)
+	retriever = TableScraper(page_link, db_title, page_title, classIdentifier, idName, dbheaders=dbheaders, linkFileName=None, dataFileName=None, useTableHeader=False)
 	retriever.scrape()
 
 def scrape_ooh_table():
@@ -122,6 +124,6 @@ def scrape_careers():
 
 if __name__ == '__main__':
 	# run the functions
-	# scrape_main_table()
-	scrape_ooh_table() 
+	scrape_main_table()
+	# scrape_ooh_table() 
 	# scrape_careers()
