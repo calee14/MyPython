@@ -73,7 +73,7 @@ def scrape_ooh_table():
 		# run it 
 		# try is temporary for testing purposes
 		try:
-			retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName)
+			retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName, True)
 			scrapedLinks = retriever.scrape()
 			links.append(scrapedLinks)
 		except Exception as e:
@@ -119,11 +119,11 @@ def scrape_careers():
 		dataFileName = None #'occupations.json'
 		headers = ["title", "quickfacts1", "quickfacts2"]
 		# run it 
-		retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName)
+		retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName, True)
 		retriever.scrape()
 
 if __name__ == '__main__':
 	# run the functions
-	scrape_main_table()
+	# scrape_main_table()
 	# scrape_ooh_table() 
-	# scrape_careers()
+	scrape_careers()
