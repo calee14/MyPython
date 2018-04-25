@@ -292,6 +292,12 @@ class TableScraper(object):
 				titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(555)")
 				# add it
 				titleList.append(titleData)
+			if self.useTableHeader is True:
+				# create instance of tuple
+				TitleTuple = namedtuple('TitleTuple', 'title datatype')
+				# make a tule to add to the list
+				titleData = TitleTuple(self.checkString("title".encode('utf-8')), "VARCHAR(555)")
+				titleList.insert(0, titleData)
 		# add the title list to the DatabaseData class
 		value_list.addheadertitle(titleList)
 		# loop through the values function was given

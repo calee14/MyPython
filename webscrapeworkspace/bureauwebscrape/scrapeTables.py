@@ -153,7 +153,7 @@ def scrapeOutLook():
 		linkFileName = None
 		dataFileName = None
 		headers = None
-		retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName, False)
+		retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName, True)
 		retriever.scrape()
 if __name__ == '__main__':
 	# run the functions
