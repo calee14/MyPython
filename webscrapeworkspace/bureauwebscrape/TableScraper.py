@@ -159,8 +159,12 @@ class TableScraper(object):
 				append_list = []
 				# loop through the request objects indexes
 				for num in self.requests_objects[i]:
-					# append the data to the right list
-					append_list.append(row[num])
+					try:
+						# append the data to the right list
+						append_list.append(row[num])
+					except Exception as e:
+						print e
+						print "Error: There is something run with the request_objects and the amount of objects in row"
 				# the append_list would go to the master list
 				organized[i].append(append_list)
 		return organized
@@ -270,14 +274,24 @@ class TableScraper(object):
 		value_list = DatabaseData()
 		titleList = []
 		# loop through all of the titles function was given
-		# NOTE: no longer using titles for we are hard coding column headers
-		for i in range(len(headers)):
-			# create instance of tuple
-			TitleTuple = namedtuple('TitleTuple', 'title datatype')
-			# make a tule to add to the list
-			titleData = TitleTuple(self.checkString(headers[i].encode('utf-8')), "VARCHAR(555)")
-			# add it
-			titleList.append(titleData)
+		if headers is not None:
+			# NOTE: no longer using titles for we are hard coding column headers
+			for i in range(len(headers)):
+				# create instance of tuple
+				TitleTuple = namedtuple('TitleTuple', 'title datatype')
+				# make a tule to add to the list
+				titleData = TitleTuple(self.checkString(headers[i].encode('utf-8')), "VARCHAR(555)")
+				# add it
+				titleList.append(titleData)
+		else:
+			# use the titles (table headers) for the database
+			for i in range(len(titles)):
+				# create instance of tuple
+				TitleTuple = namedtuple('TitleTuple', 'title datatype')
+				# make a tule to add to the list
+				titleData = TitleTuple(self.checkString(titles[i].encode('utf-8')), "VARCHAR(555)")
+				# add it
+				titleList.append(titleData)
 		# add the title list to the DatabaseData class
 		value_list.addheadertitle(titleList)
 		# loop through the values function was given

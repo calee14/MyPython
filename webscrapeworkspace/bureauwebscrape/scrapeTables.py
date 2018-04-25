@@ -121,9 +121,43 @@ def scrape_careers():
 		# run it 
 		retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName, True)
 		retriever.scrape()
-
+def scrapeOutLook():
+	# scrape the summary of the data of the careers
+	# scrape the bls.gov/ooh tables
+	# search keys
+	search_urls = []
+	# get json file name 
+	jsonfilename = "occupationlinks.json"
+	# open json file as var json_data
+	with open(jsonfilename) as json_data:
+		# store it in variable d
+		d = json.load(json_data)
+		print d
+		# get the title and url of the object
+		for link in d:
+			for child in link:
+				title = link[child]
+				for url in title:
+					blslink = title[url]
+					SearchUrl = namedtuple('SearchUrl', 'title url')
+					searchData = SearchUrl(child, blslink)
+					search_urls.append(searchData)
+	# loop through all of the urls
+	for search_url in search_urls:
+		# set the data for the scraper
+		page_link = search_url.url #'https://www.bls.gov/emp/ep_table_101.htm'
+		page_title = search_url.title
+		table_title = "outlook"
+		classIdentifier = "class"
+		idName = "regular"
+		linkFileName = None
+		dataFileName = None
+		headers = None
+		retriever = TableScraper(page_link, page_title, table_title, classIdentifier, idName, headers, linkFileName, dataFileName, False)
+		retriever.scrape()
 if __name__ == '__main__':
 	# run the functions
 	# scrape_main_table()
 	# scrape_ooh_table() 
-	scrape_careers()
+	# scrape_careers()
+	scrapeOutLook()
