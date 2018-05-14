@@ -191,8 +191,14 @@ class TextScraper(object):
 			# make sure the length of the list is no more than how many columns we have
 			text_list = text_list[:len(title_list)]
 		elif datainlist is True:
+			# setting the data from the data we scraped
 			text_list = [container for container in self.data_text]
+			# looping throught the data and getting the text
 			text_list = [text.text for text in text_list]
+			titles = [container.title for container in self.data_text]
+			for i in range(len(text_list)):
+				print str(titles[i]).encode('utf-8') + 'deez'
+				text_list[i].insert(0, str(titles[i]).encode('utf-8'))
 			text_list.insert(0, ctitle.encode('utf-8'))
 		# # add our text to our 
 		# for child in self.data_text:
