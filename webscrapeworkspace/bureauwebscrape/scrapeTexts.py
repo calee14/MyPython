@@ -43,7 +43,7 @@ def scrapeOccupationSummaries():
 		# create the database with the headers
 		headers = ["Job Title", "What Job Does", "Work Environment", "How to Become One", "Pay", "Job Outlook", "State and Area Data", "Similar Occupations"]
 		# add the data to the database
-		scrapetext.addToDatabase(page_title.strip(), "Summaries",headers,  False)
+		scrapetext.addToDatabase(page_title.strip(), "Summaries", headers,  False)
 		# scrapetext.dropTableInDatabase(page_title.strip() + '_summary')
 		# linkFileName = 'occupationlinks.json'
 		# dataFileName = 'occupations.json'
