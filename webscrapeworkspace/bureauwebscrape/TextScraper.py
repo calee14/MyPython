@@ -47,7 +47,12 @@ class TextScraper(object):
 	        return self.flatten(lst[0]) + self.flatten(lst[1:])
 	def setHeadersText(self, headers, text):
 		# set tags of the all elements we want to scrape
-		self.header_tag = headers
+		if headers is None:
+			container = BLSContent("Header")
+			self.data_text.append(container)
+			self.header_tag = ""
+		else:
+			self.header_tag = headers
 		self.text_tag = text
 	# NOTES
 	# New Method to scrape texts:
@@ -88,9 +93,13 @@ class TextScraper(object):
 							child_elements.append(child)
 						index += 1
 				return child_elements
-		return -1
-	def scrapeHTML(self, html_snippet, element_area):
-		area = html_snippet.find(element_area)
+		return area
+	def scrapeHTML(self, element_area, html_snippet=None):
+		area = None
+		if html_snippet is not None:
+			area = html_snippet.find(element_area)
+		else:
+			area = self.soup.find(element_area)
 		for element in area:
 			if element.name == self.header_tag:
 				title = element.getText()

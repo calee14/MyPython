@@ -71,10 +71,10 @@ def scrapeHowToBecome():
 		articles = scrapetext.getArea('panes', True, [1, 3])
 		# scrape duties page
 		scrapetext.setHeadersText('h3', 'ul')
-		scrapetext.scrapeHTML(articles[0], 'article')
+		scrapetext.scrapeHTML('article', articles[0])
 		# scrape the how to become site
 		scrapetext.setHeadersText('h3', 'p')
-		scrapetext.scrapeHTML(articles[1], 'article')
+		scrapetext.scrapeHTML('article', articles[0])
 		# add all data scraped to the database
 		# NOTE: Maximun amount of columns after duties is 7-8
 		scrapetext.addToDatabase(page_title.strip(), "careerdetails", ["job_title", "duties", "howtobecome1", "howtobecome2", "howtobecome3", "howtobecome4", "howtobecome5", "howtobecome6", "howtobecome7", "howtobecome8", "howtobecome9"], True)
@@ -129,9 +129,35 @@ def scrapeGuidesContent(links):
 		scrapetext.scrapeArea('inner-ac-block mrgNbtm')
 		print scrapetext.data_text
 		raise ValueError("Testing")
+def scrapeOccupationDescription():
+	search_urls = []
+	# get json file name 
+	jsonfilename = "links.json"
+	# open json file as var json_data
+	with open(jsonfilename) as json_data:
+		# store it in variable d
+		d = json.load(json_data)
+		# get get the object title and url
+		for link in d:
+			for child in link:
+				title = link[child]
+				for url in title:
+					blslink = title[url]
+					SearchUrl = namedtuple('SearchUrl', 'title url')
+					searchData = SearchUrl(child, blslink)
+					search_urls.append(searchData)
+	for search_url in search_urls:
+		page_link = search_url.url
+		page_title = search_url.title
+		table_title = "occupationdesc"
+		text_scraper = TextScraper(page_link, None, None)
+		text_scraper.setHeadersText(None, 'p')
+		text_scraper.scrapeHTML('section')
+		text_scraper.addToDatabase(page_title.strip(), table_title, None, True)
 if __name__ == '__main__':
 	# run the text scrapers
 	# scrapeOccupationSummaries()
-	scrapeHowToBecome()
+	# scrapeHowToBecome()
+	scrapeOccupationDescription()
 	# links = scrapeGuidesLinks()
 	# scrapeGuidesContent(links)

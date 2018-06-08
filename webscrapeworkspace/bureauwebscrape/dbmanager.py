@@ -92,6 +92,6 @@ for node in nodes:
 	for test_string in test_strings:
 		node.matchString(test_string)
 	print str(node.returnBestMatch()) + " " + node.title + " streak: "
-	cur.execute("UPDATE major SET occupation_group = %s WHERE title = %s;", (' '.join(letters(node.returnBestMatch()[0]).split()).replace(' ', '_'), node.title))
+	cur.execute("UPDATE occupationdesc SET occupation_group = %s WHERE job_title = %s;", (' '.join(letters(node.returnBestMatch()[0]).split()).replace(' ', '_'), node.title))
 	con.commit()
 
