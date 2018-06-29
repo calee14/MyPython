@@ -21,8 +21,8 @@ def scrape_main_table():
 	# scrape the main occupations table
 	# get values for the scraper 
 	page_link = 'https://www.bls.gov/emp/ep_table_101.htm'
-	page_title = 'major'
-	db_title = 'major'
+	page_title = 'majorc'
+	db_title = 'majorc'
 	dbheaders = ['title', 'code', 'employment', 'employment_2016', 'change_2016-26', 'change_2016-26_percent', 'average_median_wage']
 	classIdentifier = 'class'
 	idName = 'regular'
@@ -157,7 +157,7 @@ def scrapeOutLook():
 		retriever.scrape()
 if __name__ == '__main__':
 	# run the functions
-	# scrape_main_table()
+	scrape_main_table()
 	# scrape_ooh_table() 
 	# scrape_careers()
-	scrapeOutLook()
+	# scrapeOutLook()

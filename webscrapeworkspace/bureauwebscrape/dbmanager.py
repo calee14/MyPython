@@ -87,11 +87,11 @@ test_strings = ['Architecture and Engineering',
 'Sales',
 'Transportation and Material Moving'];
 
-# cur.execute('ALTER TABLE major ADD occupation_group VARCHAR(500);')
+cur.execute('ALTER TABLE majorc ADD occupation_group VARCHAR(500);')
 for node in nodes:
 	for test_string in test_strings:
 		node.matchString(test_string)
 	print str(node.returnBestMatch()) + " " + node.title + " streak: "
-	cur.execute("UPDATE occupationdesc SET occupation_group = %s WHERE job_title = %s;", (' '.join(letters(node.returnBestMatch()[0]).split()).replace(' ', '_'), node.title))
+	cur.execute("UPDATE majorc SET occupation_group = %s WHERE title = %s;", (' '.join(letters(node.returnBestMatch()[0]).split()).replace(' ', '_'), node.title))
 	con.commit()
 
