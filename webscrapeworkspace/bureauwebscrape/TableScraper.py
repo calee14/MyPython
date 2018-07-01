@@ -140,7 +140,7 @@ class TableScraper(object):
 				# print data
 				# get all the text in the cell of the table
 				text = data.findAll(text=True)
-				text = [' '.join(text).strip()]
+				text = [' '.join(text).strip().encode('utf-8')]
 				if isinstance(text, list):
 					print ' '.join(text).strip()
 				text = self.cleanArrays(text)
@@ -380,6 +380,14 @@ class TableScraper(object):
 				# NOTES: we added j to the end of the string so that there won't be any duplacite titles
 				titles.append(headerlist[i].title + "_" + str(j))
 		return titles
+
+	def dropTableInDatabase(self, dbtitle):
+		# function to drop a table 
+		# create an instance of the DatabaseCreator
+		databasemaster = DatabaseCreator()
+		# run the drop table function
+		databasemaster.dropTable(self.checkString(dbtitle))
+		
 	def scrape(self):
 		# main scrape function 
 		# get the headers
