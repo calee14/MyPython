@@ -74,10 +74,10 @@ def scrapeHowToBecome():
 		scrapetext.scrapeHTML('article', articles[0])
 		# scrape the how to become site
 		scrapetext.setHeadersText('h3', 'p')
-		scrapetext.scrapeHTML('article', articles[0])
+		scrapetext.scrapeHTML('article', articles[1])
 		# add all data scraped to the database
 		# NOTE: Maximun amount of columns after duties is 7-8
-		scrapetext.addToDatabase(page_title.strip(), "careerdetails", ["job_title", "duties", "howtobecome1", "howtobecome2", "howtobecome3", "howtobecome4", "howtobecome5", "howtobecome6", "howtobecome7", "howtobecome8", "howtobecome9"], True)
+		scrapetext.addToDatabase(page_title.strip(), "careerdetailstest", ["job_title", "duties", "howtobecome1", "howtobecome2", "howtobecome3", "howtobecome4", "howtobecome5", "howtobecome6", "howtobecome7", "howtobecome8", "howtobecome9"], True)
 def scrapeGuidesLinks():
 	# scrape the guidle links for the careers listed in the learntobecome website
 	site= "https://www.learnhowtobecome.org"
@@ -157,7 +157,7 @@ def scrapeOccupationDescription():
 if __name__ == '__main__':
 	# run the text scrapers
 	# scrapeOccupationSummaries()
-	# scrapeHowToBecome()
-	scrapeOccupationDescription()
+	scrapeHowToBecome()
+	# scrapeOccupationDescription()
 	# links = scrapeGuidesLinks()
 	# scrapeGuidesContent(links)
