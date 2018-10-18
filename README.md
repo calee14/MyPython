@@ -17,4 +17,4 @@ Make sure you have the python command or a python shell installed to run the scr
 A lot of stuff
 
 # Authors
-Me
+**Cap Lee** - probably going to be the only author.
