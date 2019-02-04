@@ -2,7 +2,7 @@
 Various python programs that I'm currently developing: webscraping, python programming styles, back-end code, apis, constructing databases and misc.
 
 # Getting Started
-To install the code to your local machine, run the git command:
+To install the code to your local machine, run the git command in your terminal:
 ```
 git clone https://github.com/calee14/MyPython.git
 ```
