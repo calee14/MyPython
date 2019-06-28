@@ -122,3 +122,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# extentions
+find-ingredients/indvl_ingredientv1.txt
