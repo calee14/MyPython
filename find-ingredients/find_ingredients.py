@@ -8,6 +8,14 @@ def get_columns():
 
 	print(df.info())
 
+def write_to_file(ingredients):
+	for ingredient in ingredients:
+
+		ingredient = ingredient.lower()
+
+		with open('indvl_ingredientv1.txt', 'a') as f:
+			f.write(ingredient)
+
 def iter_ingredients():
 	for index, row in df.iterrows():
 
@@ -19,8 +27,9 @@ def iter_ingredients():
 
 		ingredients_str = ingredients_str.replace(',', ' ')
 		ingredients_str = ' '.join(ingredients_str.split())
+		ingredients_str = ingredients_str.split()
 
-		print(ingredients_str)
+		write_to_file(ingredients_str)
 
 		if index == 8:
 			break
