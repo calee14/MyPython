@@ -14,12 +14,16 @@ def write_to_file(ingredients):
 		ingredient = ingredient.lower()
 
 		with open('indvl_ingredientv1.txt', 'a') as f:
-			f.write(ingredient)
+			f.write(ingredient + '\n')
 
 def iter_ingredients():
 	for index, row in df.iterrows():
 
 		ingredients_str = row['features.value']
+
+		if type(ingredients_str) != str:
+			
+			continue
 
 		for char in '.():\\*':
 
@@ -27,12 +31,9 @@ def iter_ingredients():
 
 		ingredients_str = ingredients_str.replace(',', ' ')
 		ingredients_str = ' '.join(ingredients_str.split())
-		ingredients_str = ingredients_str.split()
+		ingredients_list = ingredients_str.split()
 
-		write_to_file(ingredients_str)
-
-		if index == 8:
-			break
+		write_to_file(ingredients_list)
 
 if __name__ == '__main__':
 	get_columns()
