@@ -13,7 +13,7 @@ def write_to_file(ingredients):
 
 		skip_ingredient = False
 
-		for char in '#.$[]':
+		for char in '#.$[]/':
 			if char in ingredient:
 				skip_ingredient = True
 				break
