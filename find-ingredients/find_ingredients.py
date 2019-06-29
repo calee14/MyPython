@@ -11,6 +11,10 @@ def get_columns():
 def write_to_file(ingredients):
 	for ingredient in ingredients:
 
+		for char in '#.$[]':
+			if char in ingredient:
+				continue 
+
 		ingredient = ingredient.lower()
 
 		with open('indvl_ingredientv1.txt', 'a') as f:
