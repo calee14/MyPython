@@ -11,9 +11,15 @@ def get_columns():
 def write_to_file(ingredients):
 	for ingredient in ingredients:
 
+		skip_ingredient = False
+
 		for char in '#.$[]':
 			if char in ingredient:
-				continue 
+				skip_ingredient = True
+				break
+
+		if skip_ingredient == True:
+			continue 
 
 		ingredient = ingredient.lower()
 
