@@ -45,6 +45,12 @@ def iter_ingredients():
 
 		write_to_file(ingredients_list)
 
+def make_new_v():
+	df.drop(['id', 'asins', 'brand', 'categories', 'dateAdded', 'dateUpdated', 'ean', 'manufacturer', 'manufacturerNumber', 'name', 'sizes', 'upc', 'weight', 'Unnamed: 15'],axis=1, inplace=True)
+
+	df.to_csv("ingredients v2.csv", encoding='utf-8', index=False)
+	
 if __name__ == '__main__':
-	get_columns()
-	iter_ingredients()
+	make_new_v()
+	# get_columns()
+	# iter_ingredients()
