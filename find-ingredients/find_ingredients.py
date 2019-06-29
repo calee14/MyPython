@@ -18,7 +18,7 @@ def write_to_file(ingredients):
 				skip_ingredient = True
 				break
 
-		if skip_ingredient == True:
+		if skip_ingredient == True or ingredient == "":
 			continue 
 
 		ingredient = ingredient.lower()
