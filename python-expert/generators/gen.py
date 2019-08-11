@@ -55,15 +55,29 @@ class Compute:
 
 def compute():
     for i in range(10):
-        sleep(.5)
-        yield i # -> used for generators/sequencing
+
+        # performs some computation
+
+        sleep(.5) # sleep models the complex computation
+
+        # give the value back to the user to do something
+        yield i # -> used for generators/sequencing	
 '''
 Core concept and mental model of a generator
 Instead of eagerly computing values you give 
 it to the user as they ask for it
+
+Let a little library code run, then
+let a little user code run
+Let a little library code run, then
+let a little user code run
+
+Interleave them
+Core conceptualization of generators
 '''
 
 for val in compute():
+    # user do what ever they want to do with value
     print(val)
 
 # for x in xs:
@@ -72,3 +86,20 @@ for val in compute():
 # xi = iter(xs)    -> __iter__
 # while True:
 #   x = next(xi)   -> __next__
+
+class Api:
+    def run_this_first(self):
+        first()
+    def run_this_second(self):
+        second()
+    def run_this_last(self):
+        last()
+
+# can ensure that the first func will always 
+# run before the second and third
+def api():
+    first()
+    yield
+    second()
+    yield
+    last()
