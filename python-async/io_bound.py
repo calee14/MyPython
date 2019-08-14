@@ -1,5 +1,7 @@
 '''
-This is an io bound task
+this is an io bound task
+meaning there is an input and output
+the code runs linearly
 '''
 
 import time
