@@ -1,3 +1,7 @@
+'''
+asynchronous code allows code to run concurrently 
+when in io bound it runs linearly
+'''
 import time
 import asyncio
 
