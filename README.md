@@ -14,7 +14,9 @@ python name_of_file.py
 Make sure you have the python command or a python shell installed to run the scripts
 
 # Built With
-A lot of stuff
+- Beautiful Soup
+- Asyncio
+- and a lot more stuff
 
 # Authors
 **Cap Lee** - probably going to be the only author.
