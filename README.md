@@ -1,5 +1,5 @@
 # MyPython
-Various python programs that I'm currently developing: webscraping, python programming styles, back-end code, apis, constructing databases and misc.
+Various python programs that I'm currently developing: webscraping, python programming styles, back-end code, apis, constructing databases, advanced python concepts, and misc.
 
 # Getting Started
 To install the code to your local machine, run the git command in your terminal:
@@ -14,7 +14,9 @@ python name_of_file.py
 Make sure you have the python command or a python shell installed to run the scripts
 
 # Built With
-A lot of stuff
+- Beautiful Soup
+- Asyncio
+- and a lot more stuff
 
 # Authors
 **Cap Lee** - probably going to be the only author.
