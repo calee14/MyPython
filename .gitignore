@@ -126,3 +126,4 @@ dmypy.json
 # extentions
 find-ingredients/indvl_ingredientv1.txt
 *.csv
+*.txt
