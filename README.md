@@ -1,5 +1,5 @@
 # MyPython
-Various python programs that I'm currently developing: webscraping, python programming styles, back-end code, apis, constructing databases, advanced python concepts, and misc.
+Various python programs that I'm currently developing: webscraping, python programming styles, back-end code, apis, constructing databases, advanced python concepts, datastructures, and misc.
 
 # Getting Started
 To install the code to your local machine, run the git command in your terminal:
