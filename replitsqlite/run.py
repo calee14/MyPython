@@ -1,18 +1,40 @@
-import sqlite3
+import psycopg2
 
-conn = sqlite3.connect('python.db')
-c = conn.cursor()
+# deleted db connection line 
 
-def create_table():
-	c.execute('CREATE TABLE IF NOT EXISTS RecordONE (Number REAL, Name TEXT)')
-	name = input("What is your name?")
-def data_entry():
-	number = "1234"
-	c.execute("INSERT INTO RecordONE (Number, Name) VALUES(?, ?)", (number, name))
-	conn.commit()
+from config import config
 
-create_table()
-data_entry()
+def connect():
+    """ Connect to the PostgreSQL database server """
+    conn = None
+    try:
+        # read connection parameters
+        params = config()
 
-c.close()
-conn.close()
+        # connect to the PostgreSQL server
+        print('Connecting to the PostgreSQL database...')
+        conn = psycopg2.connect(**params)
+		
+        # create a cursor
+        cur = conn.cursor()
+        
+	# execute a statement
+        print('PostgreSQL database version:')
+        cur.execute('SELECT version()')
+
+        # display the PostgreSQL database server version
+        db_version = cur.fetchone()
+        print(db_version)
+       
+	# close the communication with the PostgreSQL
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if conn is not None:
+            conn.close()
+            print('Database connection closed.')
+
+
+if __name__ == '__main__':
+    connect()
