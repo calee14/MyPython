@@ -24,4 +24,23 @@
 
 ## MetaMask and Eth Wallets
 - make accounts and wallets to the eth blockchain on MetaMask
+    - can make many accounts in the MetaMask Wallet
+        - those accounts are protected by a private key which gives access to funds in the eth account
+            - private key = access to one account
+            - public address = no access to accounts
 - etherscan.io for viewing the eth blockchain
+    - Testnet are blockchains that help test smart contracts but money isn't real on that network
+    - can also view the test networks. not working with real money
+
+## Making transactions on the blockchain
+-  Gas = unit of computational measurement. the more computations for a transaction the more gas you have to pay.
+- every transaction that happens __on-the-chain__ pays a "gas fee" to node operators
+- When making a transaction to send eth need to pay a "gas fee"
+- transaction has a fee = gas used * gas price
+    - set a higher gas price means that the node will likely include your transaction in the block
+    - 1 GWEI = 0.000000000771 ETH
+
+## How A Blockchain works (Blockchain 101)
+- __hash__ = unique fixed length of string meant to identify a piece of data. created by placing the data into a "hash function"
+    - SHA-3 is used by eth and SHA-256 is used by Bitcoin
+- __block__ = 
