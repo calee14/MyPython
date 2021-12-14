@@ -42,6 +42,7 @@
 
 ## How A Blockchain works (Blockchain 101)
 - https://andersbrownworth.com/blockchain/
+- https://www.youtube.com/watch?v=_160oMzblY8
 - __hash__ = unique __fixed__ length of string meant to identify a piece of data. created by placing the data into a "hash function"
     - SHA-3 is used by eth and SHA-256 is used by Bitcoin
 - __block__: (important example in code)
@@ -71,7 +72,7 @@
     hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
 }
 
-{ // block 3
+{ // block 2
     block: Number,
     nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
     data: String, 
@@ -79,5 +80,46 @@
     hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
 }
 ```
-    - In a blockchain, the block, nonce, data, and prev_hash values all go into making the hash. Thus, changing one data entry to the hash func will affect the block's hash and then all of the following blocks in the chain
+- Code explaination: 
+    - In a blockchain, the block, nonce, data, and prev_hash values all go into making the hash. Thus, changing one data entry to the hash func will affect the block's hash and then all of the following blocks in the chain will no longer be correctly signed.
 - __distributed blockchain__ = many peers have a copy of the blockchain.
+    - even if all hashes in the blockchain start with certain number of zeros, meaning correctly signed, an different hash at the last block in the chain will indicate if there was a incorrect mining process.
+        - a democractic process will decide which chain is the accurate one.
+- __tokens__ = currency for transactions
+- __coincbase__ = where the currency is created, given as reward
+```js
+{ // block 0
+    block: Number,
+    nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
+    coinbase: {value: Number, to: String }, // where money is generated and paid to an account
+    transactions: { }, // no transactions in the first block
+    prev: String, // hash of the previous block, unless first block then full of zeros
+    hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
+}
+
+{ // block 1
+    block: Number,
+    nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
+    transactions: {
+        [{value: Number, from: String, to: String},
+        {value: Number, from: String, to: String},
+        {value: Number, from: String, to: String}
+        ]
+    }, 
+    prev: String, // since the block, nonce, data, and prev string all go into the hash, changing one data entry to the hash func will affect all of the following blocks in the chain
+    hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
+}
+
+{ // block 3
+    block: Number,
+    nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
+    transactions: {
+        [{value: Number, from: String, to: String},
+        {value: Number, from: String, to: String},
+        {value: Number, from: String, to: String},
+        {value: Number, from: String, to: String},
+        ]
+    }, 
+    prev: String,
+    hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
+}
