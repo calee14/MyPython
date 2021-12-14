@@ -41,6 +41,43 @@
     - 1 GWEI = 0.000000000771 ETH
 
 ## How A Blockchain works (Blockchain 101)
-- __hash__ = unique fixed length of string meant to identify a piece of data. created by placing the data into a "hash function"
+- https://andersbrownworth.com/blockchain/
+- __hash__ = unique __fixed__ length of string meant to identify a piece of data. created by placing the data into a "hash function"
     - SHA-3 is used by eth and SHA-256 is used by Bitcoin
-- __block__ = 
+- __block__: (important example in code)
+```js
+{
+    block: Number,
+    nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
+    data: String, 
+    hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
+}
+```
+- __blockchain__:
+```js
+{ // block 0
+    block: Number,
+    nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
+    data: String, 
+    prev: String, // hash of the previous block, unless first block then full of zeros
+    hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
+}
+
+{ // block 1
+    block: Number,
+    nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
+    data: String, 
+    prev: String, // since the block, nonce, data, and prev string all go into the hash, changing one data entry to the hash func will affect all of the following blocks in the chain
+    hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
+}
+
+{ // block 3
+    block: Number,
+    nonce: Number, // number that is set so that the hash value starts with a cerrtain number of leading zeros
+    data: String, 
+    prev: String,
+    hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
+}
+```
+    - In a blockchain, the block, nonce, data, and prev_hash values all go into making the hash. Thus, changing one data entry to the hash func will affect the block's hash and then all of the following blocks in the chain
+- __distributed blockchain__ = many peers have a copy of the blockchain.
