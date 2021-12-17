@@ -123,3 +123,18 @@
     prev: String,
     hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
 }
+- __public and private key pairs__ = way to securely make transactions on the blockchain
+    - not harmful to put the public key in the public because one cannot derive the private key based off the public key
+- __private key__ = a hash/key that is used to generate a public key, which is another string made up of __numbers__
+- __signature__ = use message or data and private key to sign hash and make a signature. This signature can also be reached by encrypting/hashing the same data and public key to reach the signature produced by the private key.
+    - this ensures that we know that the data was correctly signed by the private key
+- __transaction__ = 
+    { 
+        value: 10, 
+        from: payer_public_key, 
+        to: receiver_public_key 
+    }
+    private_key: a string full of numbers
+    => used to sign/encrypt/generate a signature = another string generated based off the transaction data
+    => then send out signature to the blockchain where the data of the transaction must sign to the correct signature
+- beauty of blockchain is that you generate a number which will be your private key and then a public key, which will allow you to pay and receive money. 
