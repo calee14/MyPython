@@ -123,3 +123,39 @@
     prev: String,
     hash: String, // fixed length according to the hash function. if the hash starts with a certin number of certain zeros then we have signed the block
 }
+```
+- __public and private key pairs__ = way to securely make transactions on the blockchain
+    - not harmful to put the public key in the public because one cannot derive the private key based off the public key
+- __private key__ = a hash/key that is used to generate a public key, which is another string made up of __numbers__
+- __signature__ = use message or data and private key to sign hash and make a signature. This signature can also be reached by encrypting/hashing the same data and public key to reach the signature produced by the private key.
+    - this ensures that we know that the data was correctly signed by the private key
+- __transaction__ = 
+    { 
+        value: 10, 
+        from: payer_public_key, 
+        to: receiver_public_key 
+    }
+    private_key: a string full of numbers \
+    => used to sign/encrypt/generate a signature = another string generated based off the transaction data \
+    => then send out signature to the blockchain where the data of the transaction must sign to the correct signature
+- beauty of blockchain is that you generate a number which will be your private key and then a public key, which will allow you to pay and receive money. 
+- the person wanting to make a transaction can only sign it
+
+## Actual implementation
+- for each blockchain each hash algo is diff but the fundamental ideas stay the same
+    - blockchains run on many different independent nodes, which are the individual servers
+- __consensus__ = mechanism used to agree on the state of the blockchain 
+    - __chain selection rule__ = longest chain rule, which ever blockchain in the node has the longest chain is the one that is the most that the system goes with
+        - __confirmations__ = appears in our transaction and means the amount of blocks that appear after the block our transformation was in
+    - __sybil resistance algo__ = __proof of work__, way to defend against malicious hackers from creating a lot of nodes to take the rewards
+        - __proof of work__ = verifible way to identify the block author
+- in proof of work every node is competing against each other. so the first node to compute the block will get the transaction fee (derived form the gas price set by the person making the transactions) and block reward where the blockchain awards the miner
+- __sybil attack__ = where user creates a lot of accounts to influence the blockchain in mining.
+- __51%__ = where one single entity can control the entire blockchain by having the longest chain as long as 51% of other nodes match them
+- proof of stake is more env friendly
+    - proof of stake nodes put up __collateral__ to say that they will behave honestly
+    - if they behave badly they'll lose their stake
+    - in this POS the nodes are chosen randomly and the other nodes are now validators to make sure that the chosen node validated correctly
+- blockchains cannot take scale if there is an influx in people who want to use blockchains
+    - eth 2.0 will implement __sharding__ where there will be several blockchains that will increase the number of transactions that can happen at a time. these blockchains will connect with the main one
+-  
