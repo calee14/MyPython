@@ -11,3 +11,15 @@ def test_deploy():
 
     # Assert
     assert starting_value == expected
+
+def test_updating_storage():
+    # arrange
+    account = accounts.add(config['wallets']['from_key'])
+    simple_storage = SimpleStorage.deploy({'from': account})
+
+    # act
+    expected = 15
+    simple_storage.store(expected, {'from': account})
+
+    # assert
+    assert expected == simple_storage.retrieve()
