@@ -1,3 +1,4 @@
 venv/*
 secret.py
 compiled_code.json
+brownie_simp_stor/README.md
