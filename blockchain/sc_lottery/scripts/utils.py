@@ -1,4 +1,4 @@
-from brownie import network, config, accounts, MockV3Aggregator, Contract
+from brownie import network, config, accounts, MockV3Aggregator, Contract, VRFCoordinatorMock, LinkTokenInterface
 from toolz.itertoolz import get
 from web3 import Web3
 
@@ -18,7 +18,7 @@ def get_account(index=None, id=None):
         or network.show_active() in FORKED_LOCAL_ENVIRONMENTS
     ):
         return accounts[0]
-
+        
     return accounts.add(config["wallets"]["from_key"])
 
 DECIMALS = 8
@@ -29,9 +29,14 @@ def deploy_mocks():
         mock_aggregator = MockV3Aggregator.deploy(
             DECIMALS, STARTING_PRICE, {'from': get_account() }
         )
+    if len(VRFCoordinatorMock) <= 0:
+        mock_vrf_coordinator = VRFCoordinatorMock.deploy(
+            DECIMALS, STARTING_PRICE, {'from': get_account() }
+        )
 
 contract_to_mock = {
     'eth_usd_price_feed': MockV3Aggregator,
+    'vrf_coordinator': VRFCoordinatorMock,
 }
 
 def get_contract(contract_name):
