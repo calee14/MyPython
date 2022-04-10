@@ -8,6 +8,7 @@ contract ZombieFactory is Ownable {
 
     uint dnaDigits = 16;
     uint dnaModulus = 10 ** dnaDigits;
+    uint cooldownTime = 1 days; // time in solidity 
 
     /**
     use struct to define object props
@@ -59,6 +60,7 @@ contract ZombieFactory is Ownable {
     function createRandomZombie(string memory _name) public {
         require(ownerZombieCount[msg.sender] == 0);
         uint randDna = _generateRandomDna(_name);
+        randDna = randDna - randDna % 100;
         _createZombie(_name, randDna);
     }
 
