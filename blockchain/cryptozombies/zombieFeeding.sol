@@ -28,6 +28,10 @@ contract KittyInterface {
 contract ZombieFeeding is ZombieFactory {
     KittyInterface kittyContract;
 
+	/**
+	setKittyContractAddress 
+		- only allowed by owner
+	 */
 	function setKittyContractAddress(address _address) external onlyOwner {
 		kittyContract = KittyInterface(_address);
 	}
@@ -54,9 +58,9 @@ contract ZombieFeeding is ZombieFactory {
 	}
 
 	function feedOnKitty(uint _zombieId, uint _kittyId) public {
-    uint kittyDna;
-    (,,,,,,,,,kittyDna) = kittyContract.getKitty(_kittyId);
-    // And modify function call here:
-    feedAndMultiply(_zombieId, kittyDna, "kitty");
-  }
+		uint kittyDna;
+		(,,,,,,,,,kittyDna) = kittyContract.getKitty(_kittyId);
+		// And modify function call here:
+		feedAndMultiply(_zombieId, kittyDna, "kitty");
+	}
 }
