@@ -4,6 +4,10 @@ import "./ownable.sol";
 
 contract ZombieFactory is Ownable {
 
+    /**
+    front end apps can listen for the NewZombie event
+    event will be broadcasted with 'emit'
+     */
     event NewZombie(uint zombieId, string name, uint dna);
 
     uint dnaDigits = 16;
