@@ -4,7 +4,7 @@ import "./Album.css";
 import Opensea from "../images/opensea.png";
 import { ClockCircleOutlined } from "@ant-design/icons";
 
-const Album = () => {
+const Album = ({ setNftAlbum}) => {
 
   const albumDetails = [
     {
@@ -100,7 +100,7 @@ const Album = () => {
           </div>
         </div>
         <div className="topBan">
-          <div className="playButton" onClick={() => console.log('start musica')}>
+          <div className="playButton" onClick={() => setNftAlbum(albumDetails)}>
             PLAY
           </div>
           <div
