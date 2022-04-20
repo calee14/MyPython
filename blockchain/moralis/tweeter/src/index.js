@@ -1,12 +1,27 @@
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { MoralisProvider } from 'react-moralis';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+const theme = extendTheme({
+  config: {
+    initialColorMode: 'dark'
+  }
+});
+
+const appId = "";
+const serverUrl = "";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MoralisProvider appId={appId} serverUrl={serverUrl}>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </MoralisProvider>
   </React.StrictMode>
 );
 
