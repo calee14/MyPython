@@ -11,8 +11,8 @@ const theme = extendTheme({
   }
 });
 
-const appId = "";
-const serverUrl = "";
+const appId = process.env.REACT_APP_APP_ID;
+const serverUrl = process.env.REACT_APP_SERVER_URL;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
