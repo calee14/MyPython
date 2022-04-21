@@ -1,9 +1,13 @@
-import { Button, Container, Heading, Alert, AlertIcon, AlertTitle, Box, AlertDescription, CloseButton} from "@chakra-ui/react";
+import { Button, Container, Heading, Alert, AlertIcon, AlertTitle, Box, AlertDescription, CloseButton, Input } from "@chakra-ui/react";
+import { useState } from "react";
 import { useMoralis } from "react-moralis";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp"
 
 function App() {
-  const {authenticate, isAuthenticated, isAuthenticating, authError, logout } = useMoralis();
-  if(isAuthenticated) {
+  const { authenticate, isAuthenticated, isAuthenticating, authError, logout } = useMoralis();
+
+  if (isAuthenticated) {
     return (
       <Container>
         <Heading>Welcome to Tweeter</Heading>
@@ -11,10 +15,11 @@ function App() {
       </Container>
     )
   }
+
   return (
     <Container>
       Tweeter
-      {authError && 
+      {authError &&
         <Alert status='error'>
           <AlertIcon />
           <Box>
@@ -31,6 +36,8 @@ function App() {
           />
         </Alert>
       }
+      <SignUp/>
+      <Login/>
       <Button isLoading={isAuthenticating} onClick={() => authenticate()}>Authenticate</Button>
     </Container>
   );
