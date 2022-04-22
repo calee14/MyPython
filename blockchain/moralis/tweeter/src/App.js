@@ -5,12 +5,12 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp"
 
 function App() {
-  const { authenticate, isAuthenticated, isAuthenticating, authError, logout } = useMoralis();
+  const { authenticate, isAuthenticated, isAuthenticating, authError, logout, user } = useMoralis();
 
   if (isAuthenticated) {
     return (
       <Container>
-        <Heading>Welcome to Tweeter</Heading>
+        <Heading>Welcome to Tweeter, {user.attributes.username}</Heading>
         <Button onClick={() => logout()}>Logout</Button>
       </Container>
     )
