@@ -2,11 +2,22 @@ import { Button, Container, Heading, Alert, AlertIcon, AlertTitle, Box, AlertDes
 import { useState } from "react";
 import { useMoralis } from "react-moralis";
 import Login from "./components/Login";
-import SignUp from "./components/SignUp"
+import SignUp from "./components/SignUp";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./components/Home";
+import { Profile } from "./components/Profile";
 
 function App() {
   const { authenticate, isAuthenticated, isAuthenticating, authError, logout, user } = useMoralis();
 
+
+  return (
+    <Routes>
+      <Route path="/" element={<Home/>} exact/>
+      <Route path="/profile" element={<Profile/>} exact/>
+    </Routes>
+  );
+  
   if (isAuthenticated) {
     return (
       <Container>
