@@ -2,6 +2,7 @@ import { Button, Alert, AlertIcon, Box, AlertTitle, AlertDescription, CloseButto
 import SignUp from "./SignUp";
 import Login from "./Login";
 import { useMoralis } from "react-moralis";
+import { ErrorBox } from "./Error";
 
 export const Auth = () => {
 
@@ -12,21 +13,7 @@ export const Auth = () => {
         <Container>
             Tweeter
             {authError &&
-                <Alert status='error'>
-                    <AlertIcon />
-                    <Box>
-                        <AlertTitle>Authentication has failed</AlertTitle>
-                        <AlertDescription>
-                            {authError.message}
-                        </AlertDescription>
-                    </Box>
-                    <CloseButton
-                        alignSelf='flex-start'
-                        position='relative'
-                        right={-1}
-                        top={-1}
-                    />
-                </Alert>
+                <ErrorBox title="Authentication has failed" message={authError.message}/>
             }
             <SignUp />
             <Login />

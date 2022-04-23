@@ -1,9 +1,9 @@
-import { Button, Container, Heading, Alert, AlertIcon, AlertTitle, Box, AlertDescription, CloseButton, Input } from "@chakra-ui/react";
+import { Button, Container, Heading, Alert, AlertIcon, AlertTitle, Box, AlertDescription, CloseButton, Input, Flex, Spacer, Avatar } from "@chakra-ui/react";
 import { useState } from "react";
 import { useMoralis } from "react-moralis";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, Link } from "react-router-dom";
 import { Home } from "./components/Home";
 import { Profile } from "./components/Profile";
 import { Auth } from "./components/Auth";
@@ -14,9 +14,14 @@ function App() {
 
   return (
     <Container>
-      <Header>
-        
-      </Header>
+      <Flex my={6}>
+          <Link to="/"><Heading>Home</Heading></Link>
+          <Spacer/>
+          {isAuthenticated && <Link to="/profile"><Avatar name={user.attributes.username}/></Link>}
+      </Flex>
+      <Heading>
+        Welcome to Tweeter, {user ? user.attributes.username : ' autenticate please...'}
+      </Heading>
       {isAuthenticated ? 
       <Routes>
         <Route path="/" element={<Home/>} exact/>
